@@ -43,7 +43,7 @@ find_ups_product( art v1_11_00 )
 find_ups_product( genie v2_8_0 )
 find_ups_product( libwda v2_21_0 )
 find_ups_product( postgresql v9_1_0 )
-find_ups_geant4( v4_10_1 )
+find_ups_geant4( v4_9_6 )
 
 message(STATUS "ROOTSYS is ${ROOTSYS}")
 
