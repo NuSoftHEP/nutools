@@ -30,17 +30,25 @@ set(CMAKE_MODULE_PATH $ENV{ART_DIR}/Modules
 include(CetCMakeEnv)
 cet_cmake_env()
 
+# e9 builds are still using ART v1
+set(IS_ART_V1 OFF)
+if( "${QUAL_SUBDIR}" MATCHES ".*e9.*" )
+  set(IS_ART_V1 ON)
+  set(ARTDFLAG -DART_V1)
+endif()
+
 # -D_GLIBCXX_USE_NANOSLEEP is needed to make std::this_thread::sleep_for available.
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR 
                        NO_UNDEFINED
                        EXTRA_FLAGS -pedantic 
-                       EXTRA_CXX_FLAGS -D_GLIBCXX_USE_NANOSLEEP 
+                       EXTRA_CXX_FLAGS -D_GLIBCXX_USE_NANOSLEEP ${ARTDFLAG}
                                        -Wno-unused-local-typedefs -Wno-variadic-macros)
 cet_report_compiler_flags()
 
 # these are minimum required versions, not the actual product versions
 find_ups_product( art v1_11_00 )
 find_ups_product( genie v2_8_0 )
+find_ups_product( dk2nu v1_03_00 )
 find_ups_product( libwda v2_21_0 )
 find_ups_product( postgresql v9_1_0 )
 find_ups_product( cetbuildtools v4_09_00 )
@@ -121,6 +129,7 @@ cet_find_library( GPDG NAMES GPDG PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GPDF NAMES GPDF PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GQEL NAMES GQEL PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GRES NAMES GRES PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
+cet_find_library( GSINGLEKAON NAMES GSingleKaon PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GREGISTRY NAMES GRegistry PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 
 # prior to GENIE R-2_9_0 Sehgal's name was spelled incorrectly
@@ -141,6 +150,87 @@ cet_find_library( GMUELOSS NAMES GMuELoss PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GREWEIGHT NAMES GReWeight PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 cet_find_library( GNUCLEONDECAY NAMES GNucleonDecay PATHS ENV GENIE_LIB NO_DEFAULT_PATH )
 
+set ( GENIE_LIB_LIST
+        ${XML2}
+        ${LOG4CPP}
+        ${PYTHIA6}
+        ${LHAPDF}
+        ${GALGORITHM}
+        ${GBARYONRESONANCE}
+        ${GBASE}
+        ${GBODEKYANG}
+        ${GCHARM}
+        ${GCOH}
+        ${GDFRC}
+        ${GDIS}
+        ${GCROSSSECTIONS}
+        ${GDECAY}
+        ${GELAS}
+        ${GELFF}
+        ${GHEP}
+        ${GEVGCORE}
+        ${GEVGMODULES}
+        ${GEVGDRIVERS}
+        ${GGIBUU}
+        ${GHADRONTRANSP}
+        ${GFRAGMENTATION}
+        ${GINTERACTION}
+        ${GLLEWELLYNSMITH}
+        ${GMEC}
+        ${GMESSENGER}
+        ${GNUGAMMA}
+        ${GNUE}
+        ${GNTUPLE}
+        ${GNUCLEAR}
+        ${GNUMERICAL}
+        ${GQPM}
+        ${GPDG}
+        ${GPDF}
+        ${GQEL}
+        ${GRES}
+        ${GREGISTRY}
+        ${GREINSEHGAL}
+        ${GSINGLEKAON}
+        ${GUTILS}
+        ${GGEO}
+        ${GFLUXDRIVERS}
+        ${GMUELOSS}
+        ${GREWEIGHT}
+        ${GNUCLEONDECAY}
+        ${ROOT_CORE}
+        ${ROOT_CINT}
+        ${ROOT_RIO}
+        ${ROOT_NET}
+        ${ROOT_HIST}
+        ${ROOT_GRAF}
+        ${ROOT_GRAF3D}
+        ${ROOT_GPAD}
+        ${ROOT_TREE}
+        ${ROOT_RINT}
+        ${ROOT_POSTSCRIPT}
+        ${ROOT_MATRIX}
+        ${ROOT_PHYSICS}
+        ${ROOT_MATHCORE}
+        ${ROOT_THREAD}
+        ${ROOT_GEOM}
+        ${ROOT_EGPYTHIA6}
+        )
+
+# dk2nu
+cet_find_library( DK2NUTREE NAMES dk2nuTree PATHS ENV DK2NU_LIB NO_DEFAULT_PATH )
+cet_find_library( DK2NUGENIE NAMES dk2nuGenie PATHS ENV DK2NU_LIB NO_DEFAULT_PATH )
+include_directories( $ENV{DK2NU_INC} )
+
+### rwh ...
+if(IS_ART_V1)
+  set(EXTRACANVASLIBS )
+else()
+  set(EXTRACANVASLIBS canvas_Persistency_Common
+                      canvas_Persistency_Provenance
+                      canvas_Utilities )
+endif()
+
+
 # macros 
 include(ArtMake)
 include(ArtDictionary)
@@ -158,6 +248,15 @@ include_directories ( $ENV{LOG4CPP_INC} )
 # included for Mac OSX using XQuartz for X11, ignored on other systems
 include_directories ( /opt/X11/include )
 
+if(NOT IS_ART_V1)
+####  cet_find_library( SIMBASE NAMES nusimdata_SimulationBase PATHS ENV NUSIMDATA_LIB NO_DEFAULT_PATH  )
+  set( SIMBASE nusimdata_SimulationBase )
+else()
+####  cet_find_library( SIMBASE NAMES SimulationBase PATHS ENV NUTOOLS_LIB NO_DEFAULT_PATH  )
+  set( SIMBASE SimulationBase )
+endif()
+
+
 # source
 add_subdirectory (EventDisplayBase)
 add_subdirectory (EventGeneratorBase)
@@ -167,7 +266,6 @@ add_subdirectory (MagneticField)
 add_subdirectory (NuBeamWeights)
 add_subdirectory (NuReweight)
 add_subdirectory (SimulationBase)
-#add_subdirectory (dk2nu)
 
 # ups - table and config files
 add_subdirectory(ups)
