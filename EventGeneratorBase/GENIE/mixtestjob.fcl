@@ -1,0 +1,72 @@
+#
+# Do event mixing.
+#
+#include "services.fcl"
+
+# Give this job a name.
+process_name: MixTest01
+
+# Start form an empty source
+source:
+{
+  module_type: RootInput
+  fileNames:   [ "testB.root" ]
+  maxEvents:   -1
+}
+
+services:
+{
+  TFileService: { fileName: "mixtest.hist.root" }
+  RandomNumberGenerator: { }
+  @table::standard_services
+}
+
+outputs:
+{
+  outfile:
+  {
+    module_type:   RootOutput
+    fileName:   "mixtest.gen_e1.root"
+  }
+}
+
+physics:
+{
+  filters: 
+  {
+    geniemixer: 
+    {
+      # Parameters for the MixFilter template
+      module_type:    MixGenieEvents
+      fileNames:      [ "testS.root" ]
+      readMode:       "sequential"
+      seed:           [ 13579 ]
+
+      # Parameters for the MixDetail class
+      mean:           -10
+      genModuleLabel: "generator"
+      g4ModuleLabel:  "geantgen"
+    }
+    singlemixer: 
+    {
+      # Parameters for the MixFilter template
+      module_type:    MixGenieEvents
+      fileNames:      [ "testS.root" ]
+      readMode:       "sequential"
+      seed:           [ 24680 ]
+
+      # Parameters for the MixDetail class
+      mean:           -10
+      genModuleLabel: "generator"
+      g4ModuleLabel:  "geantgen"
+    }
+  }
+
+
+  p1: [ geniemixer, singlemixer ]
+  e1: [ outfile ]
+
+  trigger_paths: [ p1 ]
+  end_paths:     [ e1 ]
+
+}
