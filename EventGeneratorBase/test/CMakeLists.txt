@@ -1,6 +1,6 @@
 
 art_make( EventGeneratorBasetest
-          MODULE_LIBRARIES SimulationBase
+          MODULE_LIBRARIES ${SIMBASE}
                            EventGeneratorBaseCRY
                            EventGeneratorBaseGENIE
                         ${ART_FRAMEWORK_SERVICES_OPTIONAL_RANDOMNUMBERGENERATOR_SERVICE}
@@ -8,51 +8,7 @@ art_make( EventGeneratorBasetest
                         ${MF_UTILITIES}
                         ${FHICLCPP}
                         ${CETLIB}
-                        ${LOG4CPP}
-                        ${XML2}
-                        ${PYTHIA6}
-                        ${LHAPDF}
-                        ${GALGORITHM}
-                        ${GBARYONRESONANCE}
-                        ${GBASE}
-                        ${GBODEKYANG}
-                        ${GCHARM}
-                        ${GCOH}
-                        ${GDFRC}
-                        ${GDIS}
-                        ${GCROSSSECTIONS}
-                        ${GDECAY}
-                        ${GELAS}
-                        ${GELFF}
-                        ${GHEP}
-                        ${GEVGCORE}
-                        ${GEVGMODULES}
-                        ${GEVGDRIVERS}
-                        ${GGIBUU}
-                        ${GHADRONTRANSP}
-                        ${GFRAGMENTATION}
-                        ${GINTERACTION}
-                        ${GLLEWELLYNSMITH}
-                        ${GMEC}
-                        ${GMESSENGER}
-                        ${GNUGAMMA}
-                        ${GNUE}
-                        ${GNTUPLE}
-                        ${GNUCLEAR}
-                        ${GNUMERICAL}
-                        ${GQPM}
-                        ${GPDG}
-                        ${GPDF}
-                        ${GQEL}
-                        ${GRES}
-                        ${GREGISTRY}
-                        ${GREINSEHGAL}
-                        ${GUTILS}
-                        ${GGEO}
-                        ${GFLUXDRIVERS}
-                        ${GMUELOSS}
-                        ${GREWEIGHT}
-                        ${GNUCLEONDECAY}
+                        ${GENIE_LIB_LIST}
                         ${CRY}
                         ${ROOT_CORE}
                         ${ROOT_CINT}
