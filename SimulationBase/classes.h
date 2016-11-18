@@ -27,6 +27,10 @@
 #include "SimulationBase/MCFlux.h"
 #include "SimulationBase/GTruth.h"
 #include <TLorentzVector.h>
+
+#include "dk2nu/tree/dk2nu.h"
+#include "dk2nu/tree/NuChoice.h"
+
 //
 // Only include objects that we would like to be able to put into the event.
 // Do not include the objects they contain internally.
@@ -68,3 +72,31 @@ template class art::Wrapper< art::Assns<simb::MCTruth,    simb::MCFlux,     void
 template class art::Wrapper< art::Assns<simb::GTruth,     simb::MCTruth,    void> >;
 template class art::Wrapper< art::Assns<simb::MCTruth,    simb::GTruth,     void> >;
 
+// mumbo jumbo for introducting bsim::Dk2Nu and friends
+////////////////////////////////////////////////////////////////////////////////////
+
+// try nothing special but the things we need to wrap bsim::Dk2Nu
+template class std::vector<bsim::Dk2Nu>;
+template class art::Ptr<bsim::Dk2Nu>;
+template class art::Wrapper< std::vector<bsim::Dk2Nu> >;
+// for associations
+template class std::pair< art::Ptr<simb::MCTruth>,    art::Ptr<bsim::Dk2Nu>   >;
+template class std::pair< art::Ptr<bsim::Dk2Nu>,      art::Ptr<simb::MCTruth> >;
+template class art::Assns<simb::MCTruth,    bsim::Dk2Nu,      void>;
+template class art::Assns<bsim::Dk2Nu,      simb::MCTruth,    void>;
+template class art::Wrapper< art::Assns<simb::MCTruth, bsim::Dk2Nu,   void> >;
+template class art::Wrapper< art::Assns<bsim::Dk2Nu,   simb::MCTruth, void> >;
+
+// try nothing special but the things we need to wrap bsim::NuChoice
+template class std::vector<bsim::NuChoice>;
+template class art::Ptr<bsim::NuChoice>;
+template class art::Wrapper< std::vector<bsim::NuChoice> >;
+// for associations
+template class std::pair< art::Ptr<simb::MCTruth>,  art::Ptr<bsim::NuChoice> >;
+template class std::pair< art::Ptr<bsim::NuChoice>, art::Ptr<simb::MCTruth> >;
+template class art::Assns<simb::MCTruth,    bsim::NuChoice,   void>;
+template class art::Assns<bsim::NuChoice,   simb::MCTruth,    void>;
+template class art::Wrapper< art::Assns<simb::MCTruth,  bsim::NuChoice, void> >;
+template class art::Wrapper< art::Assns<bsim::NuChoice, simb::MCTruth,  void> >;
+
+// end-of-additions

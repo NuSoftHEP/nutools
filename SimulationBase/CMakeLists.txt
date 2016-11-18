@@ -8,6 +8,7 @@ set( SIMB_LIBS ${ART_FRAMEWORK_SERVICES_REGISTRY}
                ${ART_UTILITIES}
                ${FHICLCPP}
                ${CETLIB}
+               ${DK2NUTREE}  # additional data object, assoc w/ MCTruth
                ${ROOT_EG}
                ${ROOT_CORE}
                ${ROOT_CINT}

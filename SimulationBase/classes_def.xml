@@ -66,4 +66,31 @@
  <class name="art::Wrapper< art::Assns<simb::MCParticle, simb::MCTruth,    void> >"/>
  <class name="art::Wrapper< art::Assns<simb::MCTruth,    simb::MCParticle, void> >"/>
 
+
+<!-- art entangled bsim::Dk2Nu and bsim::NuChoice -->
+
+<!-- dont make conflicting dictionary for base, just the things to wrapper it -->
+<class name="std::vector<bsim::Dk2Nu>"                            	     	   />
+<class name="art::Ptr<bsim::Dk2Nu>"       				     	   />
+<class name="art::Wrapper< std::vector<bsim::Dk2Nu> >" />
+<!-- and association stuff -->
+<class name="std::pair< art::Ptr<simb::MCTruth>,    art::Ptr<bsim::Dk2Nu>      >" />
+<class name="std::pair< art::Ptr<bsim::Dk2Nu>,      art::Ptr<simb::MCTruth>    >" />
+<class name="art::Assns<simb::MCTruth,    bsim::Dk2Nu,      void>" />
+<class name="art::Assns<bsim::Dk2Nu,      simb::MCTruth,    void>" />
+<class name="art::Wrapper< art::Assns<simb::MCTruth, bsim::Dk2Nu,   void> >" />
+<class name="art::Wrapper< art::Assns<bsim::Dk2Nu,   simb::MCTruth, void> >" />
+
+<!-- dont make conflicting dictionary for base, just the things to wrapper it -->
+<class name="std::vector<bsim::NuChoice>"                            	     	   />
+<class name="art::Ptr<bsim::NuChoice>"       				     	   />
+<class name="art::Wrapper< std::vector<bsim::NuChoice> >" />
+<!-- and association stuff -->
+<class name="std::pair< art::Ptr<simb::MCTruth>,    art::Ptr<bsim::NuChoice>   >" />
+<class name="std::pair< art::Ptr<bsim::NuChoice>,   art::Ptr<simb::MCTruth>    >" />
+<class name="art::Assns<simb::MCTruth,    bsim::NuChoice,   void>" />
+<class name="art::Assns<bsim::NuChoice,   simb::MCTruth,    void>" />
+<class name="art::Wrapper< art::Assns<simb::MCTruth,  bsim::NuChoice, void> >" />
+<class name="art::Wrapper< art::Assns<bsim::NuChoice, simb::MCTruth,  void> >" />
+
 </lcgdict>

@@ -19,7 +19,8 @@ namespace simb{
     kHistMinusFocus = -1, ///< Flux for negative horn focus
     kGenerator      =  0, ///< A bogus flux assumed by the generator
     kNtuple         =  2, ///< Full flux simulation ntuple
-    kSimple_Flux    =  3  ///< A simplified flux ntuple for quick running
+    kSimple_Flux    =  3, ///< A simplified flux ntuple for quick running
+    kDk2Nu          =  4  ///< Unified ntuple flux format (replaces 2)
   };
 
   class MCFlux {
