@@ -10,61 +10,44 @@ else()
 endif()
 
 art_make( LIBRARY_NAME EventGeneratorBaseGENIE
-          LIB_LIBRARIES SimulationBase
+          LIB_LIBRARIES ${SIMBASE}
                         ${ART_UTILITIES}
                         ${MF_MESSAGELOGGER}
                         ${MF_UTILITIES}
                         ${FHICLCPP}
                         ${CETLIB}
-                        ${XML2}
-                        ${LOG4CPP}
-                        ${PYTHIA6}
-                        ${LHAPDF}
-                        ${GALGORITHM}
-                        ${GBARYONRESONANCE}
-                        ${GBASE}
-                        ${GBODEKYANG}
-                        ${GCHARM}
-                        ${GCOH}
-                        ${GDFRC}
-                        ${GDIS}
-                        ${GCROSSSECTIONS}
-                        ${GDECAY}
-                        ${GELAS}
-                        ${GELFF}
-                        ${GHEP}
-                        ${GEVGCORE}
-                        ${GEVGMODULES}
-                        ${GEVGDRIVERS}
-                        ${GGIBUU}
-                        ${GHADRONTRANSP}
-                        ${GFRAGMENTATION}
-                        ${GINTERACTION}
-                        ${GLLEWELLYNSMITH}
-                        ${GMEC}
-                        ${GMESSENGER}
-                        ${GNUGAMMA}
-                        ${GNUE}
-                        ${GNTUPLE}
-                        ${GNUCLEAR}
-                        ${GNUMERICAL}
-                        ${GQPM}
-                        ${GPDG}
-                        ${GPDF}
-                        ${GQEL}
-                        ${GRES}
-                        ${GREGISTRY}
-                        ${GREINSEHGAL}
-                        ${GUTILS}
-                        ${GGEO}
-                        ${GFLUXDRIVERS}
-                        ${GMUELOSS}
-                        ${GREWEIGHT}
-                        ${GNUCLEONDECAY}
+                        ${GENIE_LIB_LIST}
+                        ${DK2NUTREE}
+                        ${DK2NUGENIE}
                         ${IFDH}
                         ${ROOT_GEOM}
                         ${ROOT_GEOMPAINTER}
-                        ${ROOT_BASIC_LIB_LIST} )
+                        ${ROOT_BASIC_LIB_LIST}
+          MODULE_LIBRARIES 
+                        ${SIMBASE}
+                        EventGeneratorBaseGENIE
+                        ${ART_FRAMEWORK_CORE}
+                        ${ART_FRAMEWORK_PRINCIPAL}
+                        ${ART_FRAMEWORK_SERVICES_REGISTRY}
+                        ${ART_FRAMEWORK_SERVICES_OPTIONAL}
+                        ${ART_FRAMEWORK_SERVICES_OPTIONAL_TFILESERVICE_SERVICE}
+                        ${ART_FRAMEWORK_SERVICES_OPTIONAL_RANDOMNUMBERGENERATOR_SERVICE}
+          ${ART_FRAMEWORK_IO_PRODUCTMIX}  ## for MixGenieEvents_module
+          ${ART_FRAMEWORK_IO_ROOT}  ## for IO_PRODUCTMIX
+                        ${ART_PERSISTENCY_COMMON}
+                        ${ART_PERSISTENCY_PROVENANCE}
+                        ${ART_UTILITIES}
+                        ${MF_MESSAGELOGGER}
+                        ${MF_UTILITIES}
+                        ${FHICLCPP}
+                        ${CETLIB}
+                        ${GENIE_LIB_LIST}
+                        ${CLHEP}
+                        ${ROOT_EGPYTHIA6}
+                        ${ROOT_BASIC_LIB_LIST}
+                        ${ROOT_EG}
+)
+
 
 install_headers()
 install_fhicl()
