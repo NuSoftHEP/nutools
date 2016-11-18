@@ -26,7 +26,7 @@ namespace fhicl {
   class ParameterSet;
 }
 
-/// IFDH interface (data handling)
+/// IFDH interface (data handling) ... if using bare interface
 namespace ifdh_ns {
   class ifdh;
 }
@@ -41,6 +41,8 @@ namespace simb {
 namespace genie { class EventRecord; }
 
 namespace evgb{
+
+  class EvtTimeShiftI;  // for shifting time within a spill
 
   class GENIEHelper {
     
@@ -73,6 +75,13 @@ namespace evgb{
     double                 TotalMass()        const { return fDetectorMass+fSurroundingMass; }
     
     genie::EventRecord *  GetGenieEventRecord() { return fGenieEventRecord; } 
+
+    // access the random number generator that is supplying additional values for helper
+    TRandom3*             GetHelperRandom() { return fHelperRandom; }
+
+    // direct access to flux driver ... no ownership handover
+    // base is the "real" flux driver, might be wrapped by a flavor mixer
+    genie::GFluxI*        GetFluxDriver(bool base = true ) { return ( (base) ? fFluxD : fFluxD2GMCJD ); }
 
   private:
 
@@ -107,16 +116,19 @@ namespace evgb{
     genie::GFluxI*           fFluxD2GMCJD;       ///< flux driver passed to genie GMCJDriver, might be GFluxBlender
     genie::GMCJDriver*       fDriver;
 
+    // for now leave this here ... but not necessary when using IFDH_service
     ifdh_ns::ifdh*           fIFDH;              ///< (optional) flux file handling
 
     TRandom3*                fHelperRandom;      ///< random # generator for GENIEHelper
     bool                     fUseHelperRndGen4GENIE;   ///< use fHelperRandom for gRandom during Sample()
+    evgb::EvtTimeShiftI*     fTimeShifter;       ///< generator for time offset within a spill
 
     std::string              fFluxType;          ///< histogram or ntuple or atmo_FLUKA or atmo_BARTOL
     std::string              fFluxSearchPaths;   ///< colon separated set of path stems
     std::vector<std::string> fFluxFilePatterns;  ///< wildcard patterns files containing histograms or ntuples, or txt
     std::vector<std::string> fSelectedFluxFiles; ///< flux files selected after wildcard expansion and subset selection
     int                      fMaxFluxFileMB;     ///< maximum size of flux files (MB)
+    int                      fMaxFluxFileNumber; ///< maximum # of flux files
     std::string              fFluxCopyMethod;    ///< "DIRECT" = old direct access method, otherwise = ifdh approach schema ("" okay)
     std::string              fFluxCleanup;       ///< "ALWAYS", "/var/tmp", "NEVER"
     std::string              fBeamName;          ///< name of the beam we are simulating
@@ -144,6 +156,7 @@ namespace evgb{
                                                  ///< the cylinder for the histogram flux in kg
     double                   fGlobalTimeOffset;  ///< overall time shift (ns) added to every particle time
     double                   fRandomTimeOffset;  ///< additional random time shift (ns) added to every particle time 
+    std::string              fSpillTimeConfig;   ///< alternative to flat spill distribution
     std::vector<int>         fGenFlavors;        ///< pdg codes for flavors to generate
     double                   fAtmoEmin;          ///< atmo: Minimum energy of neutrinos in GeV
     double                   fAtmoEmax;          ///< atmo: Maximum energy of neutrinos in GeV
