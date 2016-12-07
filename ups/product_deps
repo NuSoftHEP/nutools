@@ -1,6 +1,6 @@
 # The parent line must be the first non-comment line in the file
 # This line defines the product name and version
-parent nutools  v1_21_07
+parent nutools  v1_21_08
 defaultqual     e9
 
 # These optional lines define the installed directories where
@@ -19,8 +19,8 @@ bindir      fq_dir      bin
 # this means that we only need to list art, cry, and genie as a dependencies
 product         version
 art             v1_17_06
-genie           v2_12_0
-dk2nu           v01_04_01e
+genie           v2_12_2
+dk2nu           v01_04_01g
 ## nova    using genie v2_12_0   e9:r5,  needs dk2nu v01_04_01e
 ## larsoft using genie v2_10_10a e10:r6, needs dk2nu v01_04_01b
 ## also no inline comments
@@ -44,12 +44,6 @@ e9:prof          nu:e9:prof     e9:r5:prof    e9:r5:prof   e9:prof     e9:prof  
 e9:noifdh:debug  nu:e9:debug    e9:r5:debug   e9:r5:debug  e9:debug    e9:debug  -nq-    -               
 e9:noifdh:opt    nu:e9:opt      e9:r5:opt     e9:r5:opt    e9:opt      e9:opt    -nq-    -             
 e9:noifdh:prof   nu:e9:prof     e9:r5:prof    e9:r5:prof   e9:prof     e9:prof   -nq-    -             
-e7:debug         nu:e7:debug    e7:r5:debug   e7:r5:debug  e7:debug    e7:debug  -nq-    e7:p2710:debug 
-e7:opt           nu:e7:opt      e7:r5:opt     e7:r5:opt    e7:opt      e7:opt    -nq-    e7:p2710:opt   
-e7:prof          nu:e7:prof     e7:r5:prof    e7:r5:prof   e7:prof     e7:prof   -nq-    e7:p2710:prof  
-e7:noifdh:debug  nu:e7:debug    e7:r5:debug   e7:r5:debug  e7:debug    e7:debug  -nq-    -             
-e7:noifdh:opt    nu:e7:opt      e7:r5:opt     e7:r5:opt    e7:opt      e7:opt    -nq-    -             
-e7:noifdh:prof   nu:e7:prof     e7:r5:prof    e7:r5:prof   e7:prof     e7:prof   -nq-    -             
 end_qualifier_list
 
 # Preserve tabs and formatting in emacs and vi / vim:
