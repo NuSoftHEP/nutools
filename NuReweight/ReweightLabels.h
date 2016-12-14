@@ -134,7 +134,9 @@ namespace rwgt {
     fReweightZExpA2CCQE = genie::rew::kXSecTwkDial_ZExpA2CCQE,       ///< tweak Z-expansion coefficient 2, affects dsigma(CCQE)/dQ2 both in shape and normalization
     fReweightZExpA3CCQE = genie::rew::kXSecTwkDial_ZExpA3CCQE,       ///< tweak Z-expansion coefficient 3, affects dsigma(CCQE)/dQ2 both in shape and normalization
     fReweightZExpA4CCQE = genie::rew::kXSecTwkDial_ZExpA4CCQE,       ///< tweak Z-expansion coefficient 4, affects dsigma(CCQE)/dQ2 both in shape and normalization
-    fReweightAxFFCCQEshape = genie::rew::kXSecTwkDial_AxFFCCQEshape  ///< tweak axial nucleon form factors (dipole -> z-expansion) - shape only effect of dsigma(CCQE)/dQ2
+    fReweightAxFFCCQEshape = genie::rew::kXSecTwkDial_AxFFCCQEshape,  ///< tweak axial nucleon form factors (dipole -> z-expansion) - shape only effect of dsigma(CCQE)/dQ2
+
+    fNumReweightLabels
 
   } ReweightLabel_t;
 
