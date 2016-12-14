@@ -1413,6 +1413,8 @@ namespace evgb {
       fSpillExposure = 
         (fexposure->GetTotalExposure()/fDriver->GlobProbScale()) - fTotalExposure;
     }
+    // use GENIE2ART code to fill MCFlux
+    evgb::FillMCFlux(fFluxD,flux);
 #else
     // pack the flux information  (no support for dk2nu)
     if(fFluxType.compare("ntuple") == 0){
