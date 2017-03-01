@@ -31,16 +31,16 @@ namespace simb {
     double 	      fDiffXsec;     ///< differential cross section of interaction
 
     //genie::XclsTag info
-    int           fNumPiPlus;    ///< number of pi pluses in the final state
-    int  	        fNumPiMinus;   ///< number of pi minuses in the final state
-    int  	        fNumPi0;       ///< number of pi0 in the final state
-    int  	        fNumProton;    ///< number of protons in the final state
-    int  	        fNumNeutron;   ///< number of neutrons in the final state
-    bool 	        fIsCharm;      ///< did the interaction produce a charmed hadron
+    int           fNumPiPlus;    ///< number of pi pluses in interaction byproducts (before FSI)
+    int  	        fNumPiMinus;   ///< number of pi minuses in interaction byproducts (before FSI)
+    int  	        fNumPi0;       ///< number of pi0 in interaction byproducts (before FSI)
+    int  	        fNumProton;    ///< number of protons in interaction byproducts (before FSI)
+    int  	        fNumNeutron;   ///< number of neutrons in interaction byproducts (before FSI)
+    bool 	        fIsCharm;      ///< did the interaction produce a charmed hadron?
     int  	        fResNum;       ///< resonance number
 
     //kinematics info
-    ///<these are for the interal (on shell) genie kinematics
+    ///<these are for the internal (on shell) genie kinematics
     double         fgQ2;
     double         fgq2;
     double     	   fgW;
@@ -54,7 +54,7 @@ namespace simb {
     TLorentzVector fHitNucP4;
     int            ftgtZ;
     int            ftgtA;
-    int            ftgtPDG;       ///< Target Nucleous(?) PDG
+    int            ftgtPDG;       ///< Target nucleus (or nucleon if free) PDG
 
     //Initial State info
     int            fProbePDG;

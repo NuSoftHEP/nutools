@@ -23,6 +23,7 @@
 #include "Conventions/Units.h"
 #include "EVGCore/EventRecord.h"
 #include "GHEP/GHepUtils.h"
+#include "PDG/PDGCodes.h"
 #include "PDG/PDGLibrary.h"
 
 #include "Interaction/InitialState.h"
@@ -258,15 +259,40 @@ void evgb::FillGTruth(const genie::EventRecord* record,
   vtx.SetXYZT(erVtx->X(), erVtx->Y(), erVtx->Z(), erVtx->T() );
   truth.fVertex = vtx;
   
-  //genie::XclsTag info
+  //true reaction information and byproducts
+  //(PRE FSI)
   const genie::XclsTag &exclTag = inter->ExclTag();
-  truth.fNumPiPlus = exclTag.NPiPlus(); 
-  truth.fNumPiMinus = exclTag.NPiMinus();
-  truth.fNumPi0 = exclTag.NPi0();    
-  truth.fNumProton = exclTag.NProtons(); 
-  truth.fNumNeutron = exclTag.NNucleons();
   truth.fIsCharm = exclTag.IsCharmEvent();   
   truth.fResNum = (int)exclTag.Resonance();
+
+  //note that in principle this information could come from the XclsTag,
+  //but that object isn't completely filled for most reactions,
+  //at least for GENIE <= 2.12
+//    truth.fNumPiPlus = exclTag.NPiPlus();
+//    truth.fNumPiMinus = exclTag.NPiMinus();
+//    truth.fNumPi0 = exclTag.NPi0();
+//    truth.fNumProton = exclTag.NProtons();
+//    truth.fNumNeutron = exclTag.NNucleons();
+  truth.fNumPiPlus = truth.fNumPiMinus = truth.fNumPi0 = truth.fNumProton = truth.fNumNeutron = 0;
+  for (int idx = 0; idx < record->GetEntries(); idx++)
+  {
+    // want hadrons that are about to be sent to the FSI model
+    const genie::GHepParticle * particle = record->Particle(idx);
+    if (particle->Status() != genie::kIStHadronInTheNucleus)
+      continue;
+
+    int pdg = particle->Pdg();
+    if (pdg == genie::kPdgPi0)
+      truth.fNumPi0++;
+    else if (pdg == genie::kPdgPiP)
+      truth.fNumPiPlus++;
+    else if (pdg == genie::kPdgPiM)
+      truth.fNumPiMinus++;
+    else if (pdg == genie::kPdgNeutron)
+      truth.fNumNeutron++;
+    else if (pdg == genie::kPdgProton)
+      truth.fNumProton++;
+  } // for (idx)
   
   // Get the GENIE kinematics info 
   const genie::Kinematics &kine = inter->Kine();  
