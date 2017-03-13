@@ -23,7 +23,7 @@ nusimdata       v1_06_01
 genie           v2_12_2
 geant4          v4_10_1_p03d
 cry             v1_7f
-ifdhc           v2_0_3b
+ifdhc           v2_0_3
 libwda          v2_22_2
 
 cetbuildtools   v5_06_07        -        only_for_build
