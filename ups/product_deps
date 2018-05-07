@@ -25,7 +25,7 @@ geant4          v4_10_3_p03b
 cry             v1_7j
 ifdh_art        v2_05_05
 
-cetbuildtools   v7_02_01        -        only_for_build
+cetbuildtools   v7_03_02        -        only_for_build
 end_product_list
 
 
