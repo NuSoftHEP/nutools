@@ -39,6 +39,7 @@
 // -- GENIE Messenger conflict LOG_INFO w/ ART messagefacility
 //#include "Messenger/Messenger.h" 
 #include "GHEP/GHepRecord.h"
+#include "GHEP/GHepParticle.h"
 
 #include "FluxDrivers/GNuMIFlux.h"
 #include "FluxDrivers/GSimpleNtpFlux.h"
@@ -217,7 +218,7 @@ private:
   double                           fYhi;
   double                           fZhi;
   bool                             fAddMCFlux;
-  bool                             fRandomEntries; 
+  bool                             fRandomEntries;
 
   std::string                      fMyModuleType;
   std::string                      fMyModuleLabel;
@@ -523,6 +524,17 @@ void evg::AddGenieEventsToArt::produce(art::Event & evt)
 
     // offset in time
     double evtTimeOffset = fGlobalTimeOffset + fTimeShifter->TimeOffset();
+
+    // offset in space.
+    // don't need to set the particles individually, just the overall vtx,
+    // because FillMCTruth() will adjust the particles later.
+    TLorentzVector * vtx = grec->Vertex();
+    TLorentzVector newVtx = *vtx;
+    newVtx.SetX(newVtx.X() + flat.fire(fXlo, fXhi));
+    newVtx.SetY(newVtx.Y() + flat.fire(fYlo, fYhi));
+    newVtx.SetZ(newVtx.Z() + flat.fire(fZlo, fZhi));
+    grec->SetVertex(newVtx);
+
 
     // convert to simb:: ART objects using GENIE2ART functions
     evgb::FillMCTruth(grec,evtTimeOffset,mctruth);
