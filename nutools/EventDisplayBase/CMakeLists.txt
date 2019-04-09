@@ -18,29 +18,30 @@ set( EVD_LIBS ${ART_FRAMEWORK_SERVICES_REGISTRY}
               cetlib
 	      cetlib_except
               ${Boost_SYSTEM_LIBRARY}
-              ${ROOT_EVE}
-              ${ROOT_EG}
-              ${ROOT_GX11}
-              ${ROOT_TREEPLAYER}
-              ${ROOT_GEOM}
-              ${ROOT_GED}
-              ${ROOT_RGL}
-              ${ROOT_GUI}
-              ${ROOT_CORE}
-              ${ROOT_CINT}
-              ${ROOT_RIO}
-              ${ROOT_NET}
-              ${ROOT_HIST}
-              ${ROOT_GRAF}
-              ${ROOT_GRAF3D}
-              ${ROOT_GPAD}
-              ${ROOT_TREE}
-              ${ROOT_RINT}
-              ${ROOT_POSTSCRIPT}
-              ${ROOT_MATRIX}
-              ${ROOT_PHYSICS}
-              ${ROOT_MATHCORE}
-              ${ROOT_THREAD} )
+              ${ROOT_Eve_LIBRARY}
+              ${ROOT_EG_LIBRARY}
+              ${ROOT_GX11_LIBRARY}
+              ${ROOT_TreePlayer_LIBRARY}
+              ${ROOT_Geom_LIBRARY}
+              ${ROOT_Ged_LIBRARY}
+              ${ROOT_RGL_LIBRARY}
+              ${ROOT_Gui_LIBRARY}
+              ${ROOT_Core_LIBRARY}
+              ${ROOT_Cling_LIBRARY}
+              ${ROOT_RIO_LIBRARY}
+              ${ROOT_Net_LIBRARY}
+              ${ROOT_Hist_LIBRARY}
+              ${ROOT_Graf_LIBRARY}
+              ${ROOT_Graf3d_LIBRARY}
+              ${ROOT_Gpad_LIBRARY}
+              ${ROOT_Tree_LIBRARY}
+              ${ROOT_Rint_LIBRARY}
+              ${ROOT_Postscript_LIBRARY}
+              ${ROOT_Matrix_LIBRARY}
+              ${ROOT_Physics_LIBRARY}
+              ${ROOT_MathCore_LIBRARY}
+              ${ROOT_Thread_LIBRARY}
+              ${ROOT_LIBRARIES})
 
 cet_rootcint( ${PACKAGE} )
 

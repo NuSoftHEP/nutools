@@ -3,9 +3,12 @@ simple_plugin( MagneticField service
                ${MF_MESSAGELOGGER}
                ${MF_UTILITIES}
 	       cetlib_except
-               ${CLHEP}
-               ${ROOT_BASIC_LIB_LIST}
-               ${ROOT_GEOM} )
+               ${CLHEP_LIBRARIES}
+               ${ROOT_LIBRARIES}
+               ${ROOT_Geom_LIBRARY}
+               ${ROOT_GeomPainter_LIBRARY}
+               )
+
 
 install_headers()
 install_fhicl()

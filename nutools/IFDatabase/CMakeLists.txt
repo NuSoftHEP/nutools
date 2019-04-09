@@ -1,19 +1,19 @@
 set( PACKAGE IFDatabase )
 FILE( GLOB src_files *.cpp )
 
-cet_find_library( LIBWDA NAMES wda PATHS ENV LIBWDA_LIB NO_DEFAULT_PATH )
-cet_find_library( PQ NAMES pq PATHS ENV POSTGRESQL_LIBRARIES NO_DEFAULT_PATH )
+cet_find_library( LIBWDA NAMES wda PATHS ${CMAKE_INSTALL_RPATH} NO_DEFAULT_PATH )
+cet_find_library( PQ NAMES pq PATHS ${CMAKE_INSTALL_RPATH} NO_DEFAULT_PATH )
 find_library( CURL NAMES curl )
 
-include_directories( $ENV{LIBWDA_FQ_DIR}/include )
+include_directories( ${LIBWDA_INC} )
 
 art_make_library( SOURCE ${src_files} #${CMAKE_CURRENT_BINARY_DIR}/${PACKAGE}Cint.cc
                   LIBRARIES     ${LIBWDA}
-                                ${BOOST_DATE_TIME}
-                                ${BOOST_SYSTEM}
-                                ${BOOST_FILESYSTEM}
-                                ${BOOST_THREAD}
-                                ${BOOST_REGEX}
+                                ${Boost_DATE_TIME_LIBRARY}
+                                ${Boost_SYSTEM_LIBRARY}
+                                ${Boost_FILESYSTEM_LIBRARY}
+                                ${Boost_THREAD_LIBRARY}
+                                ${Boost_REGEX_LIBRARY}
                                 ${XCLIB}
                                 ${PQ}
                                 ${CURL}

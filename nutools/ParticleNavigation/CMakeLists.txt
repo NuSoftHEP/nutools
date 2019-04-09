@@ -15,7 +15,7 @@ art_make( NO_PLUGINS
 			${MF_UTILITIES}
         		cetlib
 			cetlib_except
-			${ROOT_BASIC_LIB_LIST}
+			${ROOT_LIBRARIES}
         )
 
 install_headers()

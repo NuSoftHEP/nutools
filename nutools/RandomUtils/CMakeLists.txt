@@ -13,7 +13,7 @@ art_make(
     fhiclcpp
     cetlib
     cetlib_except
-    ${ROOT_CORE}
+    ${ROOT_Core_LIBRARY}
 )
 
 

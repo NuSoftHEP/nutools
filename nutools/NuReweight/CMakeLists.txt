@@ -5,7 +5,7 @@ art_make(
     ${PYTHIA6}
     ${LHAPDF}
     ${GENIE_LIB_LIST}
-    ${ROOT_BASIC_LIB_LIST}
+    ${ROOT_LIBRARIES}
 )
 
 install_headers()

@@ -1,5 +1,5 @@
 
-art_make( LIB_LIBRARIES ${ROOT_BASIC_LIB_LIST} )
+art_make( LIB_LIBRARIES ${ROOT_LIBRARIES} )
 
 install_headers()
 install_fhicl()

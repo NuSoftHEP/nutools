@@ -1,6 +1,6 @@
 
 set( NURW_LIBS ${ART_FRAMEWORK_SERVICES_REGISTRY}
-               ${ART_ROOT_IO_TFILE_SUPPORT} ${ROOT_CORE}
+               ${ART_ROOT_IO_TFILE_SUPPORT} ${ROOT_Core_LIBRARY}
                ${ART_ROOT_IO_TFILESERVICE_SERVICE}
                ${ART_FRAMEWORK_CORE}
                art_Persistency_Common
@@ -21,13 +21,12 @@ set( NURW_LIBS ${ART_FRAMEWORK_SERVICES_REGISTRY}
                ${PYTHIA6}
                ${LHAPDF}
                ${GENIE_LIB_LIST}
-               ${ROOT_BASIC_LIB_LIST}
-               ${ROOT_EG}
-               ${ROOT_TREEPLAYER}
-               ${ROOT_FFTW}
-               ${ROOT_REFLEX}
-               ${ROOTSYS}/lib/libEGPythia6.so
-               ${ROOT_GUI}
+               ${ROOT_LIBRARIES}
+               ${ROOT_EG_LIBRARY}
+               ${ROOT_TreePlayer_LIBRARY}
+               ${ROOT_FFTW_LIBRARY}
+               ${ROOT_EGPythia6_LIBRARY}
+               ${ROOT_Gui_LIBRARY}
            )
 
 art_make_library( SOURCE NuReweight.cxx

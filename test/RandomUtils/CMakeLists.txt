@@ -12,7 +12,7 @@ art_make(
     ${FHICLCPP}
     cetlib
     cetlib_except
-    ${CLHEP}
+    ${CLHEP_LIBRARIES}
   MODULE_LIBRARIES
     nutools_test_RandomUtils
     nutools_RandomUtils_NuRandomService_service
@@ -25,7 +25,7 @@ art_make(
     ${FHICLCPP}
     cetlib
     cetlib_except
-    ${CLHEP}
+    ${CLHEP_LIBRARIES}
   SERVICE_LIBRARIES
     nutools_RandomUtils_NuRandomService_service
     art_Utilities
@@ -36,8 +36,8 @@ art_make(
     ${FHICLCPP}
     cetlib
     cetlib_except
-    ${ROOT_CORE}
-    ${ROOT_MATHCORE}
+    ${ROOT_Core_LIBRARY}
+    ${ROOT_MathCore_LIBRARY}
   NO_INSTALL
   USE_PRODUCT_NAME
 )

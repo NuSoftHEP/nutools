@@ -7,8 +7,8 @@ simple_plugin( GeneratedEventTimestamp "plugin"
                                        ${MF_UTILITIES}
                                        cetlib
                                        cetlib_except
-                                       ${Boost_FILESYSTEM_LIBRARY}
                                        ${Boost_SYSTEM_LIBRARY}
+                                       ${Boost_FILESYSTEM_LIBRARY}
              )
 
 install_headers()

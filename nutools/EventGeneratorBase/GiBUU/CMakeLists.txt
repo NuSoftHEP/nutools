@@ -13,9 +13,9 @@ art_make( LIB_LIBRARIES nutools_EventGeneratorBase_GENIE
                         ${LHAPDF}
                         ${GENIE_LIB_LIST}
                         ${IFDH}
-                        ${ROOT_GEOM}
-                        ${ROOT_GEOMPAINTER}
-                        ${ROOT_BASIC_LIB_LIST} )
+                        ${ROOT_Geom_LIBRARY}
+                        ${ROOT_GeomPainter_LIBRARY}
+                        ${ROOT_LIBRARIES} )
 
 install_headers()
 install_fhicl()

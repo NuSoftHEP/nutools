@@ -9,7 +9,7 @@ art_make( MODULE_LIBRARIES nusimdata_SimulationBase
 #                        art_root_io_TFileService_service
 #                        art_Framework_IO_ProductMix
 #                        art_root_io
-#                        art_root_io_tfile_support ${ROOT_CORE}
+#                        art_root_io_tfile_support ${ROOT_Core_LIBRARY}
 # end-of-list for MixGenieEvents_module
                         ${MF_MESSAGELOGGER}
                         ${MF_UTILITIES}
@@ -20,16 +20,15 @@ art_make( MODULE_LIBRARIES nusimdata_SimulationBase
                         ${PYTHIA6}
                         ${LHAPDF}
                         ${GENIE_LIB_LIST}
-                        ${CLHEP}
+                        ${CLHEP_LIBRARIES}
                         ${DK2NU_TREE}
                         ${CRY}
-                        ${ROOT_BASIC_LIB_LIST}
-                        ${ROOT_EG}
-                        ${ROOT_TREEPLAYER}
-                        ${ROOT_FFTW}
-                        ${ROOT_REFLEX}
-                        ${ROOTSYS}/lib/libEGPythia6.so
-                        ${ROOT_GUI}
+                        ${ROOT_LIBRARIES}
+                        ${ROOT_EG_LIBRARY}
+                        ${ROOT_TreePlayer_LIBRARY}
+                        ${ROOT_FFTW_LIBRARY}
+                        ${ROOT_EGPythia6_LIBRARY}
+                        ${ROOT_Gui_LIBRARY}
                         )
 
 install_headers()
