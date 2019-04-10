@@ -1,6 +1,6 @@
 # The parent line must be the first non-comment line in the file
 # This line defines the product name and version
-parent nutools  v2_27_03
+parent nutools  v2_27_04
 defaultqual     e17
 
 # These optional lines define the installed directories where
@@ -18,7 +18,7 @@ bindir      fq_dir      bin
 product         version
 art             v3_01_02
 nusimdata       v1_15_04
-dk2nugenie      v01_07_02e
+dk2nugenie      v01_07_02f
 geant4          v4_10_3_p03c
 cry             v1_7k
 ifdh_art        v2_07_03
@@ -34,8 +34,6 @@ c2:debug      c2:debug     c2:debug     c2:debug   c2:debug    c2:debug  c2:s78:
 c2:prof       c2:prof      c2:prof      c2:prof    c2:prof     c2:prof   c2:s78:prof
 e17:debug     e17:debug    e17:debug    e17:debug  e17:debug   e17:debug e17:s78:debug
 e17:prof      e17:prof     e17:prof     e17:prof   e17:prof    e17:prof  e17:s78:prof
-e15:debug     e15:debug    e15:debug    e15:debug  e15:debug   e15:debug e15:s78:debug
-e15:prof      e15:prof     e15:prof     e15:prof   e15:prof    e15:prof  e15:s78:prof
 end_qualifier_list
 
 # Preserve tabs and formatting in emacs and vi / vim:
