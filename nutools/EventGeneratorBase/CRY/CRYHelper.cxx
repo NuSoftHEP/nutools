@@ -205,7 +205,7 @@ namespace evgb{
     std::string cryVersion;
     if (auto v = std::getenv("CRY_VERSION"))
       cryVersion = v;
-    mctruth.SetGeneratorInfo(simb::Generator_t::kCRY, cryVersion);
+    mctruth.SetGeneratorInfo(simb::Generator_t::kCRY, cryVersion, {});
 
     /// \todo Check if this time slice passes selection criteria
     if (w) *w = 1.0;
