@@ -65,6 +65,7 @@ endif()
 # source
 add_subdirectory (nutools)
 add_subdirectory (tools)
+add_subdirectory (bundle)
 
 # ups - table and config files
 add_subdirectory(ups)
