@@ -47,6 +47,7 @@ build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}${py
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pyqual}:@version_set@
 
 build_cet nusimdata @NUSIMDATA_VERSION@ ${basequal}${pyqual}
+build_cet nuevdb @NUEVDB_VERSION@ ${basequal}${pyqual}
 build_cet nug4 @NUG4_VERSION@ ${basequal}${pyqual}
 build_cet nugen @NUGEN_VERSION@ ${basequal}${pyqual}
 build_cet nurandom @NURANDOM_VERSION@ ${basequal}${pyqual}
