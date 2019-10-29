@@ -47,7 +47,7 @@ create_product_variables(toyExperiment v0_04_12)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_02)
-create_product_variables(artdaq_core v3_05_06)
+create_product_variables(artdaq_core v3_05_08)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
