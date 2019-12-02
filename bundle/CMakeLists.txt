@@ -41,13 +41,17 @@ if (suite_rc_level)
 else()
   create_product_variables(art_suite ${ART_VERSION}${stack_suffix})
 endif()
+create_product_variables(art_root_io v1_01_04)
+
+# lite framework
+create_product_variables(gallery v1_13_01${suite_rc_level})
 
 # Tutorial
 create_product_variables(toyExperiment v0_04_12)
 
 create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_15_03)
-create_product_variables(artdaq_core v3_05_08)
+create_product_variables(TRACE v3_15_05)
+create_product_variables(artdaq_core v3_05_08a)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
@@ -87,12 +91,12 @@ create_product_variables(dk2nugenie v01_08_00f)
 create_product_variables(dk2nudata v01_08_00d)
 create_product_variables(ppfx v02_03)
 create_product_variables(nusimdata v1_20_00)
-create_product_variables(nuevdb v1_01_00 )
+create_product_variables(nuevdb v1_01_01 )
 create_product_variables(nug4 v1_03_00 )
 create_product_variables(nugen v1_07_00 )
-create_product_variables(nurandom v1_02_00 )
+create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_05_00)
-create_product_variables(nudist v3_05_00)
+create_product_variables(nudist v3_05_00b)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
