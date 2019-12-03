@@ -50,8 +50,7 @@ build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
 do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
-# add to manifest - pdfsets, genie_phyopt, genie_xsec
-build_noarch pdfsets @PDFSETS_VERSION@
+# add to manifest - genie_phyopt, genie_xsec
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
