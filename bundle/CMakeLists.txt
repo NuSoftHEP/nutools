@@ -72,11 +72,11 @@ create_product_variables(g4tendl v1_3)
 
 # ifdh
 create_product_variables(libwda v2_26_0)
-create_product_variables(ifdhc v2_5_1)
-create_product_variables(ifdhc_config v2_5_1)
-create_product_variables(ifbeam v2_4_0)
-create_product_variables(nucondb v2_4_0)
-create_product_variables(ifdh_art v2_09_02)
+create_product_variables(ifdhc v2_5_2)
+create_product_variables(ifdhc_config v2_5_2)
+create_product_variables(ifbeam v2_4_1)
+create_product_variables(nucondb v2_4_1)
+create_product_variables(ifdh_art v2_09_03)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
@@ -93,10 +93,10 @@ create_product_variables(ppfx v02_03)
 create_product_variables(nusimdata v1_20_00)
 create_product_variables(nuevdb v1_01_01 )
 create_product_variables(nug4 v1_03_00 )
-create_product_variables(nugen v1_07_00 )
+create_product_variables(nugen v1_07_02 )
 create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_05_00)
-create_product_variables(nudist v3_05_00b)
+create_product_variables(nudist v3_05_00c)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
