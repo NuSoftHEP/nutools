@@ -2,7 +2,7 @@
 # we supply only the bits needed to create the nu and nulite config files
 
 # define some necessary modules
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/bundle/bootstrap)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
