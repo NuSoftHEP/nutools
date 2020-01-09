@@ -5,21 +5,10 @@ basequal=${1}
 # specify version to bootstrap and setup ups
 check_ups @UPS_VERSION@
 
-build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return $?
+build_bundle canvas_product_stack-@CANVAS_DOT_VERSION@ ${basequal} || return $?
 # adding required cmake
 do_build cmake v3_11_4
-do_build cmake v3_12_1
 do_build cmake v3_13_2
-
-# check the build label here so it doesn't mess with canvas_product_stack
-[[ "${build_label}" == py3 ]] && py3qual=:${build_label}
-if [[ "${build_label}" == py3 ]]; then
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
-else
-  pyver=@PYTHON_VERSION@
-  pyqual=@PYQUAL@
-fi
 
 do_build cry @CRY_VERSION@ ${basequal}
 do_build xerces_c @XERCES_C_VERSION@ ${basequal}
@@ -40,19 +29,20 @@ build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
 do_build geant4 @GEANT4_VERSION@ ${basequal}
 
-do_build genie @GENIE_VERSION@ ${basequal}${py3qual}
-do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${py3qual}
-do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${py3qual}
+do_build genie @GENIE_VERSION@ ${basequal}
+do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}
+do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}
 
 do_build libwda @LIBWDA_VERSION@
-do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
+do_build ifdhc @IFDHC_VERSION@  ${basequal}:@PYQUAL@
 build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
-do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
-do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
+do_build ifbeam @IFBEAM_VERSION@  ${basequal}:@PYQUAL@
+do_build nucondb @NUCONDB_VERSION@  ${basequal}:@PYQUAL@
 
-# add to manifest - genie_phyopt, genie_xsec
+# add to manifest - pdfsets, genie_phyopt, genie_xsec
+build_noarch pdfsets @PDFSETS_VERSION@
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
-build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
+build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1802a00000-k250-e1000
 
 return 0
