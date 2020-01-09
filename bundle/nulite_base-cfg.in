@@ -44,5 +44,7 @@ build_noarch pdfsets @PDFSETS_VERSION@
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1802a00000-k250-e1000
+do_build hub @HUB_VERSION@
+build_noarch mrb @MRB_VERSION@
 
 return 0

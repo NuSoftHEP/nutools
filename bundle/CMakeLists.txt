@@ -10,6 +10,8 @@ set (version_set s85)
 set( cet_qualifier e17 )
 
 create_product_variables(ups v6_0_8)
+create_product_variables( mrb           v3_04_03 )
+create_product_variables( hub           v2_12_4 )
 
 create_product_variables(python v2_7_15a)
 create_product_variables(python3 v3_7_2)

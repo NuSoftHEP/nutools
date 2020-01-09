@@ -110,6 +110,7 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  ups     </td>  <td> @UPS_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetpkgsupport   </td>  <td> @CETPKGSUPPORT_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetbuildtools  </td>  <td>  @CETBUILDTOOLS_VERSION_LIST@  </td>  <td>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;  mrb          </td>  <td> @MRB_VERSION@ </td>  <td>&nbsp;</td></tr>
 </table>
 
 
