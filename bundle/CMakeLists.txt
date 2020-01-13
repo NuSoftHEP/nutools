@@ -51,7 +51,7 @@ create_product_variables(toyExperiment v0_04_12)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
-create_product_variables(artdaq_core v3_05_08a)
+create_product_variables(artdaq_core v3_05_09)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
@@ -96,7 +96,7 @@ create_product_variables(nug4 v1_03_01)
 create_product_variables(nugen v1_08_00)
 create_product_variables(nurandom v1_03_02)
 create_product_variables(nutools v3_05_01)
-create_product_variables(nudist v3_05_01a)
+create_product_variables(nudist v3_05_01b)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
