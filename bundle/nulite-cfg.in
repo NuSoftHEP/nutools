@@ -8,7 +8,7 @@ check_ups @UPS_VERSION@
 build_bundle nulite_base-@NUDIST_DOT_VERSION@ ${basequal} || return $?
 
 # check the build label here after building nulite_base
-[[ "${build_label}" == py3 ]] && pyqual=:${build_label}
+[[ "${build_label}" == py2 ]] && pyqual=:${build_label}
 
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 # cmake v3_14_3 is needed by cetbuildtools v7_13_02

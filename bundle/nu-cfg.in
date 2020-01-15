@@ -14,7 +14,7 @@ do_build pygccxml @PYGCCXML_VERSION@ @PYQUAL@
 
 # build cstxsd when appropriate
 if (( ${build_slf_extras:-0} )); then # only build for SL
- # cannot build cstxsd for e17 yet
+ # cannot build cstxsd for newer compilers 
  if [ "${basequal}" = "e14" ] || [ "${basequal}" = "e15" ] || [ "${basequal}" = "c2" ]; then
     # special build of xerces_c for cstxsd
     build_type=prof do_build xerces_c @XERCES_C_VERSION@ ${basequal}

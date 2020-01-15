@@ -6,8 +6,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
-set (version_set s93)
-set( cet_qualifier e17 )
+set (version_set s94)
+set( cet_qualifier e19 )
 
 create_product_variables(ups v6_0_8)
 
@@ -32,22 +32,22 @@ create_product_variables(cetmodules v1_04_00)
 # art_suite
 set(stack_suffix b) # Reset when no longer needed
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
-
 create_product_variables(studio v1_01_00)
-create_product_variables(canvas_root_io v1_04_01)
-create_product_variables(art v3_03_01${suite_rc_level})
+create_product_variables(canvas_root_io v1_05_00)
+create_product_variables(art v3_04_00${suite_rc_level})
+
 if (suite_rc_level)
   create_product_variables(art_suite ${ART_VERSION})
 else()
   create_product_variables(art_suite ${ART_VERSION}${stack_suffix})
 endif()
-create_product_variables(art_root_io v1_01_04)
+create_product_variables(art_root_io v1_02_00)
 
 # lite framework
-create_product_variables(gallery v1_13_01${suite_rc_level})
+create_product_variables(gallery v1_14_00${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_04_12)
+create_product_variables(toyExperiment v0_05_00)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
@@ -76,26 +76,26 @@ create_product_variables(ifdhc v2_5_2)
 create_product_variables(ifdhc_config v2_5_2)
 create_product_variables(ifbeam v2_4_1)
 create_product_variables(nucondb v2_4_1)
-create_product_variables(ifdh_art v2_09_03)
+create_product_variables(ifdh_art v2_10_01)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
 create_product_variables(pygccxml v1_9_1)
-create_product_variables(genie v3_00_06d)
+create_product_variables(genie v3_00_06e)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
 create_product_variables(lhapdf v6_2_3)
 create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00g)
-create_product_variables(dk2nudata v01_08_00e)
+create_product_variables(dk2nugenie v01_08_00h)
+create_product_variables(dk2nudata v01_08_00f)
 create_product_variables(ppfx v02_03)
 
-create_product_variables(nusimdata v1_20_01)
-create_product_variables(nuevdb v1_01_02)
-create_product_variables(nug4 v1_03_01)
-create_product_variables(nugen v1_08_00)
-create_product_variables(nurandom v1_03_02)
-create_product_variables(nutools v3_05_01)
+create_product_variables(nusimdata v1_21_00)
+create_product_variables(nuevdb v1_02_00)
+create_product_variables(nug4 v1_04_00)
+create_product_variables(nugen v1_09_00)
+create_product_variables(nurandom v1_04_00)
+create_product_variables(nutools v3_06_00)
 create_product_variables(nudist v3_05_01b)
 
 # NOvA

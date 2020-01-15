@@ -12,8 +12,8 @@ do_build cmake v3_12_1
 do_build cmake v3_13_2
 
 # check the build label here so it doesn't mess with canvas_product_stack
-[[ "${build_label}" == py3 ]] && py3qual=:${build_label}
-if [[ "${build_label}" == py3 ]]; then
+[[ "${build_label}" == py2 ]] && py2qual=:${build_label}
+if [[ "${build_label}" == py2 ]]; then
   pyver=@PYTHON3_VERSION@
   pyqual=@PY3QUAL@
 else
@@ -40,9 +40,9 @@ build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
 do_build geant4 @GEANT4_VERSION@ ${basequal}
 
-do_build genie @GENIE_VERSION@ ${basequal}${py3qual}
-do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${py3qual}
-do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${py3qual}
+do_build genie @GENIE_VERSION@ ${basequal}${py2qual}
+do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${py2qual}
+do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${py2qual}
 
 do_build libwda @LIBWDA_VERSION@
 do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
