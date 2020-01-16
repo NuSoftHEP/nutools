@@ -12,13 +12,13 @@ do_build cmake v3_12_1
 do_build cmake v3_13_2
 
 # check the build label here so it doesn't mess with canvas_product_stack
-[[ "${build_label}" == py2 ]] && py2qual=:${build_label}
 if [[ "${build_label}" == py2 ]]; then
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
-else
+  py2qual=:${build_label}
   pyver=@PYTHON_VERSION@
   pyqual=@PYQUAL@
+else
+  pyver=@PYTHON3_VERSION@
+  pyqual=@PY3QUAL@
 fi
 
 do_build cry @CRY_VERSION@ ${basequal}
