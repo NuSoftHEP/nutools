@@ -30,7 +30,8 @@ create_product_variable_list( cetbuildtools
 create_product_variables(cetmodules v1_04_00)
 
 # art_suite
-set(stack_suffix b) # Reset when no longer needed
+set(stack_suffix) # Reset when no longer needed
+create_product_variables(canvas v3_09_00${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_01_00)
 create_product_variables(canvas_root_io v1_05_00)
