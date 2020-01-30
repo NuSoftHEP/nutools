@@ -70,6 +70,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_2)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
+create_product_variables(geant4reweight v01_00_02 )
 
 # ifdh
 create_product_variables(libwda v2_26_0)
@@ -97,7 +98,7 @@ create_product_variables(nug4 v1_02_02 )
 create_product_variables(nugen v1_06_01 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_04)
-create_product_variables(nudist v3_01_04)
+create_product_variables(nudist v3_01_04a)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
@@ -112,16 +113,16 @@ create_pyqual_variables()
 
 #nu (NOvA uses nu and nulite)
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nu-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nu-cfg-${NUDIST_DOT_VERSION} @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nu-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nubase-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nubase-cfg-${NUDIST_DOT_VERSION} @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nubase-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nu.html.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nu-${NUDIST_VERSION}.html @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nu-${NULITE_VERSION}.html @ONLY )
 
 #nulite (LArSoft only uses nulite)
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nulite-cfg-${NUDIST_DOT_VERSION} @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nulite-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite_base-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nulite_base-cfg-${NUDIST_DOT_VERSION} @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nulite_base-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite.html.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nulite-${NUDIST_VERSION}.html @ONLY )
+                 ${CMAKE_CURRENT_BINARY_DIR}/nulite-${NULITE_VERSION}.html @ONLY )

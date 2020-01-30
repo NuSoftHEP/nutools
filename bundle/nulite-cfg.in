@@ -5,7 +5,7 @@ basequal=${1}
 # specify version to bootstrap and setup ups
 check_ups @UPS_VERSION@
 
-build_bundle nulite_base-@NUDIST_DOT_VERSION@ ${basequal} || return $?
+build_bundle nulite_base-@NULITE_DOT_VERSION@ ${basequal} || return $?
 
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
@@ -42,6 +42,7 @@ build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}:${version_set}
 
 build_cet nusimdata @NUSIMDATA_VERSION@ ${basequal}
 build_cet nug4 @NUG4_VERSION@ ${basequal}
+build_cet geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}:@version_set@
 build_cet nugen @NUGEN_VERSION@ ${basequal}
 build_cet nutools @NUTOOLS_VERSION@ ${basequal}
 

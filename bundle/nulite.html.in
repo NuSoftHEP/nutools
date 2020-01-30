@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>nulite @NUDIST_VERSION@</title>
+<title>nulite @NULITE_VERSION@</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
@@ -42,11 +42,11 @@
     <ul>
       <li>Download the script.</li>
       <li>chmod +x pullProducts</li>
-      <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nulite-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nulite-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nulite-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nulite-@NUDIST_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
-      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nulite-@NUDIST_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nulite-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
+      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nulite-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
@@ -77,6 +77,7 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  g4pii   </td>  <td> @G4PII_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4radiative    </td>  <td>  @G4RADIATIVE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4surface       </td>  <td> @G4SURFACE_VERSION@  </td>  <td>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;  geant4reweight </td>  <td> @GEANT4REWEIGHT_VERSION@ </td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  root    </td>  <td> @ROOT_VERSION@	</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  genie   </td>  <td> @GENIE_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  dk2nu   </td>  <td> @DK2NU_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>

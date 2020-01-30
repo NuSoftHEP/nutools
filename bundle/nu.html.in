@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>nu @NUDIST_VERSION@</title>
+<title>nu @NULITE_VERSION@</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
@@ -42,11 +42,11 @@
     <ul>
       <li>Download the script.</li>
       <li>chmod +x pullProducts</li>
-      <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nu-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nu-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nu-@NUDIST_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nu-@NUDIST_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
-      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nu-@NUDIST_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nu-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nu-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nu-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nu-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
+      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nu-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
@@ -171,7 +171,7 @@ Arguments:
 
   build-spec    debug, opt or prof.
 
-  bundle-spec   Bundle name and version, e.g., nu-@NUDIST_VERSION@ 
+  bundle-spec   Bundle name and version, e.g., nu-@NULITE_VERSION@ 
     </pre></li>
   </ul></li>
 </ul>
