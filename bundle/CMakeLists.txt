@@ -98,7 +98,7 @@ create_product_variables(nug4 v1_02_02 )
 create_product_variables(nugen v1_06_01 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_04)
-create_product_variables(nudist v3_01_04a)
+create_product_variables(nulite v3_01_04a)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
