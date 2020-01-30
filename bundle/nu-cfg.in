@@ -1,0 +1,29 @@
+# build nu distribution
+
+basequal=${1}
+
+# specify version to bootstrap and setup ups
+check_ups @UPS_VERSION@
+
+build_bundle nulite-@NULITE_DOT_VERSION@ ${basequal} || return $?
+
+if [ "${flvr}" != "Darwin64bit+15" ]; then
+  do_build castxml @CASTXML_VERSION@
+fi
+do_build pygccxml @PYGCCXML_VERSION@ @PYQUAL@
+
+# build cstxsd when appropriate
+if (( ${build_slf_extras:-0} )); then # only build for SL
+ # cannot build cstxsd for e17 yet
+ if [ "${basequal}" = "e14" ] || [ "${basequal}" = "e15" ] || [ "${basequal}" = "c2" ]; then
+   if [ "${flvr}" != "Linux64bit+2.6-2.12" ]; then
+    # special build of xerces_c for cstxsd
+    build_type=prof do_build xerces_c @XERCES_C_VERSION@ ${basequal}
+    build_type=prof do_build cstxsd @CSTXSD_VERSION@ ${basequal}
+   fi
+ fi
+fi
+
+build_cet ppfx @PPFX_VERSION@ ${basequal}
+
+return 0

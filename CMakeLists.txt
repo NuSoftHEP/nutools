@@ -331,6 +331,7 @@ endif()
 
 # source
 add_subdirectory (nutools)
+add_subdirectory (bundle)
 add_subdirectory (tools)
 add_subdirectory (test)
 
