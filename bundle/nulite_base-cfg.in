@@ -10,6 +10,7 @@ build_bundle canvas_product_stack-@CANVAS_DOT_VERSION@ ${basequal} || return $?
 do_build cmake v3_11_4
 do_build cmake v3_12_1
 do_build cmake v3_13_2
+do_build cmake v3_14_3
 
 do_build cry @CRY_VERSION@ ${basequal}
 do_build xerces_c @XERCES_C_VERSION@ ${basequal}
