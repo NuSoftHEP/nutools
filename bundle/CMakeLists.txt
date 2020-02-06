@@ -10,7 +10,7 @@ set (version_set s85)
 set( cet_qualifier e17 )
 
 create_product_variables(ups v6_0_8)
-create_product_variables( mrb           v3_04_03 )
+create_product_variables( mrb           v3_05_03 )
 create_product_variables( hub           v2_12_4 )
 
 create_product_variables(python v2_7_15a)
@@ -70,7 +70,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_2)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_00_02 )
+create_product_variables(geant4reweight v01_00_03 )
 
 # ifdh
 create_product_variables(libwda v2_26_0)
@@ -98,7 +98,7 @@ create_product_variables(nug4 v1_02_02 )
 create_product_variables(nugen v1_06_01 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_04)
-create_product_variables(nulite v3_01_04a)
+create_product_variables(nulite v3_01_04b)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
