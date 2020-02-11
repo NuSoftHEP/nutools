@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
-set (version_set s94)
+set (version_set s95)
 set( cet_qualifier e19 )
 
 create_product_variables(ups v6_0_8)
@@ -30,11 +30,11 @@ create_product_variable_list( cetbuildtools
 create_product_variables(cetmodules v1_04_00)
 
 # art_suite
-set(stack_suffix) # Reset when no longer needed
+set(stack_suffix a) # Reset when no longer needed
 create_product_variables(canvas v3_09_00${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_01_00)
-create_product_variables(canvas_root_io v1_05_00)
+create_product_variables(canvas_root_io v1_05_01)
 create_product_variables(art v3_04_00${suite_rc_level})
 
 if (suite_rc_level)
@@ -42,13 +42,13 @@ if (suite_rc_level)
 else()
   create_product_variables(art_suite ${ART_VERSION}${stack_suffix})
 endif()
-create_product_variables(art_root_io v1_02_00)
+create_product_variables(art_root_io v1_02_01)
 
 # lite framework
-create_product_variables(gallery v1_14_00${suite_rc_level})
+create_product_variables(gallery v1_14_01${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_05_00)
+create_product_variables(toyExperiment v0_05_01)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
