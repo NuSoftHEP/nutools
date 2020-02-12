@@ -25,6 +25,7 @@ create_product_variable_list( cetbuildtools
   v7_12_01
   v7_13_02
   v7_14_00
+  v7_15_01
   )
 # Required by TRACE >= v3_14_00.
 create_product_variables(cetmodules v1_04_00)
@@ -33,7 +34,7 @@ create_product_variables(cetmodules v1_04_00)
 set(stack_suffix a) # Reset when no longer needed
 create_product_variables(canvas v3_09_00${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
-create_product_variables(studio v1_01_00)
+create_product_variables(studio v1_02_00)
 create_product_variables(canvas_root_io v1_05_01)
 create_product_variables(art v3_04_00${suite_rc_level})
 
@@ -52,7 +53,7 @@ create_product_variables(toyExperiment v0_05_01)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
-create_product_variables(artdaq_core v3_05_09)
+create_product_variables(artdaq_core v3_05_11)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
@@ -83,22 +84,22 @@ create_product_variables(ifdh_art v2_10_02)
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
 create_product_variables(pygccxml v1_9_1)
-create_product_variables(genie v3_00_06e)
+create_product_variables(genie v3_00_06f)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
 create_product_variables(lhapdf v6_2_3)
 create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00h)
-create_product_variables(dk2nudata v01_08_00f)
+create_product_variables(dk2nugenie v01_08_00i)
+create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_03)
 
-create_product_variables(nusimdata v1_21_00)
-create_product_variables(nuevdb v1_02_01)
-create_product_variables(nug4 v1_04_00)
-create_product_variables(nugen v1_10_01)
-create_product_variables(nurandom v1_04_00)
-create_product_variables(nutools v3_06_00)
-create_product_variables(nulite v3_06_00b)
+create_product_variables(nusimdata v1_21_01)
+create_product_variables(nuevdb v1_02_02)
+create_product_variables(nug4 v1_04_01)
+create_product_variables(nugen v1_10_02)
+create_product_variables(nurandom v1_04_01)
+create_product_variables(nutools v3_06_01)
+create_product_variables(nulite v3_06_01)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
