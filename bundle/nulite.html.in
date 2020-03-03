@@ -44,9 +44,6 @@
       <li>chmod +x pullProducts</li>
       <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
       <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nulite-@NULITE_VERSION@ @version_set@-&lt;e17|c2&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nulite-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
-      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nulite-@NULITE_VERSION@ @version_set@-c2 &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
@@ -80,7 +77,8 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  geant4reweight </td>  <td> @GEANT4REWEIGHT_VERSION@ </td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  root    </td>  <td> @ROOT_VERSION@	</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  genie   </td>  <td> @GENIE_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  dk2nu   </td>  <td> @DK2NU_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  dk2nudata   </td>  <td> @DK2NUDATA_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  dk2nugenie   </td>  <td> @DK2NUGENIE_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  cstxsd  </td>  <td> @CSTXSD_VERSION@	  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  genie_phyopt </td>  <td> @GENIE_PHYOPT_VERSION@	</td>  <td>&nbsp;</td></tr>	
 <tr><td>&nbsp;&nbsp;  genie_xsec   </td>  <td> @GENIE_XSEC_VERSION@	</td>  <td>&nbsp;</td></tr>	
