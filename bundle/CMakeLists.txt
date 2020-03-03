@@ -90,7 +90,6 @@ create_product_variables(genie_xsec v3_00_04a)
 create_product_variables(lhapdf v5_9_1k)
 create_product_variables(pdfsets v5_9_1b)
 create_product_variables(log4cpp v1_1_3a)
-create_product_variables(dk2nu v01_07_02)
 create_product_variables(dk2nugenie v01_08_00_ub1)
 create_product_variables(dk2nudata v01_08_00)
 create_product_variables(ppfx v02_03)
@@ -108,14 +107,6 @@ create_pyqual_variables()
 
 ########################################################################
 # these files should be copied to scisoft for each release
-
-#nu (NOvA uses nu and nulite)
-CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nu-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nu-cfg-${NULITE_DOT_VERSION} @ONLY )
-CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nubase-cfg.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nubase-cfg-${NULITE_DOT_VERSION} @ONLY )
-CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nu.html.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/nu-${NULITE_VERSION}.html @ONLY )
 
 #nulite (LArSoft only uses nulite)
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite-cfg.in
