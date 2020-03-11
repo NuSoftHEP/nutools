@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
-set (version_set s95)
+set (version_set s96)
 set( cet_qualifier e19 )
 
 create_product_variables(ups v6_0_8)
