@@ -35,21 +35,21 @@ set(stack_suffix a) # Reset when no longer needed
 create_product_variables(canvas v3_09_00${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_02_00)
-create_product_variables(canvas_root_io v1_05_01)
-create_product_variables(art v3_04_00${suite_rc_level})
+create_product_variables(canvas_root_io v1_05_02)
+create_product_variables(art v3_05_00${suite_rc_level})
 
 if (suite_rc_level)
   create_product_variables(art_suite ${ART_VERSION})
 else()
   create_product_variables(art_suite ${ART_VERSION}${stack_suffix})
 endif()
-create_product_variables(art_root_io v1_02_01)
+create_product_variables(art_root_io v1_03_00)
 
 # lite framework
-create_product_variables(gallery v1_14_01${suite_rc_level})
+create_product_variables(gallery v1_14_02${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_05_01)
+create_product_variables(toyExperiment v0_05_02)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
@@ -79,7 +79,7 @@ create_product_variables(ifdhc v2_5_4)
 create_product_variables(ifdhc_config v2_5_4)
 create_product_variables(ifbeam v2_4_2)
 create_product_variables(nucondb v2_4_2)
-create_product_variables(ifdh_art v2_10_02)
+create_product_variables(ifdh_art v2_10_03)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
@@ -93,13 +93,13 @@ create_product_variables(dk2nugenie v01_08_00i)
 create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_03)
 
-create_product_variables(nusimdata v1_21_01)
-create_product_variables(nuevdb v1_02_02)
-create_product_variables(nug4 v1_04_01)
-create_product_variables(nugen v1_10_02)
-create_product_variables(nurandom v1_04_01)
-create_product_variables(nutools v3_06_01)
-create_product_variables(nulite v3_06_01a)
+create_product_variables(nusimdata v1_21_02)
+create_product_variables(nuevdb v1_02_03)
+create_product_variables(nug4 v1_04_02)
+create_product_variables(nugen v1_10_03)
+create_product_variables(nurandom v1_04_02)
+create_product_variables(nutools v3_06_02)
+create_product_variables(nulite v3_06_02)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
