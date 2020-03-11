@@ -16,15 +16,9 @@ do_build cmake v3_14_3
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
-build_cet cetlib_except @CETLIB_EXCEPT_VERSION@ ${basequal}
-build_cet hep_concurrency @HEP_CONCURRENCY_VERSION@ ${basequal}
-build_cet cetlib @CETLIB_VERSION@ ${basequal}
-build_cet -p fhicl-cpp fhiclcpp @FHICLCPP_VERSION@ ${basequal}${pyqual}
-build_cet messagefacility @MESSAGEFACILITY_VERSION@ ${basequal}${pyqual}
-build_cet canvas @CANVAS_VERSION@ ${basequal}${pyqual}
-build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pyqual}
-build_cet art @ART_VERSION@ ${basequal}${pyqual}
-build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pyqual}
+build_bundle art-@ART_SUITE_DOT_VERSION@ ${basequal} || return $?
+build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pylabelqual}
+build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pylabelqual}
 
 if [[ -z "${version_set}" ]]; then
   echo "ERROR: version set must be specified for artdaq_core"

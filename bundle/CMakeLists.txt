@@ -32,17 +32,13 @@ create_product_variables(cetmodules v1_04_00)
 
 # art_suite
 set(stack_suffix a) # Reset when no longer needed
-create_product_variables(canvas v3_09_00${suite_rc_level})
+create_product_variables(canvas v3_09_01${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_02_00)
 create_product_variables(canvas_root_io v1_05_02)
 create_product_variables(art v3_05_00${suite_rc_level})
 
-if (suite_rc_level)
-  create_product_variables(art_suite ${ART_VERSION})
-else()
-  create_product_variables(art_suite ${ART_VERSION}${stack_suffix})
-endif()
+create_product_variables(art_suite ${ART_VERSION})
 create_product_variables(art_root_io v1_03_00)
 
 # lite framework
