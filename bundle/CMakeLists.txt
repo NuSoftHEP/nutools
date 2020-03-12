@@ -31,7 +31,7 @@ create_product_variable_list( cetbuildtools
 create_product_variables(cetmodules v1_04_00)
 
 # art_suite
-set(stack_suffix a) # Reset when no longer needed
+set(stack_suffix) # Reset when no longer needed
 create_product_variables(canvas v3_09_01${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_02_00)
@@ -49,7 +49,7 @@ create_product_variables(toyExperiment v0_05_02)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_05)
-create_product_variables(artdaq_core v3_05_12)
+create_product_variables(artdaq_core v3_05_13)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
@@ -67,7 +67,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_1_1)
 create_product_variables(g4surface v1_0)
 create_product_variables(g4tendl v1_3)
-create_product_variables(geant4reweight v01_00_04 )
+create_product_variables(geant4reweight v01_00_05)
 
 # ifdh
 create_product_variables(libwda v2_27_0)

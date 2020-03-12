@@ -17,8 +17,8 @@ ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
 build_bundle art-@ART_SUITE_DOT_VERSION@ ${basequal} || return $?
-build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pylabelqual}
-build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pylabelqual}
+build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pyqual}
+build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pyqual}
 
 if [[ -z "${version_set}" ]]; then
   echo "ERROR: version set must be specified for artdaq_core"
