@@ -25,6 +25,7 @@ create_product_variable_list( cetbuildtools
   v7_12_01
   v7_13_02
   v7_14_00
+  v7_15_01
   )
 # Required by TRACE >= v3_14_00.
 create_product_variables(cetmodules v1_04_00)
@@ -70,7 +71,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_2)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_00_03 )
+create_product_variables(geant4reweight v01_00_06 )
 
 # ifdh
 create_product_variables(libwda v2_26_0)
@@ -98,7 +99,7 @@ create_product_variables(nug4 v1_02_02 )
 create_product_variables(nugen v1_06_01 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_04)
-create_product_variables(nulite v3_01_04b)
+create_product_variables(nulite v3_01_04c)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
