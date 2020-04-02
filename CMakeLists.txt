@@ -13,17 +13,12 @@
 #  make package (builds distribution tarfile)
 # ======================================================================
 
-cmake_minimum_required(VERSION 3.11)  # use cmake 3.11 or later
+cmake_minimum_required(VERSION 3.12)  # use cmake 3.12 or later
 
-project(nutools)
+project(nutools VERSION 3.06.01 LANGUAGES CXX)
 
-# cetbuildtools contains our cmake modules
-find_package(cetbuildtools REQUIRED)
-
-list(APPEND CMAKE_MODULE_PATH
-  $ENV{CANVAS_ROOT_IO_DIR}/Modules
-  $ENV{ART_DIR}/Modules)
-
+set(fcl_dir job)
+find_package(cetmodules)
 include(CetCMakeEnv)
 cet_cmake_env()
 
@@ -36,18 +31,12 @@ cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
 cet_report_compiler_flags()
 
 # these are minimum required versions, not the actual product versions
-find_ups_product( art )
-find_ups_product(art_root_io)
-find_ups_product( nusimdata )
-find_ups_product( cetlib )
-find_ups_product( cetlib_except )
-find_ups_product( cetbuildtools )
-
-message(STATUS "ROOTSYS is ${ROOTSYS}")
-
-## find_library directives
-# other dependencies
-cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH )
+find_package( ROOT REQUIRED COMPONENTS MathCore Geom GeomPainter GX11 EG EGPythia6 Gui)
+find_package( art REQUIRED)
+find_package( art_root_io REQUIRED)
+find_package( cetlib REQUIRED)
+find_package( cetlib_except REQUIRED)
+find_package( nusimdata REQUIRED )
 
 # macros
 include(ArtMake)
@@ -55,21 +44,28 @@ include(BuildPlugins)
 include(CetRootCint)
 
 # include search path
-include_directories ( $ENV{CRYHOME}/src )
+include_directories ( ${CRYHOME}/src )
 
 # included for Mac OSX using XQuartz for X11
 if(APPLE)
   include_directories ( /opt/X11/include )
 endif()
 
+
+
+## find_library directives
+# other dependencies
+cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH )
+
 # source
 add_subdirectory (nutools)
-add_subdirectory (tools)
-add_subdirectory (bundle)
-
+#add_subdirectory (tools)
+#add_subdirectory (test)
+#add_subdirectory (bundle)
+add_subdirectory(cmakeConfig)
 # ups - table and config files
-add_subdirectory(ups)
+#add_subdirectory(ups)
 
 # packaging utility
-include(UseCPack)
+#include(UseCPack)
 
