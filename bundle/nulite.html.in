@@ -72,14 +72,14 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  geant4  </td>  <td> @GEANT4_VERSION@</td>  <td>&lt;e19|c7&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4abla  </td>  <td> @G4ABLA_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4emlow </td>  <td> @G4EMLOW_VERSION@  </td>  <td>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;  g4incl </td>  <td> @G4INCL_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4neutron       </td>  <td> @G4NEUTRON_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  g4neutronxs     </td>  <td> @G4NEUTRONXS_VERSION@  </td>  <td>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;  g4particlexs     </td>  <td> @G4PARTICLEXS_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4nuclide     </td>  <td> @G4NUCLIDE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4photon        </td>  <td> @G4PHOTON_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4pii   </td>  <td> @G4PII_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4radiative    </td>  <td>  @G4RADIATIVE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4surface       </td>  <td> @G4SURFACE_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  geant4reweight </td>  <td> @GEANT4REWEIGHT_VERSION@ </td>  <td>&lt;e19|c7&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  root    </td>  <td> @ROOT_VERSION@	</td>  <td>&lt;e19|c7&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  genie   </td>  <td> @GENIE_VERSION@</td>  <td>&lt;e19|c7&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  dk2nu   </td>  <td> @DK2NU_VERSION@</td>  <td>&lt;e19|c7&gt;</td></tr>

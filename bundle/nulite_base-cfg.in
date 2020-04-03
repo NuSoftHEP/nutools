@@ -29,8 +29,9 @@ do_build log4cpp @LOG4CPP_VERSION@ ${basequal}
 # add g4 datasets before building geant4
 build_noarch g4abla       @G4ABLA_VERSION@
 build_noarch g4emlow      @G4EMLOW_VERSION@
+build_noarch g4incl @G4INCL_VERSION@
 build_noarch g4neutron    @G4NEUTRON_VERSION@
-build_noarch g4neutronxs  @G4NEUTRONXS_VERSION@
+build_noarch g4particlexs  @G4PARTICLEXS_VERSION@
 build_noarch g4nucleonxs  @G4NUCLEONXS_VERSION@
 build_noarch g4nuclide    @G4NUCLIDE_VERSION@
 build_noarch g4photon     @G4PHOTON_VERSION@
