@@ -36,7 +36,7 @@ create_product_variables(canvas v3_09_01${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_02_00)
 create_product_variables(canvas_root_io v1_05_02)
-create_product_variables(art v3_05_00${suite_rc_level})
+create_product_variables(art v3_05_01${suite_rc_level})
 
 create_product_variables(art_suite ${ART_VERSION})
 create_product_variables(art_root_io v1_03_01)
@@ -45,7 +45,7 @@ create_product_variables(art_root_io v1_03_01)
 create_product_variables(gallery v1_14_02${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_05_02)
+create_product_variables(toyExperiment v0_05_03)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_07)
@@ -68,7 +68,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_4)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_01_00)
+create_product_variables(geant4reweight v01_01_01)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
