@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
-set (version_set s96)
+set (version_set s97)
 set( cet_qualifier e19 )
 
 create_product_variables(ups v6_0_8)
@@ -36,20 +36,20 @@ create_product_variables(canvas v3_09_01${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_product_variables(studio v1_02_00)
 create_product_variables(canvas_root_io v1_05_02)
-create_product_variables(art v3_05_00${suite_rc_level})
+create_product_variables(art v3_05_01${suite_rc_level})
 
 create_product_variables(art_suite ${ART_VERSION})
-create_product_variables(art_root_io v1_03_00)
+create_product_variables(art_root_io v1_03_01)
 
 # lite framework
 create_product_variables(gallery v1_14_02${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_05_02)
+create_product_variables(toyExperiment v0_05_03)
 
 create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_15_05)
-create_product_variables(artdaq_core v3_05_13)
+create_product_variables(TRACE v3_15_07)
+create_product_variables(artdaq_core v3_05_15)
 
 # geant4
 create_product_variables(geant4 v4_10_3_p03e)
@@ -67,7 +67,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_1_1)
 create_product_variables(g4surface v1_0)
 create_product_variables(g4tendl v1_3)
-create_product_variables(geant4reweight v01_00_06)
+create_product_variables(geant4reweight v01_00_07)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
@@ -75,27 +75,27 @@ create_product_variables(ifdhc v2_5_4)
 create_product_variables(ifdhc_config v2_5_4)
 create_product_variables(ifbeam v2_4_3)
 create_product_variables(nucondb v2_4_3)
-create_product_variables(ifdh_art v2_10_04)
+create_product_variables(ifdh_art v2_10_05)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
 create_product_variables(pygccxml v1_9_1)
-create_product_variables(genie v3_00_06f)
+create_product_variables(genie v3_00_06g)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
-create_product_variables(lhapdf v6_2_3)
+create_product_variables(lhapdf v6_2_3b)
 create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00i)
+create_product_variables(dk2nugenie v01_08_00j)
 create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_03)
 
 create_product_variables(nusimdata v1_21_02)
-create_product_variables(nuevdb v1_02_04)
-create_product_variables(nug4 v1_04_02)
-create_product_variables(nugen v1_10_04)
-create_product_variables(nurandom v1_04_02)
-create_product_variables(nutools v3_06_03)
-create_product_variables(nulite v3_06_03)
+create_product_variables(nuevdb v1_02_05)
+create_product_variables(nug4 v1_04_03)
+create_product_variables(nugen v1_10_05)
+create_product_variables(nurandom v1_04_03)
+create_product_variables(nutools v3_06_04)
+create_product_variables(nulite v3_06_04)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
