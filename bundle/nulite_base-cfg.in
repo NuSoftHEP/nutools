@@ -23,7 +23,7 @@ fi
 
 do_build cry @CRY_VERSION@ ${basequal}
 do_build xerces_c @XERCES_C_VERSION@ ${basequal}
-do_build lhapdf @LHAPDF_VERSION@ ${basequal}
+do_build lhapdf @LHAPDF_VERSION@ ${basequal}:${pyqual}
 do_build log4cpp @LOG4CPP_VERSION@ ${basequal}
 
 # add g4 datasets before building geant4
