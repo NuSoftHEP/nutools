@@ -80,22 +80,27 @@ create_product_variables(ifdh_art v2_10_05)
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
 create_product_variables(pygccxml v1_9_1)
-create_product_variables(genie v3_00_06g)
+create_product_variables(genie v3_00_06h)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
-create_product_variables(lhapdf v6_2_3b)
+create_product_variables(lhapdf v6_2_3d)
 create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00j)
+create_product_variables(dk2nugenie v01_08_00k)
 create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_03)
+
+# tauola and friends
+create_product_variables(hepmc3 v3_2_1a)
+create_product_variables(pythia8 v8_3_02)
+create_product_variables(tauola v1_1_8b)
 
 create_product_variables(nusimdata v1_21_02)
 create_product_variables(nuevdb v1_02_05)
 create_product_variables(nug4 v1_04_03)
-create_product_variables(nugen v1_10_05)
+create_product_variables(nugen v1_10_06)
 create_product_variables(nurandom v1_04_03)
 
-set(nulite_suffix) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_product_variables(nutools v3_06_05)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 

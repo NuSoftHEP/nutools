@@ -11,8 +11,6 @@ build_bundle nulite_base-@NULITE_DOT_VERSION@ ${basequal} || return $?
 [[ "${build_label}" == py2 ]] && pyqual=:${build_label}
 
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
-# cmake v3_14_3 is needed by cetbuildtools v7_13_02
-do_build cmake v3_14_3
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
