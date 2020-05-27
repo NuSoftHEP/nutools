@@ -18,10 +18,10 @@ else
 fi
 
 do_build libwda @LIBWDA_VERSION@
-do_build ifdhc @IFDHC_VERSION@  ${basequal}:@PYQUAL@
+do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
 build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
-do_build ifbeam @IFBEAM_VERSION@  ${basequal}:@PYQUAL@
-do_build nucondb @NUCONDB_VERSION@  ${basequal}:@PYQUAL@
+do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
+do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
 #do_build cmake v3_14_3
 #ensure_cetbuildtools v7_13_02
