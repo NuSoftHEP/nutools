@@ -23,8 +23,6 @@ build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
 do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
-#do_build cmake v3_14_3
-#ensure_cetbuildtools v7_13_02
-build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}
+build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}${py2qual}
 
 return 0
