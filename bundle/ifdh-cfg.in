@@ -1,0 +1,30 @@
+# build basic ifdh distribution
+
+basequal=${1}
+
+# specify version to bootstrap and setup ups
+check_ups @UPS_VERSION@
+
+build_bundle art-@ART_DOT_VERSION@ ${basequal} || return $?
+
+# check the build label here
+if [[ "${build_label}" == py2 ]]; then
+  py2qual=:${build_label}
+  pyver=@PYTHON_VERSION@
+  pyqual=@PYQUAL@
+else
+  pyver=@PYTHON3_VERSION@
+  pyqual=@PY3QUAL@
+fi
+
+do_build libwda @LIBWDA_VERSION@
+do_build ifdhc @IFDHC_VERSION@  ${basequal}:@PYQUAL@
+build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
+do_build ifbeam @IFBEAM_VERSION@  ${basequal}:@PYQUAL@
+do_build nucondb @NUCONDB_VERSION@  ${basequal}:@PYQUAL@
+
+#do_build cmake v3_14_3
+#ensure_cetbuildtools v7_13_02
+build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}
+
+return 0

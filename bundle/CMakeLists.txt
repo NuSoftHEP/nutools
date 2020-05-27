@@ -71,11 +71,11 @@ create_product_variables(geant4reweight v01_02_00)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
-create_product_variables(ifdhc v2_5_4)
-create_product_variables(ifdhc_config v2_5_4)
-create_product_variables(ifbeam v2_4_3)
-create_product_variables(nucondb v2_4_3)
-create_product_variables(ifdh_art v2_10_05)
+create_product_variables(ifdhc v2_5_6)
+create_product_variables(ifdhc_config v2_5_6)
+create_product_variables(ifbeam v2_4_4)
+create_product_variables(nucondb v2_4_4)
+create_product_variables(ifdh_art v2_10_06)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
@@ -130,3 +130,7 @@ CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite_base-cfg.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite_base-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite.html.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite-${NULITE_VERSION}.html @ONLY )
+
+#ifdh
+CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/ifdh-cfg.in
+                 ${CMAKE_CURRENT_BINARY_DIR}/ifdh-cfg-${IFDH_ART_DOT_VERSION} @ONLY )
