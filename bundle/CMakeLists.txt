@@ -95,12 +95,12 @@ create_product_variables(pythia8 v8_3_02)
 create_product_variables(tauola v1_1_8b)
 
 create_product_variables(nusimdata v1_21_02)
-create_product_variables(nuevdb v1_02_05)
+create_product_variables(nuevdb v1_02_06)
 create_product_variables(nug4 v1_04_03)
 create_product_variables(nugen v1_10_07)
 create_product_variables(nurandom v1_04_03)
 
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_product_variables(nutools v3_06_05)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
