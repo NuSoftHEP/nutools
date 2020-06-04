@@ -87,7 +87,7 @@ create_product_variables(lhapdf v6_2_3d)
 create_product_variables(log4cpp v1_1_3b)
 create_product_variables(dk2nugenie v01_08_00k)
 create_product_variables(dk2nudata v01_08_00g)
-create_product_variables(ppfx v02_03)
+create_product_variables(ppfx v02_12_00)
 
 # tauola and friends
 create_product_variables(hepmc3 v3_2_1a)
@@ -100,7 +100,7 @@ create_product_variables(nug4 v1_04_03)
 create_product_variables(nugen v1_10_07)
 create_product_variables(nurandom v1_04_03)
 
-set(nulite_suffix c) # Reset when no longer needed
+set(nulite_suffix d) # Reset when no longer needed
 create_product_variables(nutools v3_06_05)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
