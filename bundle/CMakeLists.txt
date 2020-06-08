@@ -10,7 +10,7 @@ set (version_set s85)
 set( cet_qualifier e17 )
 
 create_product_variables(ups v6_0_8)
-create_product_variables( mrb           v4_00_01 )
+create_product_variables( mrb           v4_01_00 )
 create_product_variables( hub           v2_12_4 )
 
 create_product_variables(python v2_7_15a)
@@ -75,11 +75,11 @@ create_product_variables(geant4reweight v01_00_06 )
 
 # ifdh
 create_product_variables(libwda v2_28_0)
-create_product_variables(ifdhc v2_5_4)
-create_product_variables(ifdhc_config v2_5_4)
-create_product_variables(ifbeam v2_4_3)
-create_product_variables(nucondb v2_4_3)
-create_product_variables(ifdh_art v2_07_07)
+create_product_variables(ifdhc v2_5_6)
+create_product_variables(ifdhc_config v2_5_6)
+create_product_variables(ifbeam v2_4_4)
+create_product_variables(nucondb v2_4_4)
+create_product_variables(ifdh_art v2_07_08)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0i)
@@ -96,10 +96,10 @@ create_product_variables(ppfx v02_08)
 create_product_variables(nusimdata v1_16_04)
 create_product_variables(nuevdb v1_00_02 )
 create_product_variables(nug4 v1_02_02 )
-create_product_variables(nugen v1_06_03 )
+create_product_variables(nugen v1_06_04 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_06)
-create_product_variables(nulite v3_01_06)
+create_product_variables(nulite v3_01_06a)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
