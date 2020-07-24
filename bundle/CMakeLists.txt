@@ -93,10 +93,10 @@ create_product_variables(pdfsets v5_9_1b)
 create_product_variables(log4cpp v1_1_3a)
 create_product_variables(dk2nugenie v01_08_00_ub2)
 create_product_variables(dk2nudata v01_08_00)
-create_product_variables(ppfx v02_11_01)
+create_product_variables(ppfx v02_11_02)
 create_product_variables(nusimdata v1_15_05)
 create_product_variables(nutools v2_27_08)
-create_product_variables(nulite v2_27_08b)
+create_product_variables(nulite v2_27_08c)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
