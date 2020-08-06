@@ -88,7 +88,7 @@ create_product_variables(lhapdf v6_2_3d)
 create_product_variables(log4cpp v1_1_3b)
 create_product_variables(dk2nugenie v01_08_00l)
 create_product_variables(dk2nudata v01_08_00g)
-create_product_variables(ppfx v02_12_00)
+create_product_variables(ppfx v02_12_01)
 
 # tauola and friends
 create_product_variables(hepmc3 v3_2_1a)
