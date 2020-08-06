@@ -72,11 +72,11 @@ create_product_variables(geant4reweight v01_01_01)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
-create_product_variables(ifdhc v2_5_6)
-create_product_variables(ifdhc_config v2_5_6)
+create_product_variables(ifdhc v2_5_7)
+create_product_variables(ifdhc_config v2_5_10)
 create_product_variables(ifbeam v2_4_4)
 create_product_variables(nucondb v2_4_4)
-create_product_variables(ifdh_art v2_10_06)
+create_product_variables(ifdh_art v2_10_07)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
@@ -98,10 +98,10 @@ create_product_variables(tauola v1_1_8b)
 create_product_variables(nusimdata v1_21_02)
 create_product_variables(nuevdb v1_02_06)
 create_product_variables(nug4 v1_05_01)
-create_product_variables(nugen v1_10_07)
+create_product_variables(nugen v1_10_09)
 create_product_variables(nurandom v1_04_03)
 
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_product_variables(nutools v3_07_02)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
