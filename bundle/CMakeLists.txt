@@ -74,8 +74,8 @@ create_product_variables(geant4reweight v01_01_01)
 create_product_variables(libwda v2_28_0)
 create_product_variables(ifdhc v2_5_7)
 create_product_variables(ifdhc_config v2_5_10)
-create_product_variables(ifbeam v2_4_4)
-create_product_variables(nucondb v2_4_4)
+create_product_variables(ifbeam v2_4_5)
+create_product_variables(nucondb v2_4_5)
 create_product_variables(ifdh_art v2_10_07)
 
 # nu_extras
