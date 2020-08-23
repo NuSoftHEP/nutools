@@ -61,11 +61,11 @@ The following products are part of the full nu distribution:
 <tr><td colspan="3"><b>Code:</b></td></tr>
 <tr><td>&nbsp;&nbsp;  sqlite  </td>  <td> @SQLITE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  python  </td>  <td> @PYTHON_VERSION@  </td>  <td>&nbsp;</td></tr>
+<tr><td>&nbsp;&nbsp;  clhep   </td>  <td> @CLHEP_VERSION@	</td>  <td>&lt;e19|c7&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  tbb     </td>  <td> @TBB_VERSION@	</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  xerces_c        </td>  <td> @XERCES_C_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  cry     </td>  <td> @CRY_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  lhapdf  </td>  <td> @LHAPDF_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  pdfsets  </td>  <td> @PDFSETS_VERSION@</td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  log4cpp </td>  <td> @LOG4CPP_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  geant4  </td>  <td> @GEANT4_VERSION@</td>  <td>&lt;e17|c2&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4abla  </td>  <td> @G4ABLA_VERSION@  </td>  <td>&nbsp;</td></tr>
@@ -107,10 +107,7 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  ups     </td>  <td> @UPS_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetpkgsupport   </td>  <td> @CETPKGSUPPORT_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetbuildtools  </td>  <td>  @CETBUILDTOOLS_VERSION_LIST@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  mrb          </td>  <td> @MRB_VERSION@ </td>  <td>&nbsp;</td></tr>
 </table>
-
-
 
 </tr></td>
 </table>
