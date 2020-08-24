@@ -40,9 +40,6 @@ create_product_variables(art v3_05_01${suite_rc_level})
 create_product_variables(art_suite ${ART_VERSION})
 create_product_variables(art_root_io v1_03_01)
 
-# lite framework
-create_product_variables(gallery v1_08_06${suite_rc_level})
-
 # Tutorial
 create_product_variables(toyExperiment v0_05_03)
 
