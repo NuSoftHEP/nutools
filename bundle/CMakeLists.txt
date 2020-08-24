@@ -88,6 +88,10 @@ create_product_variables(log4cpp v1_1_3b)
 create_product_variables(dk2nugenie v01_08_00ea)
 create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_10_01)
+create_product_variables( protobuf      v3_11_2a )
+create_product_variables( tensorflow    v1_12_0c )
+
+# nutools
 create_product_variables(nusimdata v1_21_02)
 create_product_variables(nuevdb v1_02_05_01 )
 create_product_variables(nug4 v1_02_03 )
