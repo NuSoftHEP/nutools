@@ -94,7 +94,7 @@ create_product_variables(nug4 v1_02_03 )
 create_product_variables(nugen v1_06_05 )
 #create_product_variables(nurandom v1_03_00 )
 
-set(nulite_suffix _rc0) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_product_variables(nutools v3_08_00)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
