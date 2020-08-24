@@ -6,7 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include( bootstrapModules )
 
 # define qualifiers
-set (version_set s85)
+set (version_set s97)
 set( cet_qualifier e17 )
 
 create_product_variables(ups v6_0_8)
@@ -33,9 +33,9 @@ create_product_variables(cetmodules v1_04_00)
 #set(stack_suffix b) # Reset when no longer needed
 create_product_variables(canvas v3_09_01${suite_rc_level})
 create_product_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
-create_product_variables(studio v1_01_00)
-create_product_variables(canvas_root_io v1_01_11)
-create_product_variables(art v2_13_00${suite_rc_level})
+create_product_variables(studio v1_02_00)
+create_product_variables(canvas_root_io v1_05_02)
+create_product_variables(art v3_05_01${suite_rc_level})
 
 create_product_variables(art_suite ${ART_VERSION})
 create_product_variables(art_root_io v1_03_01)
@@ -44,11 +44,11 @@ create_product_variables(art_root_io v1_03_01)
 create_product_variables(gallery v1_08_06${suite_rc_level})
 
 # Tutorial
-create_product_variables(toyExperiment v0_03_27)
+create_product_variables(toyExperiment v0_05_03)
 
 create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_14_00)
-create_product_variables(artdaq_core v3_04_19)
+create_product_variables(TRACE v3_15_07)
+create_product_variables(artdaq_core v3_05_15)
 
 # geant4
 create_product_variables(geant4 v4_10_4_p02c)
@@ -78,7 +78,7 @@ create_product_variables(ifdh_art v2_10_07)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0i)
-create_product_variables(pygccxml v1_9_1a)
+create_product_variables(pygccxml v1_9_1b)
 create_product_variables(genie v3_00_06_p01a)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
@@ -87,7 +87,7 @@ create_product_variables(lhapdf v6_2_3d)
 create_product_variables(log4cpp v1_1_3b)
 create_product_variables(dk2nugenie v01_08_00ea)
 create_product_variables(dk2nudata v01_08_00g)
-create_product_variables(ppfx v02_08)
+create_product_variables(ppfx v02_10_01)
 create_product_variables(nusimdata v1_21_02)
 create_product_variables(nuevdb v1_02_05_01 )
 create_product_variables(nug4 v1_02_03 )
