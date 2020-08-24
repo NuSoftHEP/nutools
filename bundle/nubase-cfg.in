@@ -7,10 +7,19 @@ check_ups @UPS_VERSION@
 
 build_bundle nulite_base-@NULITE_DOT_VERSION@ ${basequal} || return $?
 
+if [[ "${build_label}" == py2 ]]; then
+  py2qual=:${build_label}
+  pyver=@PYTHON_VERSION@
+  pyqual=@PYQUAL@
+else
+  pyver=@PYTHON3_VERSION@
+  pyqual=@PY3QUAL@
+fi
+
 if [ "${flvr}" != "Darwin64bit+15" ]; then
   do_build castxml @CASTXML_VERSION@
 fi
-do_build pygccxml @PYGCCXML_VERSION@ @PYQUAL@
+do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
 
 # build cstxsd when appropriate
 if (( ${build_slf_extras:-0} )); then # only build for SL
