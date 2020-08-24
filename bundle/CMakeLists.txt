@@ -68,7 +68,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_4)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_01_01)
+create_product_variables(geant4reweight v01_03_00)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
@@ -101,7 +101,7 @@ create_product_variables(nug4 v1_05_01)
 create_product_variables(nugen v1_10_09)
 create_product_variables(nurandom v1_04_03)
 
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_product_variables(nutools v3_07_02)
 create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
