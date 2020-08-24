@@ -5,7 +5,7 @@ basequal=${1}
 # specify version to bootstrap and setup ups
 check_ups @UPS_VERSION@
 
-build_bundle nubase-@NUBASE_DOT_VERSION@ ${basequal} || return $?
+build_bundle nubase-@NULITE_DOT_VERSION@ ${basequal} || return $?
 
 build_bundle nulite-@NULITE_DOT_VERSION@ ${basequal} || return $?
 
