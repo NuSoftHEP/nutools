@@ -74,7 +74,7 @@ create_product_variables(ifdhc v2_5_7)
 create_product_variables(ifdhc_config v2_5_10)
 create_product_variables(ifbeam v2_4_5)
 create_product_variables(nucondb v2_4_5)
-create_product_variables(ifdh_art v2_07_08)
+create_product_variables(ifdh_art v2_10_07)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0i)
@@ -88,10 +88,10 @@ create_product_variables(log4cpp v1_1_3b)
 create_product_variables(dk2nugenie v01_08_00ea)
 create_product_variables(dk2nudata v01_08_00g)
 create_product_variables(ppfx v02_08)
-create_product_variables(nusimdata v1_16_04)
-create_product_variables(nuevdb v1_00_02 )
-create_product_variables(nug4 v1_02_02 )
-create_product_variables(nugen v1_06_04 )
+create_product_variables(nusimdata v1_21_02)
+create_product_variables(nuevdb v1_02_05_01 )
+create_product_variables(nug4 v1_02_03 )
+create_product_variables(nugen v1_06_05 )
 #create_product_variables(nurandom v1_03_00 )
 
 set(nulite_suffix _rc0) # Reset when no longer needed
