@@ -1,34 +1,28 @@
-# just build third party products
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build the nubase supporting distribution.
+########################################################################
 
 basequal=${1}
 
-# specify version to bootstrap and setup ups
+# Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
-build_bundle nulite_base-@NULITE_DOT_VERSION@ ${basequal} || return $?
+build_bundle @NULITE_BASE_NAME@-@NULITE_BASE_DOT_VERSION@ ${basequal} || return
 
-if [[ "${build_label}" == py2 ]]; then
-  py2qual=:${build_label}
-  pyver=@PYTHON_VERSION@
-  pyqual=@PYQUAL@
-else
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
-fi
+@INIT_PYQUAL_VARS@
 
 if [ "${flvr}" != "Darwin64bit+15" ]; then
   do_build castxml @CASTXML_VERSION@
 fi
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
 
-# build cstxsd when appropriate
 if (( ${build_slf_extras:-0} )); then # only build for SL
- # cannot build cstxsd for newer compilers
- if [ "${basequal}" = "e14" ] || [ "${basequal}" = "e15" ] || [ "${basequal}" = "c2" ]; then
-    # special build of xerces_c for cstxsd
-    build_type=prof do_build xerces_c @XERCES_C_VERSION@ ${basequal}
-    build_type=prof do_build cstxsd @CSTXSD_VERSION@ ${basequal}
- fi
+  build_bundle @CSTXSD_DIST_NAME@-@CSTXSD_DIST_DOT_VERSION@ || return
 fi
 
-return 0
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:
