@@ -1,28 +1,28 @@
-# build basic ifdh distribution
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build ifdh_art and dependencies.
+########################################################################
 
 basequal=${1}
 
-# specify version to bootstrap and setup ups
+# Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
-build_bundle art-@ART_DOT_VERSION@ ${basequal} || return $?
+build_bundle @ART_SUITE_NAME@-@ART_SUITE_DOT_VERSION@ ${basequal} || return
 
-# check the build label here
-if [[ "${build_label}" == py2 ]]; then
-  py2qual=:${build_label}
-  pyver=@PYTHON_VERSION@
-  pyqual=@PYQUAL@
-else
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
-fi
+@INIT_PYQUAL_VARS@
 
 do_build libwda @LIBWDA_VERSION@
-do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
+do_build ifdhc @IFDHC_VERSION@ ${basequal}:${pyqual}
 build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
-do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
-do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
+do_build ifbeam @IFBEAM_VERSION@ ${basequal}:${pyqual}
+do_build nucondb @NUCONDB_VERSION@ ${basequal}:${pyqual}
 
-build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}${py2qual}
+build_cet -p "ifdh-art/ifdh_art.git" \
+  ifdh_art @IFDH_ART_VERSION@ ${basequal}${pylabel}
 
-return 0
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:
