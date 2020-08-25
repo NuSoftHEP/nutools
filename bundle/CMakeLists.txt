@@ -26,6 +26,7 @@ create_product_variable_list( cetbuildtools
   v7_13_02
   v7_14_00
   v7_15_01
+  v7_17_01
   )
 # Required by TRACE >= v3_14_00.
 create_product_variables(cetmodules v1_04_00)
