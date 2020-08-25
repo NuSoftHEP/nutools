@@ -10,10 +10,10 @@ build_bundle nulite_base-@NULITE_DOT_VERSION@ ${basequal} || return $?
 # check the build label here after building nulite_base
 [[ "${build_label}" == py2 ]] && pyqual=:${build_label}
 
+do_build cmake v3_17_3
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
-do_build cmake v3_17_3
 
 build_bundle art-@ART_SUITE_DOT_VERSION@ ${basequal} || return $?
 build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pyqual}
