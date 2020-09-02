@@ -56,7 +56,7 @@ create_product_variables(TRACE v3_14_00)
 create_product_variables(artdaq_core v3_04_19)
 
 # geant4
-create_product_variables(geant4 v4_10_4_p02b)
+create_product_variables(geant4 v4_10_4_p02ba)
 create_product_variables(xerces_c v3_2_0a)
 create_product_variables(vecgeom v00_05_01)
 create_product_variables(qt v5_10_1a)
@@ -95,11 +95,11 @@ create_product_variables(dk2nudata v01_08_00a)
 create_product_variables(ppfx v02_08)
 create_product_variables(nusimdata v1_16_04)
 create_product_variables(nuevdb v1_00_02 )
-create_product_variables(nug4 v1_02_02 )
+create_product_variables(nug4 v1_02_02_01 )
 create_product_variables(nugen v1_06_04 )
 #create_product_variables(nurandom v1_03_00 )
 create_product_variables(nutools v3_01_06)
-create_product_variables(nulite v3_01_06a)
+create_product_variables(nulite v3_01_06b)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
