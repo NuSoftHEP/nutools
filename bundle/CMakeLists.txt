@@ -26,6 +26,7 @@ create_product_variable_list( cetbuildtools
   v7_13_02
   v7_14_00
   v7_15_01
+  v7_17_01
   )
 # Required by TRACE >= v3_14_00.
 create_product_variables(cetmodules v1_04_00)
@@ -48,8 +49,8 @@ create_product_variables(gallery v1_14_02${suite_rc_level})
 create_product_variables(toyExperiment v0_05_03)
 
 create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_15_07)
-create_product_variables(artdaq_core v3_05_15)
+create_product_variables(TRACE v3_15_09)
+create_product_variables(artdaq_core v3_06_01)
 
 # geant4
 create_product_variables(geant4 v4_10_6_p01)
@@ -68,35 +69,42 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_4)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_01_01)
+create_product_variables(geant4reweight v01_03_00)
 
 # ifdh
 create_product_variables(libwda v2_28_0)
-create_product_variables(ifdhc v2_5_4)
-create_product_variables(ifdhc_config v2_5_4)
-create_product_variables(ifbeam v2_4_3)
-create_product_variables(nucondb v2_4_3)
-create_product_variables(ifdh_art v2_10_05)
+create_product_variables(ifdhc v2_5_7)
+create_product_variables(ifdhc_config v2_5_10)
+create_product_variables(ifbeam v2_4_5)
+create_product_variables(nucondb v2_4_5)
+create_product_variables(ifdh_art v2_10_07)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
 create_product_variables(pygccxml v1_9_1)
-create_product_variables(genie v3_00_06g)
+create_product_variables(genie v3_00_06i)
 create_product_variables(genie_phyopt v3_00_04)
 create_product_variables(genie_xsec v3_00_04a)
-create_product_variables(lhapdf v6_2_3b)
+create_product_variables(lhapdf v6_2_3d)
 create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00j)
+create_product_variables(dk2nugenie v01_08_00l)
 create_product_variables(dk2nudata v01_08_00g)
-create_product_variables(ppfx v02_03)
+create_product_variables(ppfx v02_12_01)
+
+# tauola and friends
+create_product_variables(hepmc3 v3_2_1a)
+create_product_variables(pythia8 v8_3_02)
+create_product_variables(tauola v1_1_8b)
 
 create_product_variables(nusimdata v1_21_02)
-create_product_variables(nuevdb v1_02_05)
+create_product_variables(nuevdb v1_02_06)
 create_product_variables(nug4 v1_05_01)
-create_product_variables(nugen v1_10_05)
+create_product_variables(nugen v1_10_09)
 create_product_variables(nurandom v1_04_03)
+
+set(nulite_suffix c) # Reset when no longer needed
 create_product_variables(nutools v3_07_02)
-create_product_variables(nulite v3_07_02)
+create_product_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
@@ -124,3 +132,8 @@ CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite_base-cfg.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite_base-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite.html.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite-${NULITE_VERSION}.html @ONLY )
+
+#ifdh
+CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/ifdh-cfg.in
+                 ${CMAKE_CURRENT_BINARY_DIR}/ifdh-cfg-${IFDH_ART_DOT_VERSION} @ONLY )
+

@@ -6,10 +6,6 @@ basequal=${1}
 check_ups @UPS_VERSION@
 
 build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return $?
-# adding required cmake
-do_build cmake v3_11_4
-do_build cmake v3_12_1
-do_build cmake v3_13_2
 
 # check the build label here so it doesn't mess with canvas_product_stack
 if [[ "${build_label}" == py2 ]]; then
@@ -25,6 +21,10 @@ do_build cry @CRY_VERSION@ ${basequal}
 do_build xerces_c @XERCES_C_VERSION@ ${basequal}
 do_build lhapdf @LHAPDF_VERSION@ ${basequal}:${pyqual}
 do_build log4cpp @LOG4CPP_VERSION@ ${basequal}
+
+#do_build hepmc3 @HEPMC3_VERSION@ ${basequal}:${pyqual}
+#do_build pythia8 @PYTHIA8_VERSION@ ${basequal}:${pyqual}
+#do_build tauola @TAUOLA_VERSION@ ${basequal}:${pyqual}
 
 # add g4 datasets before building geant4
 build_noarch g4abla       @G4ABLA_VERSION@
