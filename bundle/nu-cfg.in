@@ -1,14 +1,18 @@
-# build nu distribution
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build the full Nu distribution for NOvA.
+########################################################################
 
 basequal=${1}
 
-# specify version to bootstrap and setup ups
+# Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
-build_bundle nubase-@NULITE_DOT_VERSION@ ${basequal} || return $?
+build_bundle @NUBASE_NAME@-@NUBASE_DOT_VERSION@ ${basequal}  && \
+  build_bundle @NULITE_NAME@-@NULITE_DOT_VERSION@ ${basequal} || return
 
-build_bundle nulite-@NULITE_DOT_VERSION@ ${basequal} || return $?
-
-
-
-return 0
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:

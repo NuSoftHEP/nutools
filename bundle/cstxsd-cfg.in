@@ -1,0 +1,30 @@
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build CodeSynthesis XSD and all dependencies.
+########################################################################
+
+########################################################################
+# Only need compiler if it's GCC.
+[[ "${bqual}" =~ ^e[[:digit:]]+([-:]|$) ]] && @BUILD_COMPILERS@
+########################################################################
+
+# Specify version to bootstrap and setup UPS.
+check_ups @UPS_VERSION@
+
+_build_cstxsd_dist() {
+  # Only build the CMake we need, if we can.
+  local _cmake_version_list=(@CMAKE_VERSION_LIST@)
+  local cmake_version="${_cmake_version_list[@]: -1}"
+  do_pull -f -n cmake ${cmake_version} || \
+    do_build cmake ${cmake_version}
+  do_build -m @CSTXSD_XERCES_C_NAME@ @CSTXSD_XERCES_C_VERSION@
+  do_build @CSTXSD_NAME@ @CSTXSD_VERSION@
+}
+
+_build_cstxsd_dist && unset _build_cstxsd_dist
+
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:

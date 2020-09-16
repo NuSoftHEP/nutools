@@ -1,32 +1,34 @@
-# just build third party products
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build the Nu-Lite-base supporting distribution.
+########################################################################
 
 basequal=${1}
 
-# specify version to bootstrap and setup ups
+# Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
-build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return $?
+# Canvas.
+build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return
 
-# check the build label here so it doesn't mess with canvas_product_stack
-if [[ "${build_label}" == py2 ]]; then
-  py2qual=:${build_label}
-  pyver=@PYTHON_VERSION@
-  pyqual=@PYQUAL@
-else
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
-fi
+# Handle Python.
+@INIT_PYQUAL_VARS@
 
 do_build cry @CRY_VERSION@ ${basequal}
-do_build xerces_c @XERCES_C_VERSION@ ${basequal}
+
+# LHAPDF.
 do_build lhapdf @LHAPDF_VERSION@ ${basequal}:${pyqual}
+
+# Geant4 depdendencies.
+do_build xerces_c @XERCES_C_VERSION@ ${basequal}
 do_build log4cpp @LOG4CPP_VERSION@ ${basequal}
 
 #do_build hepmc3 @HEPMC3_VERSION@ ${basequal}:${pyqual}
 #do_build pythia8 @PYTHIA8_VERSION@ ${basequal}:${pyqual}
 #do_build tauola @TAUOLA_VERSION@ ${basequal}:${pyqual}
 
-# add g4 datasets before building geant4
+# Add g4* datasets before building Geant4.
 build_noarch g4abla       @G4ABLA_VERSION@
 build_noarch g4emlow      @G4EMLOW_VERSION@
 build_noarch g4incl @G4INCL_VERSION@
@@ -41,19 +43,30 @@ build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
 do_build geant4 @GEANT4_VERSION@ ${basequal}
 
-do_build genie @GENIE_VERSION@ ${basequal}${py2qual}
-do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${py2qual}
-do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${py2qual}
+# GENIE.
+do_build genie @GENIE_VERSION@ ${basequal}${pylabel}
+do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
+do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 
+# IFDH.
 do_build libwda @LIBWDA_VERSION@
 do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
 build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
 do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
-# add to manifest - genie_phyopt, genie_xsec
+# Tensorflow.
+if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
+  do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
+fi
+
+# Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
 
-return 0
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:
