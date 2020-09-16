@@ -10,7 +10,7 @@ basequal=${1}
 check_ups @UPS_VERSION@
 
 # Canvas.
-build_bundle @CANVAS_STACK_NAME@-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return
+build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return
 
 # Handle Python.
 @INIT_PYQUAL_VARS@
