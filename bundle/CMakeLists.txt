@@ -19,7 +19,7 @@ create_version_variables(ups v6_0_8)
 
 # Handle Python version(s).
 create_version_variables(python v2_7_15a)
-create_version_variables(python3 NAME python v3_7_2)
+create_version_variables(python3 NAME python v3_8_3b)
 create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
@@ -40,23 +40,23 @@ create_version_variables(cetmodules v1_04_00)
 # art_suite
 #set(suite_rc_level _rc0)
 #set(stack_suffix b) # Reset when no longer needed
-create_version_variables(canvas v3_09_01${suite_rc_level})
+create_version_variables(canvas v3_10_02${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_05_02)
-create_version_variables(art v3_05_01)
+create_version_variables(canvas_root_io v1_06_02)
+create_version_variables(art v3_06_03)
 create_version_variables(art_suite NAME art ${ART_VERSION}${suite_rc_level})
-create_version_variables(art_root_io v1_03_01)
+create_version_variables(art_root_io v1_04_03)
 
 # lite framework
-create_product_variables(gallery v1_14_02${suite_rc_level})
+create_product_variables(gallery v1_15_02${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_05_03)
+create_version_variables(toyExperiment v0_05_07)
 
 create_product_variables(cry v1_7m)
 create_product_variables(TRACE v3_15_09)
-create_product_variables(artdaq_core v3_06_01)
+create_product_variables(artdaq_core v3_06_02)
 
 # geant4
 create_product_variables(geant4 v4_10_6_p01)
@@ -79,11 +79,11 @@ create_product_variables(geant4reweight v01_04_00)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
-create_version_variables(ifdhc v2_5_7)
+create_version_variables(ifdhc v2_5_10)
 create_version_variables(ifdhc_config v2_5_10)
-create_version_variables(ifbeam v2_4_5)
-create_version_variables(nucondb v2_4_5)
-create_version_variables(ifdh_art v2_10_07)
+create_version_variables(ifbeam v2_4_7)
+create_version_variables(nucondb v2_4_7)
+create_version_variables(ifdh_art v2_11_04)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
