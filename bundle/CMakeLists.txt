@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s97)
+set(version_set s102)
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -49,14 +49,14 @@ create_version_variables(art_suite NAME art ${ART_VERSION}${suite_rc_level})
 create_version_variables(art_root_io v1_03_01)
 
 # lite framework
-create_product_variables(gallery v1_14_02${suite_rc_level})
+create_product_variables(gallery v1_14_03${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_05_03)
+create_version_variables(toyExperiment v0_05_03a)
 
 create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_15_09)
-create_product_variables(artdaq_core v3_06_01)
+create_product_variables(TRACE v3_16_00)
+create_product_variables(artdaq_core v3_06_03)
 
 # geant4
 create_product_variables(geant4 v4_10_6_p01)
@@ -75,7 +75,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_4)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_04_00)
+create_product_variables(geant4reweight v01_04_01)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -122,7 +122,7 @@ create_product_variables(nurandom v1_04_03)
 
 create_version_variables(nutools v3_07_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix d) # Reset when no longer needed
+set(nulite_suffix e) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
