@@ -75,7 +75,7 @@ create_product_variables(g4pii v1_3)
 create_product_variables(g4radiative v5_4)
 create_product_variables(g4surface v2_1_1)
 create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_04_01)
+create_product_variables(geant4reweight v01_04_02)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
