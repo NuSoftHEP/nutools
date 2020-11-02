@@ -55,8 +55,8 @@ create_product_variables(gallery v1_15_02${suite_rc_level})
 create_version_variables(toyExperiment v0_05_07)
 
 create_product_variables(cry v1_7n)
-create_product_variables(TRACE v3_15_09)
-create_product_variables(artdaq_core v3_06_02)
+create_product_variables(TRACE v3_16_00)
+create_product_variables(artdaq_core v3_06_03)
 
 # geant4
 create_product_variables(geant4 v4_10_6_p01c)
