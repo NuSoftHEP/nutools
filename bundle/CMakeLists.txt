@@ -96,7 +96,7 @@ create_product_variables(log4cpp v1_1_3c)
 create_product_variables(dk2nudata v01_08_00h)
 create_product_variables(dk2nugenie v01_08_00m)
 create_product_variables(ppfx v02_12_01)
-create_version_variables(protobuf v3_11_2a)
+create_version_variables(protobuf v3_12_3)
 create_version_variables(tensorflow v1_12_0c)
 create_product_variables(pygccxml v1_9_1)
 create_version_variables(pygccxml v1_9_1b)
@@ -120,9 +120,9 @@ create_product_variables(nug4 v1_05_01)
 create_product_variables(nugen v1_10_09)
 create_product_variables(nurandom v1_04_03)
 
-create_version_variables(nutools v3_07_02)
+create_version_variables(nutools v3_09_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix d) # Reset when no longer needed
+set(nulite_suffix _rc0) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
