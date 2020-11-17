@@ -7,12 +7,10 @@
 basequal=${1}
 
 # Make sure the label is what we expect (BLAS specification)
+# Note that the default is openBLAS and requires no build label
 case ${build_label} in
-  lapack|LAPACK) build_label=lapack; pyver=v3_7_2; sver=v3_26_00_00;;
-  open|OpenBLAS|openblas)
-    build_label=open; pyver=v3_8_3b; sver=v3_32_03_00;;
-  *) echo "FATAL ERROR: unrecognized build label ${build_label}" 1>&2
-    return 1
+  lapack|LAPACK) blas_type=lapack; build_label=lapack; pyver=v3_7_2; sver=v3_26_00_00;;
+  *) blas_type=open; pyver=v3_8_3b; sver=v3_32_03_00;;
 esac
 
 # Specify version to bootstrap and setup UPS.
@@ -29,7 +27,7 @@ CMAKE_VERSION="${cmakes[@]: -1}"
 do_build -m sqlite ${sver}
 do_build -m python ${pyver}
 
-case $build_label in
+case $blas_type in
   lapack) # Special build compatible with older distributions.
     do_build lapack v3_8_0c ${basequal}
     do_build protobuf v3_11_2a ${basequal}
@@ -45,7 +43,7 @@ case $build_label in
     do_build -m fftw @FFTW_VERSION@ ${basequal}
     ;;
   *)
-    echo "INTERNAL ERROR: unable to account for recognized build label ${build_label}" 1>&2  
+    echo "INTERNAL ERROR: unable to account for recognized build label ${blas_type}" 1>&2  
 esac
 ##################
 
@@ -54,7 +52,7 @@ do_build -m gmp @GMP_VERSION@
 do_build -m mpfr @MPFR_VERSION@
 
 # Build libtorch.
-do_build libtorch @LIBTORCH_VERSION@ ${basequal}:${build_label}
+do_build libtorch @LIBTORCH_VERSION@ ${basequal}${build_label:+\:${build_label}}
 
 # Local Variables:
 # mode: sh
