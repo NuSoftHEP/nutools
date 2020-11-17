@@ -22,7 +22,6 @@ cry             v1_7m
 cetbuildtools   v7_15_01        -        only_for_build
 end_product_list
 
-
 # -nq- here means there is no qualifier
 # a - here means the dependent product is not required by the parent and will not be setup
 qualifier     nusimdata     art_root_io   cry       notes

@@ -101,17 +101,23 @@ create_version_variables(tensorflow v1_12_0c)
 create_product_variables(pygccxml v1_9_1)
 create_version_variables(pygccxml v1_9_1b)
 
+create_version_variables(openblas v0_3_10a)
+# create_version_variables(numpy v1_19_0b)
+create_version_variables(pybind11 v2_5_0a)
+create_version_variables(protobuf v3_12_3)
+create_version_variables(eigen v3_3_5)
+create_version_variables(fftw v3_3_8a)
+create_version_variables(gmp v6_2_0)
+create_version_variables(mpfr v4_1_0)
+create_version_variables(libtorch v1_6_0)
+create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
+
 # CodeSynthesis XSD for NoVA.
 #
 # Special build-time-only xerces_c required for cstxsd.
 create_version_variables(cstxsd_xerces_c NAME xerces_c v3_2_3a)
 create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
-
-# tauola and friends
-create_product_variables(hepmc3 v3_2_1a)
-create_product_variables(pythia8 v8_3_02)
-create_product_variables(tauola v1_1_8b)
 
 # nutools
 create_product_variables(nusimdata v1_21_02)
@@ -153,3 +159,6 @@ distribution(nulite WITH_HTML)
 
 # ifdh.
 distribution(ifdh)
+
+# libtorch.
+distribution(libtorch_dist)
