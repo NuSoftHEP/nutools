@@ -18,8 +18,7 @@ create_version_variables(cetpkgsupport v1_14_01)
 create_version_variables(ups v6_0_8)
 
 # Handle Python version(s).
-create_version_variables(python v2_7_15a)
-create_version_variables(python3 NAME python v3_7_2)
+create_version_variables(python3 NAME python v3_8_3b)
 create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
@@ -80,6 +79,7 @@ create_version_variables(ifdhc_config v2_5_10)
 create_version_variables(ifbeam v2_4_5)
 create_version_variables(nucondb v2_4_5)
 create_version_variables(ifdh_art v2_10_07)
+
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -94,6 +94,17 @@ create_version_variables(ppfx v02_10_01)
 create_version_variables(protobuf v3_11_2a)
 create_version_variables(tensorflow v1_12_0c)
 create_version_variables(pygccxml v1_9_1b)
+
+create_version_variables(openblas v0_3_10a)
+# create_version_variables(numpy v1_19_0b)
+create_version_variables(pybind11 v2_5_0a)
+create_version_variables(protobuf v3_12_3)
+create_version_variables(eigen v3_3_5)
+create_version_variables(fftw v3_3_8a)
+create_version_variables(gmp v6_2_0)
+create_version_variables(mpfr v4_1_0)
+create_version_variables(libtorch v1_6_0)
+create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 
 # CodeSynthesis XSD for NoVA.
 #
@@ -143,3 +154,6 @@ distribution(nulite WITH_HTML)
 
 # ifdh.
 distribution(ifdh)
+
+# libtorch.
+distribution(libtorch_dist)
