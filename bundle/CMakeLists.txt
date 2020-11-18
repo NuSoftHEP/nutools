@@ -6,6 +6,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(nutools_bundles NONE)
 
+# temporary policy
+cmake_policy(SET CMP0053 OLD)
+
 # Define some necessary modules.
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
@@ -49,33 +52,33 @@ create_version_variables(art_suite NAME art ${ART_VERSION}${suite_rc_level})
 create_version_variables(art_root_io v1_03_01)
 
 # lite framework
-create_product_variables(gallery v1_14_03${suite_rc_level})
+create_version_variables(gallery v1_14_03${suite_rc_level})
 
 # Tutorial
 create_version_variables(toyExperiment v0_05_03a)
 
-create_product_variables(cry v1_7m)
-create_product_variables(TRACE v3_16_00)
-create_product_variables(artdaq_core v3_06_03)
+create_version_variables(cry v1_7m)
+create_version_variables(TRACE v3_16_00)
+create_version_variables(artdaq_core v3_06_03)
 
 # geant4
-create_product_variables(geant4 v4_10_6_p01)
-create_product_variables(xerces_c v3_2_2)
-create_product_variables(vecgeom v01_01_05)
-create_product_variables(qt v5_12_3)
-create_product_variables(g4abla v3_1)
-create_product_variables(g4emlow v7_9_1)
-create_product_variables(g4incl v1_0)
-create_product_variables(g4neutron v4_6)
-create_product_variables(g4nucleonxs v2_0)
-create_product_variables(g4nuclide v2_2)
-create_product_variables(g4particlexs v2_1)
-create_product_variables(g4photon v5_5)
-create_product_variables(g4pii v1_3)
-create_product_variables(g4radiative v5_4)
-create_product_variables(g4surface v2_1_1)
-create_product_variables(g4tendl v1_3_2)
-create_product_variables(geant4reweight v01_04_02)
+create_version_variables(geant4 v4_10_6_p01)
+create_version_variables(xerces_c v3_2_2)
+create_version_variables(vecgeom v01_01_05)
+create_version_variables(qt v5_12_3)
+create_version_variables(g4abla v3_1)
+create_version_variables(g4emlow v7_9_1)
+create_version_variables(g4incl v1_0)
+create_version_variables(g4neutron v4_6)
+create_version_variables(g4nucleonxs v2_0)
+create_version_variables(g4nuclide v2_2)
+create_version_variables(g4particlexs v2_1)
+create_version_variables(g4photon v5_5)
+create_version_variables(g4pii v1_3)
+create_version_variables(g4radiative v5_4)
+create_version_variables(g4surface v2_1_1)
+create_version_variables(g4tendl v1_3_2)
+create_version_variables(geant4reweight v01_06_00)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -88,17 +91,17 @@ create_version_variables(ifdh_art v2_10_07)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_product_variables(genie v3_00_06i)
-create_product_variables(genie_phyopt v3_00_04)
-create_product_variables(genie_xsec v3_00_04a)
-create_product_variables(lhapdf v6_2_3d)
-create_product_variables(log4cpp v1_1_3b)
-create_product_variables(dk2nugenie v01_08_00l)
-create_product_variables(dk2nudata v01_08_00g)
-create_product_variables(ppfx v02_12_01)
+create_version_variables(genie v3_00_06i)
+create_version_variables(genie_phyopt v3_00_04)
+create_version_variables(genie_xsec v3_00_04a)
+create_version_variables(lhapdf v6_2_3d)
+create_version_variables(log4cpp v1_1_3b)
+create_version_variables(dk2nugenie v01_08_00l)
+create_version_variables(dk2nudata v01_08_00g)
+create_version_variables(ppfx v02_12_01)
 create_version_variables(protobuf v3_11_2a)
 create_version_variables(tensorflow v1_12_0c)
-create_product_variables(pygccxml v1_9_1)
+create_version_variables(pygccxml v1_9_1)
 create_version_variables(pygccxml v1_9_1b)
 
 # CodeSynthesis XSD for NoVA.
@@ -109,20 +112,20 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # tauola and friends
-create_product_variables(hepmc3 v3_2_1a)
-create_product_variables(pythia8 v8_3_02)
-create_product_variables(tauola v1_1_8b)
+create_version_variables(hepmc3 v3_2_1a)
+create_version_variables(pythia8 v8_3_02)
+create_version_variables(tauola v1_1_8b)
 
 # nutools
-create_product_variables(nusimdata v1_21_03)
-create_product_variables(nuevdb v1_02_07)
-create_product_variables(nug4 v1_05_02)
-create_product_variables(nugen v1_10_10)
-create_product_variables(nurandom v1_04_03)
+create_version_variables(nusimdata v1_21_03)
+create_version_variables(nuevdb v1_02_07)
+create_version_variables(nug4 v1_05_02)
+create_version_variables(nugen v1_10_10)
+create_version_variables(nurandom v1_04_03)
 
-create_product_variables(nutools v3_07_03)
+create_version_variables(nutools v3_07_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
