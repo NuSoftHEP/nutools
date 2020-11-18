@@ -42,8 +42,8 @@
     <ul>
       <li>Download the script.</li>
       <li>chmod +x pullProducts</li>
-      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nu-@NULITE_VERSION@ @version_set@-&lt;e19|c7&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 18: <pre>./pullProducts &lt;product-directory&gt; u18 nu-@NULITE_VERSION@ @version_set@-&lt;e19|c7&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nulite-@NULITE_VERSION@ @version_set@-&lt;e19|c7&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Ubuntu LTS 18: <pre>./pullProducts &lt;product-directory&gt; u18 nulite-@NULITE_VERSION@ @version_set@-&lt;e19|c7&gt; &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
