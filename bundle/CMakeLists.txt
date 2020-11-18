@@ -3,7 +3,7 @@
 # distributions.
 ########################################################################
 
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 project(nutools_bundles NONE)
 
 # Define some necessary modules.

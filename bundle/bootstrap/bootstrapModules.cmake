@@ -66,6 +66,9 @@
 #   @VAR@ notation.
 #
 ########################################################################
+cmake_policy(PUSH)
+cmake_minimum_required(VERSION 2.8...3.18 FATAL_ERROR)
+
 include(CMakeParseArguments)
 
 function(create_version_variables VAR_STEM)
@@ -84,18 +87,17 @@ function(create_version_variables VAR_STEM)
   else()
     set(list_suffix)
   endif()
-  list(JOIN CVV_UNPARSED_ARGUMENTS " " versions)
-  set(${VAR_STEM_UC}_VERSION${list_suffix}
-    ${versions} PARENT_SCOPE)
+  string(REPLACE ";" " " versions "${CVV_UNPARSED_ARGUMENTS}")
+  set(${VAR_STEM_UC}_VERSION${list_suffix} "${versions}" PARENT_SCOPE)
   set(dot_versions)
   foreach(VERSION ${CVV_UNPARSED_ARGUMENTS})
-    string(REGEX REPLACE "_" "." VDOT "${VERSION}")
-    string(REGEX REPLACE "^[v]" "" VDOT "${VDOT}")
+    string(REPLACE "_" "." VDOT "${VERSION}")
+    string(REGEX REPLACE "^v" "" VDOT "${VDOT}")
     list(APPEND dot_versions ${VDOT})
   endforeach()
-  list(JOIN dot_versions " " dot_versions)
+  string(REPLACE ";" " " dot_versions "${CVV_UNPARSED_ARGUMENTS}")
   set(${VAR_STEM_UC}_DOT_VERSION${list_suffix}
-    ${dot_versions} PARENT_SCOPE)
+    "${dot_versions}" PARENT_SCOPE)
   if (NOT CVV_NAME)
     set(CVV_NAME "${VAR_STEM}")
   endif()
@@ -164,30 +166,33 @@ ${_CHECK_OS_PYTHON3_SUPPORT}
 if [[ \${build_label} =~ (^|[-:])py2([-:]|\$) ]]; then")
   if (PY2QUAL AND PY3QUAL)
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
-  pyver=@PYTHON_VERSION@
-  pyqual=@PY2QUAL@
+  pyver=${PYTHON_VERSION}
+  pyqual=${PY2QUAL}
   pylabel=:py2
 else
-  pyver=@PYTHON3_VERSION@
-  pyqual=@PY3QUAL@
+  pyver=${PYTHON3_VERSION}
+  pyqual=${PY3QUAL}
   unset pylabel
-fi")
+fi\
+")
   else()
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
   echo \"Unsupported build label for this distribution.\" 1>&2
   return 1
 fi
 
-pyver=@PYTHON_VERSION@
-pyqual=@PYQUAL@
-unset pylabel")
+pyver=${PYTHON_VERSION}
+pyqual=${PYQUAL}
+unset pylabel\
+")
   endif()
   if (PY3QUAL OR NOT 3.0.0 VERSION_GREATER PYTHON_DOT_VERSION)
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
 
 if [[ \"\${pyqual}\" == p3* ]]; then
   check_os_python3_support
-fi")
+fi\
+")
   endif()
   set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
 ########################################################################")
@@ -199,7 +204,8 @@ v\$(print_version | sed -e 's&^.*[ \\t]\\{1,\\}&&' -e 's&\\.&_&g' ); then
   return 1
 else
 ${_BUILD_COMPILERS_DETAIL}
-fi" PARENT_SCOPE)
+fi\
+" PARENT_SCOPE)
 endfunction()
 
 function(distribution VAR_STEM)
@@ -236,8 +242,8 @@ endfunction()
 #########################################################################
 
 function(_create_pyqual VERSION_IN VAR)
-  string(REGEX REPLACE "_" "" pyqual "${VERSION_IN}")
-  string(REGEX REPLACE "^[v]" "p" pyqual "${pyqual}")
+  string(REPLACE "_" "" pyqual "${VERSION_IN}")
+  string(REGEX REPLACE "^v" "p" pyqual "${pyqual}")
   set(${VAR} ${pyqual} PARENT_SCOPE)
 endfunction()
 
@@ -260,15 +266,17 @@ export CET_BUILD_UNSUPPORTED=1 to override.\"
       exit 0
     fi
   fi
-}")
+}\
+")
 
-set(_CHECK_BASE_DETAIL
-  "if [ \"\${bundle_name}\" = \"build_base\" ]; then
+  set(_CHECK_BASE_DETAIL
+    "if [ \"\${bundle_name}\" = \"build_base\" ]; then
     bf_build_base=1
-  fi")
+  fi\
+")
 
-set(_BUILD_COMPILERS_DETAIL
-  "  function bf_handle_cmake() {
+  set(_BUILD_COMPILERS_DETAIL
+    "  function bf_handle_cmake() {
     local cv
     if [ -n \"\${CMAKE_VERSION}\" ]; then
       do_pull -f -n cmake \"\${CMAKE_VERSION}\" || \\
@@ -293,7 +301,8 @@ set(_BUILD_COMPILERS_DETAIL
   }
   ${_CHECK_BASE_DETAIL}
   bf_build_compilers && \\
-    unset bf_build_base bf_build_compilers bf_handle_cmake")
+    unset bf_build_base bf_build_compilers bf_handle_cmake\
+")
 endmacro()
 
 function(_verify_before_init_shell_fragment_vars PREAMBLE)
@@ -309,3 +318,5 @@ function(_verify_after_init_shell_fragment_vars PREAMBLE)
       "called too late")
   endif()
 endfunction()
+
+cmake_policy(POP)
