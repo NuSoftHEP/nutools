@@ -25,7 +25,9 @@ create_pyqual_variables()
 # CMake and cetbuildtools are special: define as many versions as
 # necessary.
 create_version_variables(cmake LIST v3_17_3)
-create_version_variables(cetbuildtools LIST
+create_version_variables(cetbuildtools
+  LIST
+  v7_17_01
   v7_11_00
   v7_12_01
   v7_13_02
