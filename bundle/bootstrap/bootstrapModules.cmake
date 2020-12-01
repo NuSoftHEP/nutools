@@ -95,7 +95,7 @@ function(create_version_variables VAR_STEM)
     string(REGEX REPLACE "^v" "" VDOT "${VDOT}")
     list(APPEND dot_versions ${VDOT})
   endforeach()
-  string(REPLACE ";" " " dot_versions "${CVV_UNPARSED_ARGUMENTS}")
+  string(REPLACE ";" " " dot_versions "${dot_versions}")
   set(${VAR_STEM_UC}_DOT_VERSION${list_suffix}
     "${dot_versions}" PARENT_SCOPE)
   if (NOT CVV_NAME)
