@@ -42,11 +42,8 @@
     <ul>
       <li>Download the script.</li>
       <li>chmod +x pullProducts</li>
-      <li>Scientific Linux 6.x: <pre>./pullProducts &lt;product-directory&gt; slf6 nu-@NULITE_VERSION@ @version_set@-&lt;e15|e19|c7&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nu-@NULITE_VERSION@ @version_set@-&lt;e15|e19|c7&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 16: <pre>./pullProducts &lt;product-directory&gt; u16 nu-@NULITE_VERSION@ @version_set@-&lt;e15|e19|c7&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Mojave (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d18 nu-@NULITE_VERSION@ @version_set@-c7 &lt;prof|debug&gt;</pre></li>
-      <li>High Sierra (SIP disabled): <pre>./pullProducts &lt;product-directory&gt; d17 nu-@NULITE_VERSION@ @version_set@-c7 &lt;prof|debug&gt;</pre></li>
+      <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nu-@NULITE_VERSION@ @version_set@-&lt;@supported_quals_string@&gt; &lt;prof|debug&gt;</pre></li>
+      <li>Ubuntu LTS 18: <pre>./pullProducts &lt;product-directory&gt; u18 nu-@NULITE_VERSION@ @version_set@-&lt;@supported_quals_string@&gt; &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
@@ -60,17 +57,17 @@ The following products are part of the full nu distribution:
 </td></tr>
 <tr><td colspan="3"><b>Code:</b></td></tr>
 <tr><td>&nbsp;&nbsp;  gcc     </td>  <td> @GCC_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  clhep   </td>  <td> @CLHEP_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  cppunit </td>  <td> @CPPUNIT_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  clhep   </td>  <td> @CLHEP_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  cppunit </td>  <td> @CPPUNIT_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  sqlite  </td>  <td> @SQLITE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  python  </td>  <td> @PYTHON_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  tbb     </td>  <td> @TBB_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  xerces_c        </td>  <td> @XERCES_C_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  cry     </td>  <td> @CRY_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  lhapdf  </td>  <td> @LHAPDF_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  tbb     </td>  <td> @TBB_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  xerces_c        </td>  <td> @XERCES_C_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  cry     </td>  <td> @CRY_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  lhapdf  </td>  <td> @LHAPDF_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  pdfsets  </td>  <td> @PDFSETS_VERSION@</td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  log4cpp </td>  <td> @LOG4CPP_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  geant4  </td>  <td> @GEANT4_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  log4cpp </td>  <td> @LOG4CPP_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  geant4  </td>  <td> @GEANT4_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4abla  </td>  <td> @G4ABLA_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4emlow </td>  <td> @G4EMLOW_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4incl </td>  <td> @G4INCL_VERSION@  </td>  <td>&nbsp;</td></tr>
@@ -81,34 +78,34 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  g4pii   </td>  <td> @G4PII_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4radiative    </td>  <td>  @G4RADIATIVE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  g4surface       </td>  <td> @G4SURFACE_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  root    </td>  <td> @ROOT_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  genie   </td>  <td> @GENIE_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  dk2nu   </td>  <td> @DK2NU_VERSION@</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  root    </td>  <td> @ROOT_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  genie   </td>  <td> @GENIE_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  dk2nu   </td>  <td> @DK2NU_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  cstxsd  </td>  <td> @CSTXSD_VERSION@	  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  genie_phyopt </td>  <td> @GENIE_PHYOPT_VERSION@	</td>  <td>&nbsp;</td></tr>	
 <tr><td>&nbsp;&nbsp;  genie_xsec   </td>  <td> @GENIE_XSEC_VERSION@	</td>  <td>&nbsp;</td></tr>	
 <tr><td>&nbsp;&nbsp;  libwda       </td>  <td> @LIBWDA_VERSION@	  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  ifdhc        </td>  <td> @IFDHC_VERSION@		</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  ifbeam       </td>  <td> @IFBEAM_VERSION@		</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  nucondb      </td>  <td> @NUCONDB_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  caffe        </td>  <td> @CAFFE_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  ppfx         </td>  <td> @PPFX_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  ifdhc        </td>  <td> @IFDHC_VERSION@		</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  ifbeam       </td>  <td> @IFBEAM_VERSION@		</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nucondb      </td>  <td> @NUCONDB_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  caffe        </td>  <td> @CAFFE_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  ppfx         </td>  <td> @PPFX_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  pygccxml     </td>  <td> @PYGCCXML_VERSION@	</td>  <td>@PYQUAL@</td></tr>
-<tr><td>&nbsp;&nbsp;  ifdh_art     </td>  <td> @IFDH_ART_VERSION@	</td>  <td>e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  cetlib_except  </td>  <td> @CETLIB_EXCEPT_VERSION@  </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  cetlib  </td>  <td> @CETLIB_VERSION@  </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  fhiclcpp        </td>  <td> @FHICLCPP_VERSION@  </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  hep_concurrency </td>  <td> @HEP_CONCURRENCY_VERSION@  </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  messagefacility </td>  <td> @MESSAGEFACILITY_VERSION@  </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  canvas     </td>  <td> @CANVAS_VERSION@ </td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  canvas_root_io </td>  <td> @CANVAS_ROOT_IO_VERSION@ </td>  <td>nu:&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  art     </td>  <td> @ART_VERSION@ </td>  <td>nu:&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  artdaq_core   </td>  <td> @ARTDAQ_CORE_VERSION@ </td>  <td>&lt;e15|e19|c7&gt;:@version_set@</td></tr>
-<tr><td>&nbsp;&nbsp;  nusimdata      </td>  <td> @NUSIMDATA_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  nutools      </td>  <td> @NUTOOLS_VERSION@	</td>  <td>&lt;e15|e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  nuevdb      </td>  <td> @NUEVDB_VERSION@	</td>  <td>&lt;e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  nug4      </td>  <td> @NUG4_VERSION@	</td>  <td>&lt;e19|c7&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  nugen      </td>  <td> @NUGEN_VERSION@	</td>  <td>&lt;e19|c7&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  ifdh_art     </td>  <td> @IFDH_ART_VERSION@	</td>  <td>@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  cetlib_except  </td>  <td> @CETLIB_EXCEPT_VERSION@  </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  cetlib  </td>  <td> @CETLIB_VERSION@  </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  fhiclcpp        </td>  <td> @FHICLCPP_VERSION@  </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  hep_concurrency </td>  <td> @HEP_CONCURRENCY_VERSION@  </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  messagefacility </td>  <td> @MESSAGEFACILITY_VERSION@  </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  canvas     </td>  <td> @CANVAS_VERSION@ </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  canvas_root_io </td>  <td> @CANVAS_ROOT_IO_VERSION@ </td>  <td>nu:&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  art     </td>  <td> @ART_VERSION@ </td>  <td>nu:&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  artdaq_core   </td>  <td> @ARTDAQ_CORE_VERSION@ </td>  <td>&lt;@supported_quals_string@&gt;:@version_set@</td></tr>
+<tr><td>&nbsp;&nbsp;  nusimdata      </td>  <td> @NUSIMDATA_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nutools      </td>  <td> @NUTOOLS_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nuevdb      </td>  <td> @NUEVDB_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nug4      </td>  <td> @NUG4_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nugen      </td>  <td> @NUGEN_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td colspan="3"><b>Utilities:</b></td></tr>
 <tr><td>&nbsp;&nbsp;  ups     </td>  <td> @UPS_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetpkgsupport   </td>  <td> @CETPKGSUPPORT_VERSION@  </td>  <td>&nbsp;</td></tr>

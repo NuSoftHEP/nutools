@@ -13,10 +13,14 @@ build_bundle @NULITE_BASE_NAME@-@NULITE_BASE_DOT_VERSION@ ${basequal} || return
 
 @INIT_PYQUAL_VARS@
 
-do_build cmake v3_17_3
+for cv in @CMAKE_VERSION_LIST@; do
+  do_build cmake ${cv}
+done
+
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
+ensure_support_package -f NULL -- cetmodules @CETMODULES_VERSION@
 
 build_bundle @ART_SUITE_NAME@-@ART_SUITE_DOT_VERSION@ ${basequal} || return
 build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pylabel}
@@ -34,7 +38,7 @@ if (( $(print_version | cut -d' ' -f 2 | cut -d. -f1) < 4)); then
   echo "ERROR: TRACE >= v3_14_00 needs buildFW >= 4.00.00" 1>&2
   return 1
 fi
-build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES_VERSION@
+build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
 
 build_cet -p trace-git TRACE @TRACE_VERSION@ -nq-
 

@@ -13,16 +13,12 @@
 #  make package (builds distribution tarfile)
 # ======================================================================
 
-cmake_minimum_required(VERSION 3.11)  # use cmake 3.11 or later
+cmake_minimum_required(VERSION 3.12...3.18 FATAL_ERROR)
 
-project(nutools)
+project(nutools LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
 find_package(cetbuildtools REQUIRED)
-
-list(APPEND CMAKE_MODULE_PATH
-  $ENV{CANVAS_ROOT_IO_DIR}/Modules
-  $ENV{ART_DIR}/Modules)
 
 include(CetCMakeEnv)
 cet_cmake_env()
@@ -37,7 +33,8 @@ cet_report_compiler_flags()
 
 # these are minimum required versions, not the actual product versions
 find_ups_product( art )
-find_ups_product(art_root_io)
+find_ups_product( art_root_io )
+find_ups_product( canvas_root_io )
 find_ups_product( nusimdata )
 find_ups_product( cetlib )
 find_ups_product( cetlib_except )
