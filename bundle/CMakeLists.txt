@@ -131,7 +131,7 @@ create_version_variables(nurandom v1_05_00)
 
 create_version_variables(nutools v3_09_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix _rc0) # Reset when no longer needed
+set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
