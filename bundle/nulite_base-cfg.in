@@ -51,10 +51,17 @@ build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
 do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
+# pygccxml and castxml
+if [ "${flvr}" != "Darwin64bit+15" ]; then
+  do_build castxml @CASTXML_VERSION@
+fi
+do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
+
 # Tensorflow.
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
-  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
+# temporarily unable to build
+#  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
 fi
 
 # Data-only packages.

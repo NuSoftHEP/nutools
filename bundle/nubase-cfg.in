@@ -13,11 +13,6 @@ build_bundle @NULITE_BASE_NAME@-@NULITE_BASE_DOT_VERSION@ ${basequal} || return
 
 @INIT_PYQUAL_VARS@
 
-if [ "${flvr}" != "Darwin64bit+15" ]; then
-  do_build castxml @CASTXML_VERSION@
-fi
-do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
-
 if (( ${build_slf_extras:-0} )); then # only build for SL
   build_bundle @CSTXSD_DIST_NAME@-@CSTXSD_DIST_DOT_VERSION@ || return
 fi
