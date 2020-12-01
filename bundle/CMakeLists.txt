@@ -11,7 +11,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s97)
+set(version_set s101)
+# for use in html
+set( supported_quals_string "e19|e20|c7")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -24,10 +26,9 @@ create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
 # necessary.
-create_version_variables(cmake LIST v3_17_3)
+create_version_variables(cmake LIST v3_17_3 v3_18_2)
 create_version_variables(cetbuildtools
   LIST
-  v7_17_01
   v7_11_00
   v7_12_01
   v7_13_02
@@ -36,8 +37,9 @@ create_version_variables(cetbuildtools
   v7_17_01
   )
 
-# Required by TRACE >= v3_14_00.
-create_version_variables(cetmodules v1_04_00)
+# cetmodules v1_04_00 is required by TRACE >= v3_14_00.
+create_version_variables(cetmodules1 v1_04_00)
+create_version_variables(cetmodules v2_05_03)
 
 # art_suite
 #set(suite_rc_level _rc0)
@@ -77,7 +79,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_04_00)
+create_version_variables(geant4reweight v01_06_00)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -97,11 +99,10 @@ create_version_variables(lhapdf v6_2_3f)
 create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_08_00h)
 create_version_variables(dk2nugenie v01_08_00m)
-create_version_variables(ppfx v02_12_01)
+create_version_variables(ppfx v02_13_00)
 create_version_variables(protobuf v3_12_3)
 create_version_variables(tensorflow v1_12_0c)
-create_version_variables(pygccxml v1_9_1)
-create_version_variables(pygccxml v1_9_1b)
+create_version_variables(pygccxml v1_9_1c)
 
 create_version_variables(openblas v0_3_10a)
 # create_version_variables(numpy v1_19_0b)
@@ -122,11 +123,11 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_21_02)
-create_version_variables(nuevdb v1_02_06)
-create_version_variables(nug4 v1_05_01)
-create_version_variables(nugen v1_10_09)
-create_version_variables(nurandom v1_04_03)
+create_version_variables(nusimdata v1_22_00)
+create_version_variables(nuevdb v1_03_00)
+create_version_variables(nug4 v1_06_00)
+create_version_variables(nugen v1_11_00)
+create_version_variables(nurandom v1_05_00)
 
 create_version_variables(nutools v3_09_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
