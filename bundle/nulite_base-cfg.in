@@ -64,6 +64,9 @@ do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 #  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
 #fi
 
+# pick up libtorch
+build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
+
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
