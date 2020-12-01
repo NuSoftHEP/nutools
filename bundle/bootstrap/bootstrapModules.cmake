@@ -173,7 +173,7 @@ else
   pyver=${PYTHON3_VERSION}
   pyqual=${PY3QUAL}
   unset pylabel
-fi\
+fi
 ")
   else()
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
@@ -183,7 +183,7 @@ fi
 
 pyver=${PYTHON_VERSION}
 pyqual=${PYQUAL}
-unset pylabel\
+unset pylabel
 ")
   endif()
   if (PY3QUAL OR NOT 3.0.0 VERSION_GREATER PYTHON_DOT_VERSION)
@@ -191,7 +191,7 @@ unset pylabel\
 
 if [[ \"\${pyqual}\" == p3* ]]; then
   check_os_python3_support
-fi\
+fi
 ")
   endif()
   set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
@@ -204,7 +204,7 @@ v\$(print_version | sed -e 's&^.*[ \\t]\\{1,\\}&&' -e 's&\\.&_&g' ); then
   return 1
 else
 ${_BUILD_COMPILERS_DETAIL}
-fi\
+fi
 " PARENT_SCOPE)
 endfunction()
 
@@ -266,13 +266,13 @@ export CET_BUILD_UNSUPPORTED=1 to override.\"
       exit 0
     fi
   fi
-}\
+}
 ")
 
   set(_CHECK_BASE_DETAIL
     "if [ \"\${bundle_name}\" = \"build_base\" ]; then
     bf_build_base=1
-  fi\
+  fi
 ")
 
   set(_BUILD_COMPILERS_DETAIL
@@ -301,7 +301,7 @@ export CET_BUILD_UNSUPPORTED=1 to override.\"
   }
   ${_CHECK_BASE_DETAIL}
   bf_build_compilers && \\
-    unset bf_build_base bf_build_compilers bf_handle_cmake\
+    unset bf_build_base bf_build_compilers bf_handle_cmake
 ")
 endmacro()
 
