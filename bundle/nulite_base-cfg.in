@@ -59,10 +59,9 @@ do_build pygccxml @PYGCCXML_VERSION@ ${pyqual}
 
 # Tensorflow.
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
-# temporarily unable to build
-#if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
-#  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
-#fi
+if [[ "${basequal}" == e19 ]]; then # Cannot build for clang or e20 at this time
+  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
+fi
 
 # pick up libtorch
 build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
