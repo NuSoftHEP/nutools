@@ -59,10 +59,10 @@ do_build pygccxml @PYGCCXML_VERSION@ ${pyqual}
 
 # Tensorflow.
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
-if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
 # temporarily unable to build
+#if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
 #  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
-fi
+#fi
 
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
