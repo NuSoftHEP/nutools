@@ -101,7 +101,7 @@ create_version_variables(dk2nudata v01_08_00h)
 create_version_variables(dk2nugenie v01_08_00m)
 create_version_variables(ppfx v02_13_00)
 create_version_variables(protobuf v3_12_3)
-create_version_variables(tensorflow v1_12_0c)
+create_version_variables(tensorflow v1_12_0d)
 create_version_variables(pygccxml v1_9_1c)
 
 create_product_variables(sqlite v3_32_03_00)
