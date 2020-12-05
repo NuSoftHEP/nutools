@@ -104,7 +104,7 @@ create_version_variables(protobuf v3_12_3)
 create_version_variables(tensorflow v1_12_0d)
 create_version_variables(pygccxml v1_9_1c)
 
-create_product_variables(sqlite v3_32_03_00)
+create_version_variables(sqlite v3_32_03_00)
 create_version_variables(openblas v0_3_10a)
 # create_version_variables(numpy v1_19_0b)
 create_version_variables(pybind11 v2_5_0a)
