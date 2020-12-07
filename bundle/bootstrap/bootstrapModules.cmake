@@ -198,9 +198,9 @@ fi
 ########################################################################")
   set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}" PARENT_SCOPE)
 
-  set(BUILD_COMPILERS "if version_greater v5_02_00 \\
+  set(BUILD_COMPILERS "if version_greater v5_03_00 \\
 v\$(print_version | sed -e 's&^.*[ \\t]\\{1,\\}&&' -e 's&\\.&_&g' ); then
-  echo \"Need buildFW 5.02.00 or better.\" 1>&2
+  echo \"Need buildFW 5.03.00 or better.\" 1>&2
   return 1
 else
 ${_BUILD_COMPILERS_DETAIL}
