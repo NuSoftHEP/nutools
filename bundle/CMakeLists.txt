@@ -117,13 +117,13 @@ create_version_variables(pythia8 v8_3_02)
 create_version_variables(tauola v1_1_8b)
 
 # nutools
-create_version_variables(nusimdata v1_21_03)
-create_version_variables(nuevdb v1_02_07)
-create_version_variables(nug4 v1_05_02)
-create_version_variables(nugen v1_10_10)
-create_version_variables(nurandom v1_04_03)
+create_version_variables(nusimdata v1_21_04)
+create_version_variables(nuevdb v1_02_08)
+create_version_variables(nug4 v1_05_03)
+create_version_variables(nugen v1_10_11)
+create_version_variables(nurandom v1_04_04)
 
-create_version_variables(nutools v3_07_03)
+create_version_variables(nutools v3_07_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
