@@ -56,7 +56,7 @@ create_version_variables(TRACE v3_15_07)
 create_version_variables(artdaq_core v3_05_15)
 
 # geant4
-create_version_variables(geant4 v4_10_4_p02c)
+create_version_variables(geant4 v4_10_4_p02d)
 create_version_variables(xerces_c v3_2_2)
 create_version_variables(vecgeom v00_05_01)
 create_version_variables(qt v5_10_1a)
@@ -71,7 +71,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_2)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_00_08)
+create_version_variables(geant4reweight v01_04_03)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -107,12 +107,12 @@ create_version_variables(lhapdf v6_2_3d)
 # nutools
 create_version_variables(nusimdata v1_21_02)
 create_version_variables(nuevdb v1_02_05_01)
-create_version_variables(nug4 v1_02_03)
+create_version_variables(nug4 v1_04_03)
 create_version_variables(nugen v1_06_05)
 
 create_version_variables(nutools v3_08_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix) # Reset when no longer needed.
+set(nulite_suffix a) # Reset when no longer needed.
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
