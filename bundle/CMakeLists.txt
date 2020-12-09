@@ -107,7 +107,7 @@ create_version_variables(lhapdf v6_2_3d)
 # nutools
 create_version_variables(nusimdata v1_21_02)
 create_version_variables(nuevdb v1_02_05_01)
-create_version_variables(nug4 v1_04_03)
+create_version_variables(nug4 v1_04_04)
 create_version_variables(nugen v1_06_05)
 
 create_version_variables(nutools v3_08_00)
