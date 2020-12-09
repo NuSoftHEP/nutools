@@ -12,6 +12,7 @@ include(bootstrapModules)
 
 # Define version set for desired version of art suite.
 set(version_set s97)
+set( supported_quals_string "e19|c7")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
