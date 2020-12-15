@@ -78,7 +78,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_06_02)
+create_version_variables(geant4reweight v01_06_03)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -117,13 +117,13 @@ create_version_variables(pythia8 v8_3_02)
 create_version_variables(tauola v1_1_8b)
 
 # nutools
-create_version_variables(nusimdata v1_21_04)
-create_version_variables(nuevdb v1_02_08)
-create_version_variables(nug4 v1_05_03)
-create_version_variables(nugen v1_10_11)
-create_version_variables(nurandom v1_04_04)
+create_version_variables(nusimdata v1_21_05)
+create_version_variables(nuevdb v1_02_09)
+create_version_variables(nug4 v1_05_04)
+create_version_variables(nugen v1_10_12)
+create_version_variables(nurandom v1_04_05)
 
-create_version_variables(nutools v3_07_04)
+create_version_variables(nutools v3_07_05)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
