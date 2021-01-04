@@ -3,7 +3,12 @@
 # distributions.
 ########################################################################
 
-cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+if (POLICY CMP0048)
+  # Prevent dev complaint about lack of VERSION in project() call for
+  # CMake >=3.0.
+  cmake_policy(SET CMP0048 NEW)
+endif()
 project(nutools_bundles NONE)
 
 # Define some necessary modules.
