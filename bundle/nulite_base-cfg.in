@@ -53,6 +53,7 @@ do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
 # pygccxml and castxml
 if [ "${flvr}" != "Darwin64bit+15" ]; then
+  do_build -m clang v5_0_1
   do_build castxml @CASTXML_VERSION@
 fi
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
