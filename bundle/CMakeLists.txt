@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s101)
+set(version_set s106)
 # for use in html
 set( supported_quals_string "e19|e20|c7")
 
@@ -43,24 +43,24 @@ create_version_variables(cetmodules v2_05_03)
 
 # art_suite
 #set(suite_rc_level _rc0)
-#set(stack_suffix b) # Reset when no longer needed
+set(stack_suffix c) # Reset when no longer needed
 create_version_variables(canvas v3_10_02${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_06_02)
+create_version_variables(canvas_root_io v1_07_02)
 create_version_variables(art v3_06_03)
 create_version_variables(art_suite NAME art ${ART_VERSION}${suite_rc_level})
-create_version_variables(art_root_io v1_04_03)
+create_version_variables(art_root_io v1_05_02)
 
 # lite framework
-create_version_variables(gallery v1_15_02${suite_rc_level})
+create_version_variables(gallery v1_16_02${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_05_07)
+create_version_variables(toyExperiment v0_05_10)
 
 create_version_variables(cry v1_7n)
-create_version_variables(TRACE v3_16_00)
-create_version_variables(artdaq_core v3_06_03)
+create_version_variables(TRACE v3_16_02)
+create_version_variables(artdaq_core v3_06_09)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01c)
@@ -79,7 +79,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_06_04)
+create_version_variables(geant4reweight v01_06_05)
 
 # ifdh
 create_version_variables(libwda v2_28_0)
@@ -92,28 +92,28 @@ create_version_variables(ifdh_art v2_11_04)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06j)
+create_version_variables(genie v3_00_06k)
 create_version_variables(genie_phyopt v3_00_04)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_2_3f)
 create_version_variables(log4cpp v1_1_3c)
-create_version_variables(dk2nudata v01_08_00h)
-create_version_variables(dk2nugenie v01_08_00m)
-create_version_variables(ppfx v02_13_00)
+create_version_variables(dk2nudata v01_08_00i)
+create_version_variables(dk2nugenie v01_08_00n)
+create_version_variables(ppfx v02_13_01)
 create_version_variables(protobuf v3_12_3)
 create_version_variables(tensorflow v1_12_0d)
-create_version_variables(pygccxml v1_9_1c)
+create_version_variables(pygccxml v2_1_0)
 
 create_version_variables(sqlite v3_32_03_00)
 create_version_variables(openblas v0_3_10a)
 # create_version_variables(numpy v1_19_0b)
 create_version_variables(pybind11 v2_5_0a)
 create_version_variables(protobuf v3_12_3)
-create_version_variables(eigen v3_3_5)
+create_version_variables(eigen v3_3_9a)
 create_version_variables(fftw v3_3_8a)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
-create_version_variables(libtorch v1_6_0)
+create_version_variables(libtorch v1_6_0a)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 
 # CodeSynthesis XSD for NoVA.
@@ -122,15 +122,16 @@ create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 create_version_variables(cstxsd_xerces_c NAME xerces_c v3_2_3a)
 create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
+message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
-create_version_variables(nusimdata v1_22_01)
-create_version_variables(nuevdb v1_03_01)
-create_version_variables(nug4 v1_06_01)
-create_version_variables(nugen v1_11_01)
-create_version_variables(nurandom v1_05_01)
+create_version_variables(nusimdata v1_22_02)
+create_version_variables(nuevdb v1_03_02)
+create_version_variables(nug4 v1_06_02)
+create_version_variables(nugen v1_11_02)
+create_version_variables(nurandom v1_05_02)
 
-create_version_variables(nutools v3_09_01)
+create_version_variables(nutools v3_09_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
@@ -140,7 +141,7 @@ create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
 # NOvA
-create_version_variables(castxml v0_00_00_f20180122)
+create_version_variables(castxml v0_4_2)
 
 # Initialize CMake variables containing shell fragments used by bundle
 # configurations.
