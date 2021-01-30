@@ -40,7 +40,7 @@ case $blas_type in
     do_build protobuf @PROTOBUF_VERSION@ ${basequal}
     build_noarch -m pybind11 @PYBIND11_VERSION@
     build_noarch -m eigen @EIGEN_VERSION@
-    do_build -m fftw @FFTW_VERSION@ ${basequal}
+    build_type=prof do_build -m fftw @FFTW_VERSION@ ${basequal}
     ;;
   *)
     echo "INTERNAL ERROR: unable to account for recognized build label ${blas_type}" 1>&2  
