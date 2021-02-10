@@ -42,14 +42,15 @@ create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules v2_05_03)
 
 # art_suite
-#set(suite_rc_level _rc0)
+set(suite_rc_level)
 set(stack_suffix c) # Reset when no longer needed
+set(art_suffix c) # Reset when no longer needed
 create_version_variables(canvas v3_10_02${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
 create_version_variables(canvas_root_io v1_07_02)
-create_version_variables(art v3_06_03)
-create_version_variables(art_suite NAME art ${ART_VERSION}${suite_rc_level})
+create_version_variables(art v3_06_03${suite_rc_level})
+create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
 create_version_variables(art_root_io v1_05_02)
 
 # lite framework
