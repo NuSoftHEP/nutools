@@ -64,8 +64,11 @@ if [[ "${basequal}" == e19 ]] || [[ "${basequal}" == e20 ]]; then # Cannot build
   do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
 fi
 
-# pick up libtorch
-build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
+# pick up libtorch on appropriate platforms
+echo "check to see if we can build libtorch on ${flvr}"
+if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]]; then
+  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
+fi
 
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
