@@ -52,7 +52,7 @@ do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
 # pygccxml and castxml
-if [ "${flvr}" != "Darwin64bit+15" ]; then
+if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
   do_build -m clang v5_0_1
   do_build castxml @CASTXML_VERSION@
 fi
