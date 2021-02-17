@@ -83,12 +83,12 @@ create_version_variables(g4tendl v1_3_2)
 create_version_variables(geant4reweight v01_06_05)
 
 # ifdh
-create_version_variables(libwda v2_28_0)
-create_version_variables(ifdhc v2_5_10)
-create_version_variables(ifdhc_config v2_5_10)
-create_version_variables(ifbeam v2_4_7)
-create_version_variables(nucondb v2_4_7)
-create_version_variables(ifdh_art v2_11_04)
+create_version_variables(libwda v2_29_1)
+create_version_variables(ifdhc v2_5_12)
+create_version_variables(ifdhc_config v2_5_12)
+create_version_variables(ifbeam v2_4_8)
+create_version_variables(nucondb v2_4_8)
+create_version_variables(ifdh_art v2_11_05)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -127,14 +127,14 @@ message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
 create_version_variables(nusimdata v1_22_02)
-create_version_variables(nuevdb v1_03_02)
+create_version_variables(nuevdb v1_03_03)
 create_version_variables(nug4 v1_06_02)
-create_version_variables(nugen v1_11_02)
+create_version_variables(nugen v1_11_03)
 create_version_variables(nurandom v1_05_02)
 
 create_version_variables(nutools v3_09_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
