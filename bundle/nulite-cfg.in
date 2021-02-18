@@ -32,15 +32,20 @@ if [[ -z "${version_set}" ]]; then
 fi
 
 # As of v1_07_00, artdaq_core is built with canvas and TRACE.
-#
-# TRACE >= v3_14_00 needs buildFW >= 4.00.00 and cetmodules.
-if (( $(print_version | cut -d' ' -f 2 | cut -d. -f1) < 4)); then
-  echo "ERROR: TRACE >= v3_14_00 needs buildFW >= 4.00.00" 1>&2
+# As of art 3.06, newer releases of cetmodules are also available
+# The TRACE build needs to specify the version of cetmodules
+# This feature requires buildFW 5.04.01 or greater
+buildFW_version=v$(print_version | cut -d' ' -f 2 | sed -e 's&\.&_&g')
+$(version_greater ${buildFW_version} v5_04_00)
+status=$?
+if (( ${status} != 0 )); then
+  echo "ERROR: TRACE >= v3_14_00 needs buildFW >= 5.04.01" 1>&2
   return 1
 fi
+
 build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
 
-build_cet -p trace-git TRACE @TRACE_VERSION@ -nq-
+build_cet -p trace-git -w v1_04_00 TRACE @TRACE_VERSION@ -nq-
 
 build_cet -p artdaq-core artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}${pylabel}:@version_set@
 
