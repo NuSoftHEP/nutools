@@ -102,8 +102,9 @@ create_version_variables(dk2nudata v01_08_00i)
 create_version_variables(dk2nugenie v01_08_00n)
 create_version_variables(ppfx v02_13_01)
 create_version_variables(protobuf v3_12_3)
-create_version_variables(tensorflow v1_12_0d)
 create_version_variables(pygccxml v2_1_0)
+create_version_variables(tensorflow v2_3_1)
+create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 
 create_version_variables(sqlite v3_32_03_00)
 create_version_variables(openblas v0_3_10a)
@@ -168,3 +169,6 @@ distribution(ifdh)
 
 # libtorch.
 distribution(libtorch_dist)
+
+# tensorflow.
+distribution(tensorflow_dist)

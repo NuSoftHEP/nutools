@@ -1,0 +1,29 @@
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build the Nu-Lite-base supporting distribution.
+########################################################################
+
+basequal=${1}
+
+# Specify version to bootstrap and setup UPS.
+check_ups @UPS_VERSION@
+
+# Compilers.
+@BUILD_COMPILERS@
+
+# Handle Python.
+@INIT_PYQUAL_VARS@
+
+# packages needed only for the build
+do_build -m bazel v3_1_0
+do_build -m swig v4_0_2 ${basequal}
+
+# Tensorflow.
+do_build sqlite @SQLITE_VERSION@
+do_build python ${pyver}
+build_noarch pybind11 @PYBIND11_VERSION@
+build_noarch -m eigen @EIGEN_VERSION@
+do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}
+
