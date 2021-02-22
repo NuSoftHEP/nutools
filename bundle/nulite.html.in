@@ -103,6 +103,7 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  nugen      </td>  <td> @NUGEN_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  nurandom      </td>  <td> @NURANDOM_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  geant4reweight </td>  <td> @GEANT4REWEIGHT_VERSION@ </td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  ppfx         </td>  <td> @PPFX_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td colspan="3"><b>Utilities:</b></td></tr>
 <tr><td>&nbsp;&nbsp;  ups     </td>  <td> @UPS_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  cetpkgsupport   </td>  <td> @CETPKGSUPPORT_VERSION@  </td>  <td>&nbsp;</td></tr>
