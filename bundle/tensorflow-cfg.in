@@ -17,7 +17,7 @@ check_ups @UPS_VERSION@
 
 # packages needed only for the build
 do_build -m bazel v3_1_0
-do_build -m swig v4_0_2 ${basequal}
+build_type=prof do_build -m swig v4_0_2 ${basequal}
 
 # Tensorflow.
 do_build sqlite @SQLITE_VERSION@
