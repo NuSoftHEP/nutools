@@ -1,0 +1,29 @@
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build the Nu-Lite-base supporting distribution.
+########################################################################
+
+basequal=${1}
+
+# Specify version to bootstrap and setup UPS.
+check_ups @UPS_VERSION@
+
+# We\'re special, and only need the latest version of CMake.
+cmakes=(@CMAKE_VERSION_LIST@)
+CMAKE_VERSION="${cmakes[@]: -1}"
+
+# Compilers.
+@BUILD_COMPILERS@
+
+# Handle Python.
+@INIT_PYQUAL_VARS@
+
+#  triton
+do_build sqlite @SQLITE_VERSION@
+do_build python ${pyver}
+do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+do_build opencv @OPENCV_VERSION@ ${basequal}:${pyqual}
+do_build grpc @GRPC_VERSION@ ${basequal}
+do_build triton @TRITON_VERSION@ ${basequal}
+
