@@ -13,6 +13,9 @@ check_ups @UPS_VERSION@
 cmakes=(@CMAKE_VERSION_LIST@)
 CMAKE_VERSION="${cmakes[@]: -1}"
 
+# ninja for grpc
+do_build ninja v1_10_0
+
 # Compilers.
 @BUILD_COMPILERS@
 
