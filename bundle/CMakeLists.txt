@@ -103,7 +103,7 @@ create_version_variables(dk2nugenie v01_08_00n)
 create_version_variables(ppfx v02_13_01)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(pygccxml v2_1_0)
-create_version_variables(tensorflow v2_3_1)
+create_version_variables(tensorflow v2_3_1a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 
 create_version_variables(sqlite v3_32_03_00)

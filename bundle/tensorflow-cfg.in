@@ -25,5 +25,5 @@ do_build python ${pyver}
 build_noarch pybind11 @PYBIND11_VERSION@
 build_noarch -m eigen @EIGEN_VERSION@
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
-do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}
+do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}:${pyqual}
 
