@@ -118,7 +118,7 @@ create_version_variables(grpc v1_35_0)
 create_product_variables(opencv v4_2_0a)
 create_version_variables(libtorch v1_6_0b)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables(triton v2_3_0)
+create_version_variables(triton v2_3_0b)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # CodeSynthesis XSD for NoVA.
