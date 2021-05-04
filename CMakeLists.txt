@@ -36,6 +36,7 @@ find_ups_product( art )
 find_ups_product( art_root_io )
 find_ups_product( canvas_root_io )
 find_ups_product( nusimdata )
+find_ups_product( clhep )
 find_ups_product( cetlib )
 find_ups_product( cetlib_except )
 
