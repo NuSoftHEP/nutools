@@ -10,7 +10,7 @@ basequal=${1}
 # Note that the default is openBLAS and requires no build label
 case ${build_label} in
   lapack|LAPACK) blas_type=lapack; build_label=lapack; pyver=v3_7_2; sver=v3_26_00_00;;
-  *) blas_type=open; pyver=v3_8_3b; sver=v3_32_03_00;;
+  *) blas_type=open; pyver=@PYTHON_VERSION@; sver=@SQLITE_VERSION@;;
 esac
 
 # Specify version to bootstrap and setup UPS.

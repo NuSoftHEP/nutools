@@ -20,8 +20,8 @@ create_version_variables(cetpkgsupport v1_14_01)
 create_version_variables(ups v6_0_8)
 
 # Handle Python version(s).
-create_version_variables(python v2_7_15a)
-create_version_variables(python3 NAME python v3_8_3b)
+create_version_variables(python v3_9_2)
+create_version_variables(python3 NAME python v3_9_2)
 create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
@@ -35,6 +35,7 @@ create_version_variables(cetbuildtools
   v7_14_00
   v7_15_01
   v7_17_01
+  v8_07_00
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
@@ -43,28 +44,28 @@ create_version_variables(cetmodules v2_05_03)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix c) # Reset when no longer needed
-set(art_suffix c) # Reset when no longer needed
-create_version_variables(canvas v3_10_02${suite_rc_level})
+set(stack_suffix) # Reset when no longer needed
+set(art_suffix) # Reset when no longer needed
+create_version_variables(canvas v3_12_00${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_07_02)
-create_version_variables(art v3_06_03${suite_rc_level})
+create_version_variables(canvas_root_io v1_09_00)
+create_version_variables(art v3_08_00${suite_rc_level})
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_05_02)
+create_version_variables(art_root_io v1_07_00)
 
 # lite framework
-create_version_variables(gallery v1_16_02${suite_rc_level})
+create_version_variables(gallery v1_18_00${suite_rc_level})
 
 # Tutorial
 create_version_variables(toyExperiment v0_05_10)
 
 create_version_variables(cry v1_7n)
-create_version_variables(TRACE v3_16_02)
-create_version_variables(artdaq_core v3_06_09)
+create_version_variables(TRACE v3_17_01)
+create_version_variables(artdaq_core v3_06_11)
 
 # geant4
-create_version_variables(geant4 v4_10_6_p01c)
+create_version_variables(geant4 v4_10_6_p01d)
 create_version_variables(xerces_c v3_2_3a)
 create_version_variables(vecgeom v01_01_05c)
 create_version_variables(qt v5_12_3a)
@@ -84,39 +85,37 @@ create_version_variables(geant4reweight v01_06_05)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
-create_version_variables(ifdhc v2_5_12)
-create_version_variables(ifdhc_config v2_5_12)
-create_version_variables(ifbeam v2_4_8)
-create_version_variables(nucondb v2_4_8)
-create_version_variables(ifdh_art v2_11_05)
+create_version_variables(ifdhc v2_5_13)
+create_version_variables(ifdhc_config v2_5_13)
+create_version_variables(ifbeam v2_4_9)
+create_version_variables(nucondb v2_4_9)
+create_version_variables(ifdh_art v2_12_00)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06k)
+create_version_variables(genie v3_00_06l)
 create_version_variables(genie_phyopt v3_00_04)
 create_version_variables(genie_xsec v3_00_04a)
-create_version_variables(lhapdf v6_2_3f)
+create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
-create_version_variables(dk2nudata v01_08_00i)
-create_version_variables(dk2nugenie v01_08_00n)
-create_version_variables(ppfx v02_13_01)
+create_version_variables(dk2nudata v01_08_00j)
+create_version_variables(dk2nugenie v01_08_00o)
 create_version_variables(protobuf v3_12_3a)
-create_version_variables(pygccxml v2_1_0)
+create_version_variables(pygccxml v2_1_0a)
 create_version_variables(tensorflow v2_3_1a)
-create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
+create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION}_a)
 
-create_version_variables(sqlite v3_32_03_00)
-create_version_variables(openblas v0_3_10a)
-# create_version_variables(numpy v1_19_0b)
-create_version_variables(pybind11 v2_5_0a)
+create_version_variables(sqlite v3_34_01_00)
+create_version_variables(openblas v0_3_13)
+create_version_variables(pybind11 v2_6_2)
 create_version_variables(eigen v3_3_9a)
-create_version_variables(fftw v3_3_8a)
+create_version_variables(fftw v3_3_9)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
 create_version_variables(grpc v1_35_0)
 create_product_variables(opencv v4_2_0a)
-create_version_variables(libtorch v1_6_0b)
+create_version_variables(libtorch v1_6_0c)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 create_version_variables(triton v2_3_0b)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
@@ -136,14 +135,16 @@ create_version_variables(nug4 v1_06_02)
 create_version_variables(nugen v1_11_03)
 create_version_variables(nurandom v1_05_02)
 
-create_version_variables(nutools v3_09_02)
+create_version_variables(nutools v3_10_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix _rc0) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
+
+create_version_variables(ppfx v02_13_01)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
