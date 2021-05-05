@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s106)
+set(version_set s107)
 # for use in html
 set( supported_quals_string "e19|e20|c7")
 
@@ -29,11 +29,6 @@ create_pyqual_variables()
 create_version_variables(cmake LIST v3_17_3 v3_18_2)
 create_version_variables(cetbuildtools
   LIST
-  v7_11_00
-  v7_12_01
-  v7_13_02
-  v7_14_00
-  v7_15_01
   v7_17_01
   v8_07_00
   )
@@ -58,7 +53,7 @@ create_version_variables(art_root_io v1_07_00)
 create_version_variables(gallery v1_18_00${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_05_10)
+create_version_variables(toyExperiment v0_06_01)
 
 create_version_variables(cry v1_7n)
 create_version_variables(TRACE v3_17_01)
@@ -81,7 +76,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_06_05)
+create_version_variables(geant4reweight v01_07_00)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
@@ -135,7 +130,7 @@ create_version_variables(nug4 v1_08_00)
 create_version_variables(nugen v1_13_00)
 create_version_variables(nurandom v1_06_00)
 
-create_version_variables(nutools v3_11_00)
+create_version_variables(nutools v3_10_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix _rc0) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
@@ -144,7 +139,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_13_01)
+create_version_variables(ppfx v02_14_00)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
