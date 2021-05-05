@@ -26,7 +26,7 @@ create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
 # necessary.
-create_version_variables(cmake LIST v3_17_3 v3_18_2)
+create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_20_0)
 create_version_variables(cetbuildtools
   LIST
   v7_17_01
@@ -35,7 +35,7 @@ create_version_variables(cetbuildtools
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules v2_05_03)
+create_version_variables(cetmodules LIST v2_05_03 v2_17_00)
 
 # art_suite
 set(suite_rc_level)
@@ -109,10 +109,10 @@ create_version_variables(fftw v3_3_9)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
 create_version_variables(grpc v1_35_0)
-create_product_variables(opencv v4_2_0a)
+create_product_variables(opencv v4_2_0b)
 create_version_variables(libtorch v1_6_0d)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables(triton v2_3_0b)
+create_version_variables(triton v2_3_0c)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # CodeSynthesis XSD for NoVA.
@@ -132,7 +132,7 @@ create_version_variables(nurandom v1_06_00)
 
 create_version_variables(nutools v3_10_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix _rc0) # Reset when no longer needed
+set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
