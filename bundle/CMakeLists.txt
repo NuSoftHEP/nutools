@@ -79,7 +79,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_07_00)
+create_version_variables(geant4reweight v01_08_00)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
@@ -127,13 +127,13 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
-create_version_variables(nusimdata v1_23_00)
-create_version_variables(nuevdb v1_04_00)
-create_version_variables(nug4 v1_08_00)
-create_version_variables(nugen v1_13_00)
-create_version_variables(nurandom v1_06_00)
+create_version_variables(nusimdata v1_24_00)
+create_version_variables(nuevdb v1_05_00)
+create_version_variables(nug4 v1_09_00)
+create_version_variables(nugen v1_14_00)
+create_version_variables(nurandom v1_07_00)
 
-create_version_variables(nutools v3_10_00)
+create_version_variables(nutools v3_11_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
