@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s107)
+set(version_set s108)
 # for use in html
 set( supported_quals_string "e19|e20|c7")
 
@@ -26,38 +26,41 @@ create_pyqual_variables()
 
 # CMake and cetbuildtools are special: define as many versions as
 # necessary.
-create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_20_0)
+create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0)
 create_version_variables(cetbuildtools
   LIST
   v7_17_01
   v8_07_00
+  v8_07_02
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_05_03 v2_17_00)
+create_version_variables(cetmodules LIST v2_05_03 v2_17_00 v2_17_03)
+# mrb
+create_version_variables(mrb v5_08_03)
 
 # art_suite
 set(suite_rc_level)
 set(stack_suffix) # Reset when no longer needed
 set(art_suffix) # Reset when no longer needed
-create_version_variables(canvas v3_12_00${suite_rc_level})
+create_version_variables(canvas v3_12_01${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_09_00)
-create_version_variables(art v3_08_00${suite_rc_level})
+create_version_variables(canvas_root_io v1_09_01)
+create_version_variables(art v3_09_00${suite_rc_level})
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_07_00)
+create_version_variables(art_root_io v1_08_00)
 
 # lite framework
-create_version_variables(gallery v1_18_00${suite_rc_level})
+create_version_variables(gallery v1_18_01${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_06_01)
+create_version_variables(toyExperiment v0_07_00)
 
 create_version_variables(cry v1_7n)
 create_version_variables(TRACE v3_17_01)
-create_version_variables(artdaq_core v3_06_11)
+create_version_variables(artdaq_core v3_07_00)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01d)
@@ -84,7 +87,7 @@ create_version_variables(ifdhc v2_5_13)
 create_version_variables(ifdhc_config v2_5_13)
 create_version_variables(ifbeam v2_4_9)
 create_version_variables(nucondb v2_4_9)
-create_version_variables(ifdh_art v2_12_00)
+create_version_variables(ifdh_art v2_12_01)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
