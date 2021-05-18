@@ -101,21 +101,26 @@ create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_00)
 create_version_variables(dk2nugenie v01_10_00)
 create_version_variables(ppfx v02_13_03)
-create_version_variables(protobuf v3_12_3)
-create_version_variables(tensorflow v1_12_0d)
+create_version_variables(protobuf v3_12_3a)
+create_version_variables(tensorflow v2_3_1a)
+create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 create_version_variables(pygccxml v2_1_0)
 
 create_version_variables(sqlite v3_32_03_00)
 create_version_variables(openblas v0_3_10a)
 # create_version_variables(numpy v1_19_0b)
 create_version_variables(pybind11 v2_5_0a)
-create_version_variables(protobuf v3_12_3)
 create_version_variables(eigen v3_3_9a)
 create_version_variables(fftw v3_3_8a)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
-create_version_variables(libtorch v1_6_0a)
+create_version_variables(grpc v1_35_0)
+create_product_variables(opencv v4_2_0a)
+create_version_variables(libtorch v1_6_0b)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
+create_version_variables(triton v2_3_0b)
+create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
+
 
 # CodeSynthesis XSD for NoVA.
 #
@@ -168,3 +173,8 @@ distribution(ifdh)
 
 # libtorch.
 distribution(libtorch_dist)
+# triton.
+distribution(triton_dist)
+# tensorflow.
+distribution(tensorflow_dist)
+
