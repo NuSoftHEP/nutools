@@ -60,9 +60,12 @@ do_build pygccxml @PYGCCXML_VERSION@ ${pyqual}
 
 # Tensorflow.
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
-if [[ "${basequal}" == e19 ]] || [[ "${basequal}" == e20 ]]; then # Cannot build for clang
-  do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
+if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
+  build_bundle tensorflow-@TENSORFLOW_DIST_DOT_VERSION@ ${basequal} || return
 fi
+
+# Triton.
+build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 
 # pick up libtorch on appropriate platforms
 echo "check to see if we can build libtorch on ${flvr}"
