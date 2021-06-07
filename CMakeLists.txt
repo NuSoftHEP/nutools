@@ -18,7 +18,7 @@ cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
 project(nutools VERSION 3.09.02 LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
-find_package(cetbuildtools REQUIRED)
+find_package(cetmodules REQUIRED)
 
 include(CetCMakeEnv)
 cet_cmake_env()
