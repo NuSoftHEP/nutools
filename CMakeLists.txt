@@ -13,12 +13,12 @@
 #  make package (builds distribution tarfile)
 # ======================================================================
 
-cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
 
-project(nutools 3.09.02 LANGUAGES CXX)
+project(nutools LANGUAGES CXX)
 
 # cetbuildtools contains our cmake modules
-find_package(cetmodules REQUIRED)
+find_package(cetbuildtools REQUIRED)
 
 include(CetCMakeEnv)
 cet_cmake_env()
@@ -53,28 +53,21 @@ include(BuildPlugins)
 include(CetRootCint)
 
 # include search path
-include_directories ( ${CRYHOME}/src )
+include_directories ( $ENV{CRYHOME}/src )
 
 # included for Mac OSX using XQuartz for X11
 if(APPLE)
   include_directories ( /opt/X11/include )
 endif()
 
-
-
-## find_library directives
-# other dependencies
-cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH )
-
 # source
 add_subdirectory (nutools)
-#add_subdirectory (tools)
-#add_subdirectory (test)
-#add_subdirectory (bundle)
-add_subdirectory(cmakeConfig)
+add_subdirectory (tools)
+add_subdirectory (bundle)
+
 # ups - table and config files
-#add_subdirectory(ups)
+add_subdirectory(ups)
 
 # packaging utility
-#include(UseCPack)
+include(UseCPack)
 
