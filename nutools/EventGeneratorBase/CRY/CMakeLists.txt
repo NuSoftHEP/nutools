@@ -1,7 +1,7 @@
 
 art_make( LIB_LIBRARIES nusimdata_SimulationBase
                         ${CRY}
-                        messagefacility::MFMessageLogger
+                        messagefacility::MF_MessageLogger
                         messagefacility::headers
                         fhiclcpp::fhiclcpp fhiclcpp::types
                         cetlib
