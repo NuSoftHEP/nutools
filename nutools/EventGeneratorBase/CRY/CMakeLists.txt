@@ -1,9 +1,9 @@
 
 art_make( LIB_LIBRARIES nusimdata_SimulationBase
                         ${CRY}
-                        ${MF_MESSAGELOGGER}
-                        ${MF_UTILITIES}
-                        ${FHICLCPP}
+                        messagefacility::MFMessageLogger
+                        messagefacility::headers
+                        fhiclcpp::fhiclcpp fhiclcpp::types
                         cetlib
 			cetlib_except
                         ${ROOT_GEOM}
