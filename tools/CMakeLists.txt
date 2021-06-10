@@ -3,10 +3,10 @@ macro( _nu_install_tools )
   cmake_parse_arguments( NT "" "DIRNAME" "SCRIPT_LIST" ${ARGN})
   if( NT_DIRNAME )
     install( PROGRAMS ${NT_SCRIPT_LIST}
-             DESTINATION "${product}/${version}/tools/${NT_DIRNAME}" )
+             DESTINATION "${PROJECT_NAME}/${PROJECT_VERSION}/tools/${NT_DIRNAME}" )
   else()
     install( PROGRAMS ${NT_SCRIPT_LIST}
-             DESTINATION "${product}/${version}/tools" )
+             DESTINATION "${PROJECT_NAME}/${PROJECT_VERSION}/tools" )
   endif()
 endmacro( _nu_install_tools )
 
