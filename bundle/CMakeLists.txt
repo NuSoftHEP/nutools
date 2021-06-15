@@ -32,35 +32,36 @@ create_version_variables(cetbuildtools
   v7_17_01
   v8_07_00
   v8_07_02
+  v8_08_02
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_05_03 v2_17_00 v2_17_03)
+create_version_variables(cetmodules LIST v2_05_03 v2_17_00 v2_17_03 v2_18_03)
 # mrb
-create_version_variables(mrb v5_08_03)
+create_version_variables(mrb v5_09_04)
 
 # art_suite
 set(suite_rc_level)
 set(stack_suffix) # Reset when no longer needed
 set(art_suffix) # Reset when no longer needed
-create_version_variables(canvas v3_12_01${suite_rc_level})
+create_version_variables(canvas v3_12_02)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_09_01)
-create_version_variables(art v3_09_00${suite_rc_level})
+create_version_variables(canvas_root_io v1_09_02)
+create_version_variables(art v3_09_01)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_08_00)
+create_version_variables(art_root_io v1_08_01)
 
 # lite framework
-create_version_variables(gallery v1_18_01${suite_rc_level})
+create_version_variables(gallery v1_18_02)
 
 # Tutorial
-create_version_variables(toyExperiment v0_07_00)
+create_version_variables(toyExperiment v0_07_01)
 
 create_version_variables(cry v1_7n)
 create_version_variables(TRACE v3_17_01)
-create_version_variables(artdaq_core v3_07_00)
+create_version_variables(artdaq_core v3_07_01)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01d)
@@ -87,18 +88,18 @@ create_version_variables(ifdhc v2_5_13)
 create_version_variables(ifdhc_config v2_5_13)
 create_version_variables(ifbeam v2_4_9)
 create_version_variables(nucondb v2_4_9)
-create_version_variables(ifdh_art v2_12_01)
+create_version_variables(ifdh_art v2_12_02)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06l)
+create_version_variables(genie v3_00_06m)
 create_version_variables(genie_phyopt v3_00_04)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
-create_version_variables(dk2nudata v01_08_00j)
-create_version_variables(dk2nugenie v01_08_00o)
+create_version_variables(dk2nudata v01_10_00a)
+create_version_variables(dk2nugenie v01_10_00a)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(pygccxml v2_1_0a)
 create_version_variables(tensorflow v2_3_1a)
