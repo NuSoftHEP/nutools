@@ -100,7 +100,7 @@ create_version_variables(lhapdf v6_2_3f)
 create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_00)
 create_version_variables(dk2nugenie v01_10_00)
-create_version_variables(ppfx v02_13_03)
+create_version_variables(ppfx v02_13_04)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(tensorflow v2_3_1a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
@@ -134,12 +134,12 @@ message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 create_version_variables(nusimdata v1_22_03)
 create_version_variables(nuevdb v1_03_04)
 create_version_variables(nug4 v1_07_01)
-create_version_variables(nugen v1_12_01)
+create_version_variables(nugen v1_12_02)
 create_version_variables(nurandom v1_05_02)
 
 create_version_variables(nutools v3_09_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
