@@ -3,7 +3,7 @@
 # distributions.
 ########################################################################
 
-cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
 project(nutools_bundles NONE)
 
 # Define some necessary modules.
@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s108)
+set(version_set s109)
 # for use in html
 set( supported_quals_string "e19|e20|c7")
 
@@ -45,16 +45,16 @@ create_version_variables(mrb v5_09_04)
 set(suite_rc_level)
 set(stack_suffix) # Reset when no longer needed
 set(art_suffix) # Reset when no longer needed
-create_version_variables(canvas v3_12_02)
+create_version_variables(canvas v3_12_02${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
 create_version_variables(canvas_root_io v1_09_02)
-create_version_variables(art v3_09_01)
+create_version_variables(art v3_09_01${suite_rc_level})
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
 create_version_variables(art_root_io v1_08_01)
 
 # lite framework
-create_version_variables(gallery v1_18_02)
+create_version_variables(gallery v1_18_02${suite_rc_level})
 
 # Tutorial
 create_version_variables(toyExperiment v0_07_01)
@@ -113,7 +113,7 @@ create_version_variables(fftw v3_3_9)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
 create_version_variables(grpc v1_35_0)
-create_product_variables(opencv v4_2_0b)
+create_version_variables(opencv v4_2_0b)
 create_version_variables(libtorch v1_6_0d)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 create_version_variables(triton v2_3_0c)
@@ -128,13 +128,13 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
-create_version_variables(nusimdata v1_24_00)
-create_version_variables(nuevdb v1_05_00)
-create_version_variables(nug4 v1_09_00)
-create_version_variables(nugen v1_14_00)
-create_version_variables(nurandom v1_07_00)
+create_version_variables(nusimdata v1_24_01)
+create_version_variables(nuevdb v1_05_01)
+create_version_variables(nug4 v1_09_01)
+create_version_variables(nugen v1_14_01)
+create_version_variables(nurandom v1_07_01)
 
-create_version_variables(nutools v3_11_00)
+create_version_variables(nutools v3_11_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
@@ -143,7 +143,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_01)
+create_version_variables(ppfx v02_14_02)
 
 # NOvA
 create_version_variables(castxml v0_4_2)

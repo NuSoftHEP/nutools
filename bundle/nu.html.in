@@ -58,10 +58,8 @@ The following products are part of the full nu distribution:
 <tr><td colspan="3"><b>Code:</b></td></tr>
 <tr><td>&nbsp;&nbsp;  gcc     </td>  <td> @GCC_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  clhep   </td>  <td> @CLHEP_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
-<tr><td>&nbsp;&nbsp;  cppunit </td>  <td> @CPPUNIT_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  sqlite  </td>  <td> @SQLITE_VERSION@  </td>  <td>&nbsp;</td></tr>
 <tr><td>&nbsp;&nbsp;  python  </td>  <td> @PYTHON_VERSION@  </td>  <td>&nbsp;</td></tr>
-<tr><td>&nbsp;&nbsp;  tbb     </td>  <td> @TBB_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  xerces_c        </td>  <td> @XERCES_C_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  cry     </td>  <td> @CRY_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  lhapdf  </td>  <td> @LHAPDF_VERSION@</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
