@@ -44,7 +44,7 @@ message(STATUS "ROOTSYS is ${ROOTSYS}")
 
 ## find_library directives
 # other dependencies
-cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH )
+cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB )
 
 # macros
 include(ArtMake)
