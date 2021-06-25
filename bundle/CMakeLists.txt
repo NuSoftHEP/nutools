@@ -57,7 +57,7 @@ create_version_variables(art_root_io v1_05_03)
 create_version_variables(gallery v1_16_02${suite_rc_level})
 
 # Tutorial
-create_version_variables(toyExperiment v0_05_10)
+create_version_variables(toyExperiment v0_05_11)
 
 create_version_variables(cry v1_7n)
 create_version_variables(TRACE v3_17_01)
