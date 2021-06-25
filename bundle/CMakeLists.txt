@@ -11,7 +11,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s106)
+set(version_set s110)
 # for use in html
 set( supported_quals_string "e19|e20|c7")
 
@@ -43,15 +43,15 @@ create_version_variables(cetmodules v2_05_03)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix c) # Reset when no longer needed
-set(art_suffix c) # Reset when no longer needed
+set(stack_suffix d) # Reset when no longer needed
+set(art_suffix d) # Reset when no longer needed
 create_version_variables(canvas v3_10_02${suite_rc_level})
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_07_02)
+create_version_variables(canvas_root_io v1_07_03)
 create_version_variables(art v3_06_03${suite_rc_level})
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_05_02)
+create_version_variables(art_root_io v1_05_03)
 
 # lite framework
 create_version_variables(gallery v1_16_02${suite_rc_level})
@@ -60,8 +60,8 @@ create_version_variables(gallery v1_16_02${suite_rc_level})
 create_version_variables(toyExperiment v0_05_10)
 
 create_version_variables(cry v1_7n)
-create_version_variables(TRACE v3_16_02)
-create_version_variables(artdaq_core v3_06_09)
+create_version_variables(TRACE v3_17_01)
+create_version_variables(artdaq_core v3_06_13)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01c)
@@ -80,7 +80,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_06_07)
+create_version_variables(geant4reweight v01_06_08)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
@@ -93,14 +93,14 @@ create_version_variables(ifdh_art v2_11_06)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06k)
+create_version_variables(genie v3_00_06n)
 create_version_variables(genie_phyopt v3_00_04)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_2_3f)
 create_version_variables(log4cpp v1_1_3c)
-create_version_variables(dk2nudata v01_10_00)
-create_version_variables(dk2nugenie v01_10_00)
-create_version_variables(ppfx v02_13_04)
+create_version_variables(dk2nudata v01_10_00b)
+create_version_variables(dk2nugenie v01_10_00b)
+create_version_variables(ppfx v02_13_05)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(tensorflow v2_3_1a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
@@ -131,15 +131,15 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
-create_version_variables(nusimdata v1_22_03)
-create_version_variables(nuevdb v1_03_04)
-create_version_variables(nug4 v1_07_01)
-create_version_variables(nugen v1_12_02)
-create_version_variables(nurandom v1_05_02)
+create_version_variables(nusimdata v1_22_04)
+create_version_variables(nuevdb v1_03_05)
+create_version_variables(nug4 v1_07_02)
+create_version_variables(nugen v1_12_03)
+create_version_variables(nurandom v1_05_03)
 
-create_version_variables(nutools v3_09_03)
+create_version_variables(nutools v3_09_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
