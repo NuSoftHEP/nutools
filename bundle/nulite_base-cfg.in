@@ -10,6 +10,8 @@ basequal=${1}
 check_ups @UPS_VERSION@
 
 # Canvas.
+# If sphinx is not already available, it needs to be built separately.
+SPHINX_PULL_ONLY=1
 build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || return
 
 # Handle Python.
