@@ -41,6 +41,10 @@ build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
 do_build geant4 @GEANT4_VERSION@ ${basequal}
 
+# TAUOLA C++.
+build_label=${pyqual} \
+  build_bundle @TAUOLA_DIST_NAME@-@TAUOLA_DIST_DOT_VERSION@ ${basequal} || return
+
 # GENIE.
 do_build genie @GENIE_VERSION@ ${basequal}${pylabel}
 do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}

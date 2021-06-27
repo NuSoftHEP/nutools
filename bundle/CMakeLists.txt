@@ -124,13 +124,18 @@ create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
 create_version_variables(triton v2_3_0c)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
+# TAUOLA C++ and friends
+create_version_variables(hepmc3 v3_2_2b)
+create_version_variables(pythia8 v8_3_02e)
+create_version_variables(tauola v1_1_8h)
+create_version_variables(tauola_dist NAME tauola ${TAUOLA_VERSION})
+
 # CodeSynthesis XSD for NoVA.
 #
 # Special build-time-only xerces_c required for cstxsd.
 create_version_variables(cstxsd_xerces_c NAME xerces_c v3_2_3a)
 create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
-message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
 create_version_variables(nusimdata v1_24_01)
@@ -181,3 +186,6 @@ distribution(libtorch_dist)
 distribution(triton_dist)
 # tensorflow.
 distribution(tensorflow_dist)
+
+# Tauola C++ & friends.
+distribution(tauola_dist)
