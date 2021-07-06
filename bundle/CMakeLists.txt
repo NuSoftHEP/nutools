@@ -33,6 +33,8 @@ create_version_variables(cetbuildtools
   v8_07_00
   v8_07_02
   v8_08_02
+  v8_09_00
+  v8_10_01
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
