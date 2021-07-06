@@ -33,6 +33,8 @@ create_version_variables(cetbuildtools
   v8_07_00
   v8_07_02
   v8_08_02
+  v8_09_00
+  v8_10_01
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
@@ -128,13 +130,13 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 message(STATUS "found cstxsd_dist ${CSTXSD_DIST_VERSION}")
 
 # nutools
-create_version_variables(nusimdata v1_24_01)
-create_version_variables(nuevdb v1_05_01)
-create_version_variables(nug4 v1_09_01)
-create_version_variables(nugen v1_14_01)
-create_version_variables(nurandom v1_07_01)
+create_version_variables(nusimdata v1_24_02)
+create_version_variables(nuevdb v1_05_02)
+create_version_variables(nug4 v1_09_02)
+create_version_variables(nugen v1_14_02)
+create_version_variables(nurandom v1_07_02)
 
-create_version_variables(nutools v3_11_01)
+create_version_variables(nutools v3_11_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
