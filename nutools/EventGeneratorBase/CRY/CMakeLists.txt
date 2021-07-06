@@ -1,6 +1,6 @@
 
 art_make( LIB_LIBRARIES nusimdata_SimulationBase
-                        ${CRY}
+                        CRY
                         ${MF_MESSAGELOGGER}
                         ${MF_UTILITIES}
                         ${FHICLCPP}
