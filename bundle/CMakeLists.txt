@@ -44,7 +44,7 @@ create_version_variables(cetbuildtools
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_05_03 v2_17_00 v2_17_03 v2_18_03)
+create_version_variables(cetmodules LIST v2_05_03 v2_17_00 v2_17_03 v2_18_03 v2_19_00 v2_20_01)
 # mrb
 create_version_variables(mrb v5_09_04)
 
