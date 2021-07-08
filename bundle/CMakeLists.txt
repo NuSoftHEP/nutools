@@ -35,13 +35,14 @@ create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0)
 create_version_variables(cetbuildtools
   LIST
   v7_17_01
+  v8_08_02
   v8_10_00
   v8_10_01
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_20_00 v2_20_01)
+create_version_variables(cetmodules LIST v2_18_03 v2_20_00 v2_20_01)
 # mrb
 create_version_variables(mrb v5_11_01)
 
