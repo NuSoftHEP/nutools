@@ -57,7 +57,7 @@ build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_s
 build_cet nusimdata @NUSIMDATA_VERSION@ ${basequal}${pylabel}
 build_cet nuevdb @NUEVDB_VERSION@ ${basequal}${pylabel}
 build_cet nug4 @NUG4_VERSION@ ${basequal}${pylabel}
-build_cet geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}${pylabel}:@version_set@
+build_cet -G NuSoftHEP geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}${pylabel}:@version_set@
 build_cet nugen @NUGEN_VERSION@ ${basequal}${pylabel}
 build_cet nurandom @NURANDOM_VERSION@ ${basequal}${pylabel}
 build_cet nutools @NUTOOLS_VERSION@ ${basequal}${pylabel}
