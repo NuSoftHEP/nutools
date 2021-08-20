@@ -36,11 +36,13 @@ create_version_variables(cetbuildtools
   LIST
   v8_11_01
   v8_11_02
+  v8_12_00
+  v8_14_02
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_21_01 v2_21_02)
+create_version_variables(cetmodules LIST v2_21_01 v2_21_02 v2_22_00 v2_24_02)
 # mrb
 create_version_variables(mrb v5_12_02)
 
@@ -140,11 +142,11 @@ create_version_variables(nusimdata v1_24_04)
 create_version_variables(nuevdb v1_05_04)
 create_version_variables(nug4 v1_09_04)
 create_version_variables(nugen v1_14_04)
-create_version_variables(nurandom v1_07_04)
+create_version_variables(nurandom v1_07_05)
 
 create_version_variables(nutools v3_11_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
