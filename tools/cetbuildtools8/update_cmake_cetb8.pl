@@ -54,12 +54,15 @@ s&\$\{CETLIB_EXCEPT\}&cetlib_except::cetlib_except&;
 s&\$\{FHICLCPP\}&fhiclcpp::fhiclcpp&;
 s&\$\{MF_MESSAGELOGGER\}&messagefacility::MF_MessageLogger&;
 s&\$\{MF_UTILITIES\}&&; # No longer exists
+s&\$\{ROOT_CINT\}&&; # No longer exists
 s&\$\{ROOT_CORE\}&ROOT::Core&;
 s&\$\{ROOT_EG\}&ROOT::EG&;
 s&\$\{ROOT_EVE\}&ROOT::Eve&;
+s&\$\{ROOT_FFTW\}&ROOT::FFTW&;
 s&\$\{ROOT_GDML\}&ROOT::Gdml&;
 s&\$\{ROOT_GED\}&ROOT::Ged&;
 s&\$\{ROOT_GEOM\}&ROOT::Geom&;
+s&\$\{ROOT_GEOMPAINTER\}&ROOT::GeomPainter&;
 s&\$\{ROOT_GPAD\}&ROOT::Gpad&;
 s&\$\{ROOT_GRAF\}&ROOT::Graf&;
 s&\$\{ROOT_GRAF3D\}&ROOT::Graf3d&;
@@ -156,6 +159,7 @@ s&\$\{GPHRESEG\}&GPHRESEG&;
 s&\$\{GPHSTRXS\}&GPHSTRXS&;
 s&\$\{GPHSTREG\}&GPHSTREG&;
 s&\$\{GPHNDCY\}&GPHNDCY&;
+s&\$\{GPHDCY\}&GPHDCY&;
 s&\$\{GTLGEO\}&GTLGEO&;
 s&\$\{GTLFLX\}&GTLFLX&;
 s&\$\{GRWFWK\}&GRWFWK&;
