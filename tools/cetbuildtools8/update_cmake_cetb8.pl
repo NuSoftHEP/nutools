@@ -22,6 +22,7 @@ foreach my $lib (sort keys %dir_list) {
    next if m&add_subdirectory&i;
    next if m&find_ups_product&i;
    next if m&simple_plugin&i;
+   next if m&create_version_variables&i;
    next if m&SUBDIRNAME&i;
    next if m&SUBDIRS&i;
    next if m&LIBRARY_NAME&i;
