@@ -51,7 +51,7 @@ s&\$\{BOOST_SYSTEM\}&&; # No longer needed
 s&\$\{BOOST_THREAD\}&Boost::thread&;
 s&\$\{CETLIB\}&cetlib::cetlib&;
 s&\$\{CETLIB_EXCEPT\}&cetlib_except::cetlib_except&;
-s&\$\{FHICLCPP\}&fhiclcpp::fhiclcpp fhiclcpp::types&;
+s&\$\{FHICLCPP\}&fhiclcpp::fhiclcpp&;
 s&\$\{MF_MESSAGELOGGER\}&messagefacility::MF_MessageLogger&;
 s&\$\{MF_UTILITIES\}&&; # No longer exists
 s&\$\{ROOT_CORE\}&ROOT::Core&;
