@@ -1,0 +1,7 @@
+These scripts were used when migrating the nutools suite from redmine to github.
+We save them here for archival purposes.
+
+Old feature branches (e.g., feature/team_for_art_3_09)  were removed by hand. 
+In certain cases, we wanted to retain old branches for archival purposes.
+These branches were renamed as archive/xxx.
+
