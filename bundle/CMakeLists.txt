@@ -95,6 +95,7 @@ create_version_variables(ppfx v02_10_01)
 create_version_variables(protobuf v3_11_2a)
 create_version_variables(tensorflow v1_12_0c)
 create_version_variables(pygccxml v1_9_1b)
+create_version_variables(eigen v3_4_0)
 
 # CodeSynthesis XSD for NoVA.
 #

@@ -51,6 +51,7 @@ do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
 
 # Tensorflow.
+build_noarch eigen @EIGEN_VERSION@
 if [[ "${basequal}" == e19 ]]; then # Cannot build for clang.
   do_build protobuf @PROTOBUF_VERSION@ ${basequal}
   do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}${pylabel}
