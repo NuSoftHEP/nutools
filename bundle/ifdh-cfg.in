@@ -19,6 +19,12 @@ build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
 do_build ifbeam @IFBEAM_VERSION@ ${basequal}:${pyqual}
 do_build nucondb @NUCONDB_VERSION@ ${basequal}:${pyqual}
 
+# using a newer cetbuildtools
+for _cps_cetmodules_ver in @CETMODULES_VERSION_LIST@; do
+  ensure_support_package -f NULL -- cetmodules ${_cps_cetmodules_ver}
+done
+ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
+
 build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}${pylabel}
 
 # Local Variables:

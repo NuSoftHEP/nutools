@@ -37,12 +37,12 @@ create_version_variables(cetbuildtools
   v8_11_01
   v8_11_02
   v8_12_00
-  v8_14_02
+  v8_14_02 v8_18_05
   )
 
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
-create_version_variables(cetmodules LIST v2_21_01 v2_21_02 v2_22_00 v2_24_02)
+create_version_variables(cetmodules LIST v2_21_01 v2_21_02 v2_22_00 v2_24_02 v2_29_06)
 # mrb
 create_version_variables(mrb v5_12_02)
 
@@ -89,11 +89,11 @@ create_version_variables(geant4reweight v01_08_03)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
-create_version_variables(ifdhc v2_5_14)
-create_version_variables(ifdhc_config v2_5_14)
-create_version_variables(ifbeam v2_5_1)
-create_version_variables(nucondb v2_5_1)
-create_version_variables(ifdh_art v2_12_04)
+create_version_variables(ifdhc v2_5_16)
+create_version_variables(ifdhc_config v2_5_16)
+create_version_variables(ifbeam v2_5_2)
+create_version_variables(nucondb v2_5_2)
+create_version_variables(ifdh_art v2_12_05)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
