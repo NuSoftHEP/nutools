@@ -50,7 +50,8 @@ create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
                            v2_21_01 v2_21_02 v2_22_00 
-                           v2_24_02
+                           v2_23_02 v2_23_03
+                           v2_24_00 v2_24_01 v2_24_02
                            v2_25_01 v2_25_05
                            v2_26_00
                            v2_27_00
