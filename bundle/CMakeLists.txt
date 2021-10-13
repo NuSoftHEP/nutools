@@ -120,7 +120,7 @@ create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_00d)
 create_version_variables(dk2nugenie v01_10_00d)
 create_version_variables(protobuf v3_12_3a)
-create_version_variables(pygccxml v2_1_0a)
+create_version_variables(pygccxml v2_1_0c)
 create_version_variables(tensorflow v2_3_1a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION}_a)
 
@@ -160,7 +160,7 @@ create_version_variables(nurandom v1_07_06)
 
 create_version_variables(nutools v3_11_05)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
