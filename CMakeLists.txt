@@ -37,25 +37,9 @@ find_package(cetlib REQUIRED)
 find_package(cetlib_except REQUIRED)
 find_package(CLHEP REQUIRED)
 
-# checking variables
-get_cmake_property(_variableNames VARIABLES)
-list (SORT _variableNames)
-foreach (_variableName ${_variableNames})
-    message(STATUS "${_variableName}=${${_variableName}}")
-endforeach()
-
-
-## find_library directives
-# other dependencies
-cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH ) ### MIGRATE-ACTION-RECOMMENDED: use of ENV ... may be UPS-dependent ### MIGRATE-ACTION-RECOMMENDED: use cet_find_package() with target semantics for linking
-
-# macros
 include(ArtMake)
 include(BuildPlugins)
 include(CetRootCint)
-
-# include search path
-include_directories ( $ENV{CRYHOME}/src ) ### MIGRATE-ACTION-RECOMMENDED: use target_link_directories() with target semantics
 
 # source
 add_subdirectory (nutools)
