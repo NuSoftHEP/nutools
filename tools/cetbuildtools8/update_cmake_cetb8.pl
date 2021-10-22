@@ -6,21 +6,26 @@ BEGIN { %dir_list = (
         "art_Persistency_Provenance" => "art::Persistency_Provenance",
         "art_Framework_Principal" => "art::Framework_Principal",
         "art_Framework_Services_Registry" => "art::Framework_Services_Registry",
+        "ART_FRAMEWORK_SERVICES_REGISTRY" => "art::Framework_Services_Registry",
         "art_Framework_Services_Optional_RandomNumberGenerator_service" => "art::Framework_Services_Optional_RandomNumberGenerator_service",
         "art_Framework_IO_ProductMix" => "art::Framework_IO_ProductMix",
         "art_Utilities" => "art::Utilities",
         "MF_MessageLogger"  => "messagefacility::MF_MessageLogger",
+        "MF_MESSAGELOGGER"  => "messagefacility::MF_MessageLogger",
+        "FHICLCPP" => "fhiclcpp::fhiclcpp",
         "canvas" => "canvas::canvas",
         "cetlib" => "cetlib::cetlib",
         "cetlib_except" => "cetlib_except::cetlib_except",
         "lardata_Utilities_LArPropertiesServiceArgoNeuT_service" => "ArgoneutUtilities_LArPropertiesServiceArgoNeuT_service",
         "lardata_Utilities_DetectorPropertiesServiceArgoNeuT_service" => "ArgoneutUtilities_DetectorPropertiesServiceArgoNeuT_service",
+        "GeometryTestLib" => "larcorealg::GeometryTestLib",
         "nusimdata_SimulationBase" => "nusimdata::SimulationBase"
                        ); }
 
 foreach my $lib (sort keys %dir_list) {
    next if m&add_subdirectory&i;
    next if m&find_ups_product&i;
+   next if m&cet_find_library&i;
    next if m&simple_plugin&i;
    next if m&create_version_variables&i;
    next if m&SUBDIRNAME&i;
@@ -41,20 +46,27 @@ s&\$\{ART_FRAMEWORK_IO_SOURCES\}&art::Framework_IO_Sources&;
 s&\$\{ART_FRAMEWORK_PRINCIPAL\}&art::Framework_Principal&;
 s&\$\{ART_FRAMEWORK_SERVICES_REGISTRY\}&art::Framework_Services_Registry&;
 s&\$\{ART_PERSISTENCY_COMMON\}&art::Persistency_Common&;
+s&\$\{ART_PERSISTENCY_PROVENANCE\}&art::Persistency_Provenance&;
+s&\$\{ART_UTILITIES\}&art::Utilities&;
 s&\$\{ART_ROOT_IO\}&art_root_io::art_root_io&;
 s&\$\{ART_ROOT_IO_ROOTINPUT_SOURCE\}&art_root_io::RootInput_source&;
 s&\$\{ART_ROOT_IO_TFILESERVICE_SERVICE\}&art_root_io::TFileService_service&;
 s&\$\{ART_ROOT_IO_TFILE_SUPPORT\}&art_root_io::tfile_support&;
 s&\$\{BOOST_DATE_TIME\}&Boost::date_time&;
 s&\$\{BOOST_FILESYSTEM\}&Boost::filesystem&;
+s&\$\{Boost_FILESYSTEM_LIBRARY\}&Boost::filesystem&;
 s&\$\{BOOST_REGEX\}&Boost::regex&;
-s&\$\{BOOST_SYSTEM\}&&; # No longer needed
+s&\$\{BOOST_SYSTEM\}&&; # No longer exists
+s&\$\{Boost_SYSTEM_LIBRARY\}&&; # No longer exists
 s&\$\{BOOST_THREAD\}&Boost::thread&;
+s&\$\{CANVAS\}&canvas::canvas&;
 s&\$\{CETLIB\}&cetlib::cetlib&;
 s&\$\{CETLIB_EXCEPT\}&cetlib_except::cetlib_except&;
 s&\$\{FHICLCPP\}&fhiclcpp::fhiclcpp&;
 s&\$\{MF_MESSAGELOGGER\}&messagefacility::MF_MessageLogger&;
 s&\$\{MF_UTILITIES\}&&; # No longer exists
+s&\$\{PANDORASDK\}&PANDORASDK&;
+s&\$\{PANDORAMONITORING\}&PANDORAMONITORING&;
 s&\$\{ROOT_CINT\}&&; # No longer exists
 s&\$\{ROOT_CORE\}&ROOT::Core&;
 s&\$\{ROOT_EG\}&ROOT::EG&;
@@ -88,7 +100,7 @@ s&\$\{ROOTSYS\}/lib/libEGPythia6.so&ROOT::EGPythia6&;
 s&\$\{LIBWDA\}&LIBWDA&;
 s&\$\{PQ\}&PQ&;
 s&\$\{CRY\}&CRY&;
-s&\$\{CLHEP\}&CLHEP&;
+s&\$\{CLHEP\}&CLHEP::CLHEP&;
 s&\$\{GSL\}&GSL&;
 s&\$\{XML2\}&XML2&;
 s&\$\{IFDH\}&IFDH&;
@@ -96,6 +108,8 @@ s&\$\{IFDH_SERVICE\}&IFDH_SERVICE&;
 s&\$\{LOG4CPP\}&LOG4CPP&;
 s&\$\{PYTHIA6\}&PYTHIA6&;
 s&\$\{LHAPDF\}&LHAPDF&;
+s&\$\{SQLITE\}&SQLITE&;
+s&\$\{SQLITE3\}&SQLITE&;
 s&\$\{G4FR\}&G4FR&;
 s&\$\{G4GMOCREN\}&G4GMOCREN&;
 s&\$\{G4RAYTRACER\}&G4RAYTRACER&;
@@ -104,7 +118,9 @@ s&\$\{G4VRML\}&G4VRML&;
 s&\$\{G4EVENT\}&G4EVENT&;
 s&\$\{G4GEOMETRY\}&G4GEOMETRY&;
 s&\$\{G4GLOBAL\}&G4GLOBAL&;
+s&\$\{G4GRAPHICS_REPS\}&G4GRAPHICS_REPS&;
 s&\$\{G4INTERCOMS\}&G4INTERCOMS&;
+s&\$\{G4INTERFACES\}&G4INTERFACES&;
 s&\$\{G4MATERIALS\}&G4MATERIALS&;
 s&\$\{G4MODELING\}&G4MODELING&;
 s&\$\{G4PARTICLES\}&G4PARTICLES&;
@@ -113,9 +129,11 @@ s&\$\{G4PHYSICSLISTS\}&G4PHYSICSLISTS&;
 s&\$\{G4PROCESSES\}&G4PROCESSES&;
 s&\$\{G4READOUT\}&G4READOUT&;
 s&\$\{G4RUN\}&G4RUN&;
+s&\$\{G4TRACK\}&G4TRACK&;
 s&\$\{G4TRACKING\}&G4TRACKING&;
 s&\$\{G4VISHEPREP\}&G4VISHEPREP&;
 s&\$\{G4VIS_MANAGEMENT\}&G4VIS_MANAGEMENT&;
+s&\$\{G4DIGITS_HITS\}&G4DIGITS_HITS&;
 s&\$\{XERCESC\}&XERCESC&;
 s&\$\{GFWMSG\}&GFWMSG&;
 s&\$\{GFWREG\}&GFWREG&;
@@ -169,3 +187,10 @@ s&\$\{GRWCLC\}&GRWCLC&;
 s&\$\{BLAS\}&BLAS&;
 s&\$\{DK2NU_TREE\}&DK2NU_TREE&;
 s&\$\{DK2NU_GENIE\}&DK2NU_GENIE&;
+s&\$\{TENSORFLOW\}&TENSORFLOW&;
+s&\$\{PROTOBUF\}&PROTOBUF&;
+s&\$\{GRPC_CLIENT\}&TRITON::grpcclient&;
+s&\$\{MARLEY\}&MARLEY&;
+s&\$\{MARLEY_ROOT\}&MARLEY_ROOT&;
+s&\$\{BXDECAY0\}&BXDECAY0&;
+s&\$\{JSONCPP\}&JSONCPP&;
