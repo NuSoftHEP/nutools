@@ -13,9 +13,3 @@ endmacro( _nu_install_tools )
 add_subdirectory (refactor)
 add_subdirectory (nutools3)
 
-# This is for users NOT using mrb or cetbuildtools in their build system ### MIGRATE-ACTION-REQUIRED: remove
-CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/setup_cetbuildtools.csh.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/setup_cetbuildtools.csh @ONLY )
-CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/setup_cetbuildtools.sh.in
-                 ${CMAKE_CURRENT_BINARY_DIR}/setup_cetbuildtools.sh @ONLY )
-install_scripts( LIST ${CMAKE_CURRENT_BINARY_DIR}/setup_cetbuildtools.csh ${CMAKE_CURRENT_BINARY_DIR}/setup_cetbuildtools.sh )
