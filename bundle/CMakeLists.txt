@@ -12,7 +12,7 @@ endif()
 project(nutools_bundles NONE)
 
 # Define some necessary modules.
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap) ### MIGRATE-ACTION-REQUIRED: remove
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
@@ -29,10 +29,10 @@ create_version_variables(python v3_9_2)
 create_version_variables(python3 NAME python v3_9_2)
 create_pyqual_variables()
 
-# CMake and cetbuildtools are special: define as many versions as
+# CMake and cetbuildtools are special: define as many versions as ### MIGRATE-ACTION-REQUIRED: remove
 # necessary.
 create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0)
-create_version_variables(cetbuildtools
+create_version_variables(cetbuildtools ### MIGRATE-ACTION-REQUIRED: remove
   LIST
   v8_11_01
   v8_11_02
@@ -56,7 +56,7 @@ create_version_variables(cetmodules
                            v2_26_00
                            v2_27_00
                            v2_28_03
-                           v2_29_00 v2_29_01 v2_29_02 v2_29_04 v2_29_05 v2_29_06)
+                           v2_29_00 v2_29_01 v2_29_02 v2_29_04 v2_29_05 v2_29_06 v2_29_07)
 # mrb
 create_version_variables(mrb v5_12_02)
 

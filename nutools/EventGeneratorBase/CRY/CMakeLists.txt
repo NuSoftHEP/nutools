@@ -1,5 +1,5 @@
 
-art_make( LIB_LIBRARIES nusimdata::SimulationBase
+art_make( LIB_LIBRARIES nusimdata::SimulationBase ### MIGRATE-ACTION-RECOMMENDED: use art_make_library(), art_dictionary(), simple_plugin() with explicit source lists
                         CRY
                         messagefacility::MF_MessageLogger
                         
