@@ -96,6 +96,9 @@ create_version_variables(protobuf v3_11_2a)
 create_version_variables(tensorflow v1_12_0c)
 create_version_variables(pygccxml v1_9_1b)
 create_version_variables(eigen v3_4_0)
+create_version_variables( sundials v5_8_0 )
+create_version_variables( stan_math v4_2_1 )
+create_version_variables( stan v2_28_1 )
 
 # CodeSynthesis XSD for NoVA.
 #
@@ -114,7 +117,7 @@ create_version_variables(nugen v1_06_05)
 
 create_version_variables(nutools v3_08_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed.
+set(nulite_suffix b) # Reset when no longer needed.
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
@@ -145,3 +148,6 @@ distribution(nulite WITH_HTML)
 
 # ifdh.
 distribution(ifdh)
+
+# stan
+distribution(stan)
