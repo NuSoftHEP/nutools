@@ -29,36 +29,15 @@ create_version_variables(python v3_9_2)
 create_version_variables(python3 NAME python v3_9_2)
 create_pyqual_variables()
 
-# CMake and cetbuildtools are special: define as many versions as
-# necessary.
+# CMake and cetmodules are special: define as many versions as necessary.
 create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0)
-create_version_variables(cetbuildtools
-  LIST
-  v8_11_01
-  v8_11_02
-  v8_12_00
-  v8_13_02 v8_13_03
-  v8_14_00 v8_14_01 v8_14_02
-  v8_15_00 v8_15_01
-  v8_16_00
-  v8_17_03
-  v8_18_00 v8_18_01 v8_18_03 v8_18_04 v8_18_05
-  )
-
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_21_01 v2_21_02 v2_22_00 
-                           v2_23_02 v2_23_03
-                           v2_24_00 v2_24_01 v2_24_02
-                           v2_25_01 v2_25_05
-                           v2_26_00
-                           v2_27_00
-                           v2_28_03
-                           v2_29_00 v2_29_01 v2_29_02 v2_29_04 v2_29_05 v2_29_06)
+                           v2_29_00 v2_29_01 v2_29_02 v2_29_04 v2_29_05 v2_29_06 v2_29_07 v2_29_08 v2_29_09)
 # mrb
-create_version_variables(mrb v5_12_02)
+create_version_variables(mrb v5_19_04)
 
 # art_suite
 set(suite_rc_level)
@@ -107,7 +86,7 @@ create_version_variables(ifdhc v2_5_16)
 create_version_variables(ifdhc_config v2_5_16)
 create_version_variables(ifbeam v2_5_2)
 create_version_variables(nucondb v2_5_2)
-create_version_variables(ifdh_art v2_12_05)
+create_version_variables(ifdh_art v2_13_00)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -152,13 +131,13 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_24_05)
-create_version_variables(nuevdb v1_05_05)
-create_version_variables(nug4 v1_11_00)
-create_version_variables(nugen v1_14_05)
-create_version_variables(nurandom v1_07_06)
+create_version_variables(nusimdata v1_25_00)
+create_version_variables(nuevdb v1_06_00)
+create_version_variables(nug4 v1_12_00)
+create_version_variables(nugen v1_15_00)
+create_version_variables(nurandom v1_08_00)
 
-create_version_variables(nutools v3_11_05)
+create_version_variables(nutools v3_12_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})

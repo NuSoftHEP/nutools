@@ -1,16 +1,21 @@
 
-art_make( LIB_LIBRARIES nusimdata::SimulationBase
-                        CRY
+find_package(ROOT COMPONENTS Geom GeomPainter Core EG REQUIRED)
+find_package(CRY)
+
+art_make_library(LIBRARIES PRIVATE
+                        CRY::CRY
+                        nusimdata::SimulationBase
+                        art::Framework_Services_Registry
                         messagefacility::MF_MessageLogger
-                        
                         fhiclcpp::fhiclcpp
                         cetlib::cetlib
 			cetlib_except::cetlib_except
                         ROOT::Geom
                         ROOT::GeomPainter
 			ROOT::EG
-                        ${ROOT_BASIC_LIB_LIST} )
-
+                        ROOT::Core
+                        CLHEP::CLHEP
+                        )
 
 install_headers()
 install_fhicl()

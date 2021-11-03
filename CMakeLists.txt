@@ -12,62 +12,46 @@
 #  make install
 #  make package (builds distribution tarfile)
 # ======================================================================
+cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
-cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
 
-project(nutools VERSION 3.11.05 LANGUAGES CXX)
-
-# cetbuildtools contains our cmake modules
-find_package(cetbuildtools REQUIRED)
+find_package(cetmodules 2.29.06 REQUIRED)
+project(nutools VERSION 3.12.00 LANGUAGES CXX)
 
 include(CetCMakeEnv)
 cet_cmake_env()
 
+# Find our own CMake modules, and tell everyone else where to find them.
+cet_cmake_module_directories(Modules)
+
 # -D_GLIBCXX_USE_NANOSLEEP is needed to make std::this_thread::sleep_for available. (IFDatabase)
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
                        NO_UNDEFINED
-                       EXTRA_FLAGS -pedantic
-                       EXTRA_CXX_FLAGS -D_GLIBCXX_USE_NANOSLEEP
-                                       -Wno-unused-local-typedefs -Wno-variadic-macros)
-cet_report_compiler_flags()
+                       EXTRA_FLAGS -pedantic 
+                                   $<$<COMPILE_LANGUAGE:CXX>:-D_GLIBCXX_USE_NANOSLEEP 
+                                   -Wno-unused-local-typedefs -Wno-variadic-macros>)
+cet_report_compiler_flags(REPORT_THRESHOLD VERBOSE)
 
-# these are minimum required versions, not the actual product versions
-find_ups_product( art )
-find_ups_product( art_root_io )
-find_ups_product( canvas_root_io )
-find_ups_product( nusimdata )
-find_ups_product( clhep )
-find_ups_product( cetlib )
-find_ups_product( cetlib_except )
-find_ups_root()
+find_package(art REQUIRED)
+find_package(art_root_io REQUIRED)
+find_package(canvas_root_io REQUIRED)
+find_package(nusimdata REQUIRED)
+find_package(cetlib REQUIRED)
+find_package(cetlib_except REQUIRED)
+find_package(CLHEP REQUIRED)
 
-message(STATUS "ROOTSYS is ${ROOTSYS}")
-
-## find_library directives
-# other dependencies
-cet_find_library( CRY NAMES CRY PATHS ENV CRY_LIB NO_DEFAULT_PATH )
-
-# macros
 include(ArtMake)
 include(BuildPlugins)
 include(CetRootCint)
-
-# include search path
-include_directories ( $ENV{CRYHOME}/src )
-
-# included for Mac OSX using XQuartz for X11
-if(APPLE)
-  include_directories ( /opt/X11/include )
-endif()
 
 # source
 add_subdirectory (nutools)
 add_subdirectory (tools)
 add_subdirectory (bundle)
+add_subdirectory (Modules)
 
 # ups - table and config files
-add_subdirectory(ups)
 
 # packaging utility
-include(UseCPack)
 
+cet_cmake_config()
