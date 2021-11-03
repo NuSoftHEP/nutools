@@ -2,7 +2,7 @@
 find_package(ROOT COMPONENTS Geom GeomPainter Core EG REQUIRED)
 find_package(CRY)
 
-art_make_library(LIBRARIES
+art_make_library(LIBRARIES PRIVATE
                         CRY::CRY
                         nusimdata::SimulationBase
                         art::Framework_Services_Registry
