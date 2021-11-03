@@ -16,7 +16,7 @@ cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 
 find_package(cetmodules 2.29.06 REQUIRED)
-project(nutools VERSION 3.11.05 LANGUAGES CXX)
+project(nutools VERSION 3.12.00 LANGUAGES CXX)
 
 include(CetCMakeEnv)
 cet_cmake_env()
@@ -48,6 +48,7 @@ include(CetRootCint)
 add_subdirectory (nutools)
 add_subdirectory (tools)
 add_subdirectory (bundle)
+add_subdirectory (Modules)
 
 # ups - table and config files
 
