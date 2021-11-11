@@ -9,10 +9,10 @@ art_make_library(LIBRARIES PRIVATE
   messagefacility::MF_MessageLogger
   fhiclcpp::fhiclcpp
   cetlib::cetlib
-	cetlib_except::cetlib_except
+  cetlib_except::cetlib_except
   ROOT::Geom
   ROOT::GeomPainter
-	ROOT::EG
+  ROOT::EG
   ROOT::Core
   PUBLIC CLHEP::Random
   )
