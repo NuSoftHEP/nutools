@@ -131,13 +131,13 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_25_00)
-create_version_variables(nuevdb v1_06_00)
-create_version_variables(nug4 v1_12_00)
-create_version_variables(nugen v1_15_00)
-create_version_variables(nurandom v1_08_00)
+create_version_variables(nusimdata v1_25_01)
+create_version_variables(nuevdb v1_06_01)
+create_version_variables(nug4 v1_12_01)
+create_version_variables(nugen v1_15_01)
+create_version_variables(nurandom v1_08_01)
 
-create_version_variables(nutools v3_12_00)
+create_version_variables(nutools v3_12_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
