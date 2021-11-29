@@ -21,7 +21,6 @@ ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 for _cps_cetmodules_ver in @CETMODULES_VERSION_LIST@; do
   ensure_support_package -f NULL -- cetmodules ${_cps_cetmodules_ver}
 done
-ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
 build_bundle @ART_SUITE_NAME@-@ART_SUITE_DOT_VERSION@ ${basequal} || return
