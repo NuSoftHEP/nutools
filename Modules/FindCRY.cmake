@@ -33,7 +33,7 @@ if (EXISTS "${_cet_CRY_include_dir}")
   set(CRY_LIBRARY_DIR "${_cet_CRY_dir}/lib}")
 endif()
 if (CRY_FOUND)
-  find_library(CRY_LIBRARY NAMES CRY HINTS ${CRY_LIBRARY_DIR} NO_DEFAULT_PATH)
+  find_library(CRY_LIBRARY NAMES CRY HINTS ${CRY_LIBRARY_DIR})
   if (NOT TARGET CRY::CRY)
     add_library(CRY::CRY SHARED IMPORTED)
     set_target_properties(CRY::CRY PROPERTIES
