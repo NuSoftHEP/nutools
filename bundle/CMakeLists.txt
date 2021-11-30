@@ -94,6 +94,7 @@ create_version_variables(ifdh ${IFDH_ART_VERSION})
 # nu_extras
 create_version_variables(genie v3_00_06p)
 create_version_variables(genie_phyopt v3_00_04)
+create_version_variables(genie_phyopt2 v3_00_06)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
