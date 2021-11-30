@@ -31,6 +31,7 @@ create_pyqual_variables()
 
 # CMake and cetmodules are special: define as many versions as necessary.
 create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0)
+create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
