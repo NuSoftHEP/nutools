@@ -83,11 +83,11 @@ create_version_variables(geant4reweight v01_11_00)
 
 # ifdh
 create_version_variables(libwda v2_29_1)
-create_version_variables(ifdhc v2_5_18)
-create_version_variables(ifdhc_config v2_5_14)
-create_version_variables(ifbeam v2_5_4)
-create_version_variables(nucondb v2_5_4)
-create_version_variables(ifdh_art v2_13_01)
+create_version_variables(ifdhc v2_6_0)
+create_version_variables(ifdhc_config v2_6_0)
+create_version_variables(ifbeam v2_5_6)
+create_version_variables(nucondb v2_5_6)
+create_version_variables(ifdh_art v2_13_02)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -141,7 +141,7 @@ create_version_variables(nurandom v1_08_01)
 
 create_version_variables(nutools v3_12_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
