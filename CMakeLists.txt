@@ -16,13 +16,13 @@ cmake_minimum_required(VERSION 3.19 FATAL_ERROR)
 
 
 find_package(cetmodules 2.29.06 REQUIRED)
-project(nutools VERSION 3.12.01 LANGUAGES CXX)
+project(nutools VERSION 3.12.02 LANGUAGES CXX)
 
 include(CetCMakeEnv)
 cet_cmake_env()
 
 # Find our own CMake modules, and tell everyone else where to find them.
-cet_cmake_module_directories(Modules)
+#cet_cmake_module_directories(Modules)
 
 # -D_GLIBCXX_USE_NANOSLEEP is needed to make std::this_thread::sleep_for available. (IFDatabase)
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
@@ -48,7 +48,7 @@ include(CetRootCint)
 add_subdirectory (nutools)
 add_subdirectory (tools)
 add_subdirectory (bundle)
-add_subdirectory (Modules)
+#add_subdirectory (Modules)
 
 # ups - table and config files
 
