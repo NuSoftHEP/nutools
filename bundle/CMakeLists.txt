@@ -36,9 +36,9 @@ create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01)
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_29_00 v2_29_01 v2_29_02 v2_29_04 v2_29_05 v2_29_06 v2_29_07 v2_29_08 v2_29_09 v2_30_01)
+                           v2_29_06 v2_29_09 v2_30_01 v2_31_01)
 # mrb
-create_version_variables(mrb v5_19_09)
+create_version_variables(mrb v5_19_11)
 
 # art_suite
 set(suite_rc_level)
@@ -82,12 +82,12 @@ create_version_variables(g4tendl v1_3_2)
 create_version_variables(geant4reweight v01_13_00)
 
 # ifdh
-create_version_variables(libwda v2_29_1)
+create_version_variables(libwda v2_30_0)
 create_version_variables(ifdhc v2_6_1)
-create_version_variables(ifdhc_config v2_6_1)
-create_version_variables(ifbeam v2_5_7)
-create_version_variables(nucondb v2_5_7)
-create_version_variables(ifdh_art v2_13_03)
+create_version_variables(ifdhc_config v2_6_1a)
+create_version_variables(ifbeam v2_5_9)
+create_version_variables(nucondb v2_5_9)
+create_version_variables(ifdh_art v2_13_04)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 

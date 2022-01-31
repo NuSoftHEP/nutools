@@ -13,6 +13,10 @@ build_bundle @ART_SUITE_NAME@-@ART_SUITE_DOT_VERSION@ ${basequal} || return
 
 @INIT_PYQUAL_VARS@
 
+for cv in @CMAKE_VERSION_LIST@; do
+  do_build cmake ${cv}
+done
+
 do_build libwda @LIBWDA_VERSION@
 do_build ifdhc @IFDHC_VERSION@ ${basequal}:${pyqual}
 build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
