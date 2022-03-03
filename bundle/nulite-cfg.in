@@ -24,6 +24,11 @@ done
 ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
+# mrb
+do_build hub @HUB_VERSION@
+do_build gh @GH_VERSION@
+build_noarch mrb @MRB_VERSION@
+
 build_bundle @ART_SUITE_NAME@-@ART_SUITE_DOT_VERSION@ ${basequal} || return
 build_cet canvas_root_io @CANVAS_ROOT_IO_VERSION@ ${basequal}${pylabel}
 build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pylabel}

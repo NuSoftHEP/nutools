@@ -6,6 +6,13 @@
 
 basequal=${1}
 
+# Special requirements on buildFW version for modern Cetmodules and MRB.
+if version_greater $(latest_version @CETMODULES_VERSION_LIST@) v3_02_99 ||
+    version_greater @MRB_VERSION@ v5_99_99; then
+  @DEFINE_REQUIRE_BUILDFW_VERSION@
+  require_buildfw_version 6.00.00 || return
+fi
+
 # Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
@@ -85,9 +92,6 @@ build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_phyopt @GENIE_PHYOPT2_VERSION@ dkcharmtau-resfixfix
 build_noarch genie_phyopt @GENIE_PHYOPT2_VERSION@ dkstandard-resfixfix
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
-
-# mrb
-build_noarch mrb @MRB_VERSION@
 
 # Local Variables:
 # mode: sh
