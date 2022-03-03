@@ -67,7 +67,7 @@
 #
 ########################################################################
 cmake_policy(PUSH)
-cmake_minimum_required(VERSION 3.18.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8...3.18 FATAL_ERROR)
 
 include(CMakeParseArguments)
 
@@ -146,7 +146,21 @@ macro(create_pyqual_variables)
 endmacro()
 
 function(init_shell_fragment_vars)
+  set(public_vars
+    DEFINE_REQUIRE_BUILDFW_VERSION
+    INIT_PYQUAL_VARS
+    BUILD_COMPILERS
+    )
   _init_shell_fragment_support_vars()
+  set(DEFINE_REQUIRE_BUILDFW_VERSION
+    "require_buildfw_version() {
+  if version_greater \\
+\$1 v\$(print_version | sed -e 's&^.*[ \\t]\\{1,\\}&&' -e 's&\\.&_&g' ); then
+    echo \"Need buildFW \$1 or better.\" 1>&2
+    return 1
+  fi
+}
+")
   # INIT_PYQUAL_VARS supports two cases:
   #
   # 1. where we support both Python 2 and Python 3 via a 'py2' build
@@ -162,8 +176,7 @@ function(init_shell_fragment_vars)
 ${_CHECK_OS_PYTHON3_SUPPORT}
 ")
   endif()
-  set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
-if [[ \${build_label} =~ (^|[-:])py2([-:]|\$) ]]; then")
+  set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}if [[ \${build_label} =~ (^|[-:])py2([-:]|\$) ]]; then")
   if (PY2QUAL AND PY3QUAL)
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
   pyver=${PYTHON_VERSION}
@@ -188,24 +201,24 @@ unset pylabel
   endif()
   if (PY3QUAL OR NOT 3.0.0 VERSION_GREATER PYTHON_DOT_VERSION)
     set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
-
 if [[ \"\${pyqual}\" == p3* ]]; then
   check_os_python3_support
 fi
 ")
   endif()
-  set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}
-########################################################################")
-  set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}" PARENT_SCOPE)
+  set(INIT_PYQUAL_VARS "${INIT_PYQUAL_VARS}########################################################################
+")
 
-  set(BUILD_COMPILERS "if version_greater v5_03_00 \\
-v\$(print_version | sed -e 's&^.*[ \\t]\\{1,\\}&&' -e 's&\\.&_&g' ); then
-  echo \"Need buildFW 5.03.00 or better.\" 1>&2
-  return 1
-else
+  set(BUILD_COMPILERS
+    "${DEFINE_REQUIRE_BUILDFW_VERSION}
+require_buildfw_version 5.03.00 || return
+
 ${_BUILD_COMPILERS_DETAIL}
-fi
-" PARENT_SCOPE)
+")
+
+  foreach (var ${public_vars})
+    set(${var} "${${var}}" PARENT_SCOPE)
+  endforeach()
 endfunction()
 
 function(distribution VAR_STEM)
@@ -271,37 +284,56 @@ export CET_BUILD_UNSUPPORTED=1 to override.\"
 
   set(_CHECK_BASE_DETAIL
     "if [ \"\${bundle_name}\" = \"build_base\" ]; then
-    bf_build_base=1
-  fi
+  bf_build_base=1
+fi
 ")
 
+  set(DEFINE_BF_BUILD_CMAKE
+    "########################################################################
+# Define a support function to build required CMake packages.
+bf_build_cmake() {
+  local cv
+  local versions=(\${CMAKE_VERSION:-\"\$@\"})
+  for cv in \${versions[@]:-${CMAKE_VERSION_LIST}}; do
+    do_pull -f -n cmake \"\${cv}\" || \\
+      { local no_binary_download=1
+        do_build cmake \"\${cv}\"; }
+  done
+}
+########################################################################
+")
+  set(DEFINE_BF_BUILD_CMAKE "${DEFINE_BF_BUILD_CMAKE}" PARENT_SCOPE)
+
+  set(BF_BUILD_CMAKE
+    "${DEFINE_BF_BUILD_CMAKE}
+bf_build_cmake \\
+")
+  set(BF_BUILD_CMAKE "${BF_BUILD_CMAKE}" PARENT_SCOPE)
+
   set(_BUILD_COMPILERS_DETAIL
-    "  function bf_handle_cmake() {
-    local cv
-    if [ -n \"\${CMAKE_VERSION}\" ]; then
-      do_pull -f -n cmake \"\${CMAKE_VERSION}\" || \\
-        { local no_binary_download=1
-          do_build cmake \"\${CMAKE_VERSION}\"; }
-    else
-      for cv in ${CMAKE_VERSION_LIST}; do
-        do_build cmake \${cv}
-      done
-    fi
-  }
-  function bf_build_compilers() {
-    # Attempt to pull required_items.
-    (( bf_build_base )) || ! maybe_pull_gcc && \\
-      { local no_binary_download=1
-        maybe_build_gcc; }
-    bf_handle_cmake
-    (( bf_build_base )) || ! maybe_pull_other_compilers && \\
-      { local no_binary_download=1
-        maybe_build_other_compilers ${SQLITE_VERSION} \\
-        ${PYTHON_VERSION}; }
-  }
-  ${_CHECK_BASE_DETAIL}
-  bf_build_compilers && \\
-    unset bf_build_base bf_build_compilers bf_handle_cmake
+    "${DEFINE_BF_BUILD_CMAKE}
+########################################################################
+# Define a function to build required compiler packages and their
+# prerequisites.
+bf_build_compilers() {
+  # Attempt to pull required_items.
+  (( bf_build_base )) || ! maybe_pull_gcc && \\
+    { local no_binary_download=1
+      maybe_build_gcc; }
+  bf_build_cmake
+  (( bf_build_base )) || ! maybe_pull_other_compilers && \\
+    { local no_binary_download=1
+      maybe_build_other_compilers ${SQLITE_VERSION} \\
+      ${PYTHON_VERSION}; }
+}
+########################################################################
+
+########################################################################
+# Actually build the compiler packages and their prerequisites.
+${_CHECK_BASE_DETAIL}
+bf_build_compilers && \\
+  unset bf_build_base bf_build_compilers bf_handle_cmake
+########################################################################
 ")
 endmacro()
 
