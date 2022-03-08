@@ -11,6 +11,8 @@ check_ups @UPS_VERSION@
 
 build_bundle @NULITE_BASE_NAME@-@NULITE_BASE_DOT_VERSION@ ${basequal} || return
 
+build_bundle @IFDH_NAME@-@IFDH_DOT_VERSION@ ${basequal} || return
+
 @INIT_PYQUAL_VARS@
 
 for cv in @CMAKE_VERSION_LIST@; do
@@ -56,7 +58,6 @@ build_cet -p trace-git -w v1_04_00 TRACE @TRACE_VERSION@ -nq-
 
 build_cet -p artdaq-core artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}${pylabel}:@version_set@
 
-build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}${pylabel}
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
 build_cet -G NuSoftHEP nusimdata @NUSIMDATA_VERSION@ ${basequal}${pylabel}

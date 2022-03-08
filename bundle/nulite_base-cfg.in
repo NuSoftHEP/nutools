@@ -58,11 +58,7 @@ do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
 do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 
 # IFDH.
-do_build libwda @LIBWDA_VERSION@
-do_build ifdhc @IFDHC_VERSION@  ${basequal}:${pyqual}
-build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
-do_build ifbeam @IFBEAM_VERSION@  ${basequal}:${pyqual}
-do_build nucondb @NUCONDB_VERSION@  ${basequal}:${pyqual}
+# use the ifdh bundle and call it from nulite-cfg
 
 # pygccxml and castxml
 if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
