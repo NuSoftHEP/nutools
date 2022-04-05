@@ -16,8 +16,7 @@ check_ups @UPS_VERSION@
 @INIT_PYQUAL_VARS@
 
 # packages needed only for the build
-do_build -m bazel v3_1_0
-build_type=prof do_build -m swig v4_0_2 ${basequal}
+do_build -m bazelisk @BAZELISK_VERSION@
 
 # Tensorflow.
 do_build sqlite @SQLITE_VERSION@
@@ -25,5 +24,6 @@ do_build python ${pyver}
 build_noarch pybind11 @PYBIND11_VERSION@
 build_noarch -m eigen @EIGEN_VERSION@
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+do_build grpc @GRPC_VERSION@ ${basequal}
 do_build tensorflow @TENSORFLOW_VERSION@ ${basequal}:${pyqual}
 

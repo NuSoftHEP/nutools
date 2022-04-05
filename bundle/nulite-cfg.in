@@ -6,6 +6,15 @@
 
 basequal=${1}
 
+# Special requirements on buildFW version for modern Cetmodules and MRB.
+# The TRACE build needs to specify the version of cetmodules
+# This feature requires buildFW 5.04.01 or greater
+if version_greater $(latest_version @CETMODULES_VERSION_LIST@) v3_02_99 ||
+    version_greater @MRB_VERSION@ v5_99_99; then
+  @DEFINE_REQUIRE_BUILDFW_VERSION@
+  require_buildfw_version 6.00.00 || return
+fi
+
 # Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
@@ -37,18 +46,6 @@ build_cet art_root_io @ART_ROOT_IO_VERSION@ ${basequal}${pylabel}
 
 if [[ -z "${version_set}" ]]; then
   echo "ERROR: version set must be specified for artdaq_core" 1>&2
-  return 1
-fi
-
-# As of v1_07_00, artdaq_core is built with canvas and TRACE.
-# As of art 3.06, newer releases of cetmodules are also available
-# The TRACE build needs to specify the version of cetmodules
-# This feature requires buildFW 5.04.01 or greater
-buildFW_version=v$(print_version | cut -d' ' -f 2 | sed -e 's&\.&_&g')
-$(version_greater ${buildFW_version} v5_04_00)
-status=$?
-if (( ${status} != 0 )); then
-  echo "ERROR: TRACE >= v3_14_00 needs buildFW >= 5.04.01" 1>&2
   return 1
 fi
 
