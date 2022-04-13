@@ -85,11 +85,11 @@ create_version_variables(geant4reweight v01_13_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0)
-create_version_variables(ifdhc v2_6_2)
-create_version_variables(ifdhc_config v2_6_1c)
-create_version_variables(ifbeam v2_5_10)
-create_version_variables(nucondb v2_5_10)
-create_version_variables(ifdh_art v2_13_06)
+create_version_variables(ifdhc v2_6_3)
+create_version_variables(ifdhc_config v2_6_3)
+create_version_variables(ifbeam v2_5_11)
+create_version_variables(nucondb v2_5_11)
+create_version_variables(ifdh_art v2_13_07)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -138,19 +138,19 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 create_version_variables(nusimdata v1_25_02)
 create_version_variables(nuevdb v1_06_03)
 create_version_variables(nug4 v1_12_02)
-create_version_variables(nugen v1_15_07)
+create_version_variables(nugen v1_15_08)
 create_version_variables(nurandom v1_08_01)
 
 create_version_variables(nutools v3_12_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_11)
+create_version_variables(ppfx v02_14_12)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
