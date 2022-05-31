@@ -31,12 +31,12 @@ create_pyqual_variables()
 
 # CMake and cetmodules are special: define as many versions as necessary.
 create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0 v3_22_0 v3_22_2)
-create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02)
+create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02 v8_20_00)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01)
+                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
@@ -85,11 +85,11 @@ create_version_variables(geant4reweight v01_14_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0)
-create_version_variables(ifdhc v2_6_3)
-create_version_variables(ifdhc_config v2_6_3)
-create_version_variables(ifbeam v2_5_11)
-create_version_variables(nucondb v2_5_11)
-create_version_variables(ifdh_art v2_13_07)
+create_version_variables(ifdhc v2_6_4)
+create_version_variables(ifdhc_config v2_6_4)
+create_version_variables(ifbeam v2_5_12)
+create_version_variables(nucondb v2_5_12)
+create_version_variables(ifdh_art v2_13_08)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -138,19 +138,19 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 create_version_variables(nusimdata v1_25_02)
 create_version_variables(nuevdb v1_06_03)
 create_version_variables(nug4 v1_12_02)
-create_version_variables(nugen v1_15_08)
+create_version_variables(nugen v1_15_09)
 create_version_variables(nurandom v1_08_01)
 
 create_version_variables(nutools v3_12_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix c) # Reset when no longer needed
+set(nulite_suffix d) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_12)
+create_version_variables(ppfx v02_14_13)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
