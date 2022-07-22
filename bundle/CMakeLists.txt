@@ -139,7 +139,7 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 # nutools
 create_version_variables(nusimdata v1_25_02_02)
 create_version_variables(nuevdb v1_06_03_02)
-create_version_variables(nug4 v1_12_02_02)
+create_version_variables(nug4 v1_12_02_01)
 create_version_variables(nugen v1_15_10_02)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_08_01)
