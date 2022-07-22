@@ -92,11 +92,10 @@ if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-
 fi
 
 # Data-only packages.
-build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_phyopt @GENIE_PHYOPT2_VERSION@ dkcharmtau-resfixfix
 build_noarch genie_phyopt @GENIE_PHYOPT2_VERSION@ dkstandard-resfixfix
-build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
+build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1802a00000-k250-e1000
 
 # Local Variables:
 # mode: sh

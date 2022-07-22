@@ -81,7 +81,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_14_00)
+create_version_variables(geant4reweight v01_14_00_01)
 
 # ifdh
 create_version_variables(libwda v2_30_0)
@@ -94,14 +94,14 @@ create_version_variables(ifdh_art v2_13_09)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06p)
-create_version_variables(genie_phyopt v3_00_04)
+create_version_variables(genie v3_02_00)
+create_version_variables(genie_phyopt v3_02_00)
 create_version_variables(genie_phyopt2 v3_00_06)
-create_version_variables(genie_xsec v3_00_04a)
+create_version_variables(genie_xsec v3_02_00)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_00d)
-create_version_variables(dk2nugenie v01_10_00d)
+create_version_variables(dk2nugenie v01_10_00e)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(pygccxml v2_1_0c)
 # tensorflow
@@ -137,16 +137,16 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_25_02)
-create_version_variables(nuevdb v1_06_03)
-create_version_variables(nug4 v1_12_02)
-create_version_variables(nugen v1_15_10)
+create_version_variables(nusimdata v1_25_02_01)
+create_version_variables(nuevdb v1_06_03_01)
+create_version_variables(nug4 v1_12_02_01)
+create_version_variables(nugen v1_15_10_01)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_08_01)
 create_version_variables(systematicstools v01_00_03)
-create_version_variables(nusystematics v01_00_14)
+create_version_variables(nusystematics v01_00_14_01)
 
-create_version_variables(nutools v3_12_03)
+create_version_variables(nutools v3_12_03_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix f) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
@@ -155,7 +155,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_14)
+create_version_variables(ppfx v02_15_00)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
