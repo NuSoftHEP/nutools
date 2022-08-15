@@ -98,13 +98,13 @@ create_version_variables(ifdh_art v2_12_04)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_00_06p)
+create_version_variables(genie v3_02_00)
 create_version_variables(genie_phyopt v3_00_04)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_00d)
-create_version_variables(dk2nugenie v01_10_00d)
+create_version_variables(dk2nugenie v01_10_00e)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(pygccxml v2_1_0a)
 create_version_variables(tensorflow v2_3_1a)
@@ -146,7 +146,7 @@ create_version_variables(nurandom v1_07_05)
 
 create_version_variables(nutools v3_11_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
