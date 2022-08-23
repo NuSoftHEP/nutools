@@ -21,7 +21,7 @@ nusimdata       v1_15_05
 dk2nugenie      v01_08_00_ub4
 geant4          v4_10_3_p03c
 cry             v1_7k
-ifdh_art        v2_07_07
+ifdh_art        v2_07_09
 
 cetbuildtools   v7_15_01        -        only_for_build
 end_product_list
