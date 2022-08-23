@@ -75,12 +75,12 @@ create_product_variables(g4tendl v1_3)
 create_product_variables(geant4reweight v01_00_03c )
 
 # ifdh
-create_product_variables(libwda v2_28_0)
-create_product_variables(ifdhc v2_5_4)
-create_product_variables(ifdhc_config v2_5_4)
-create_product_variables(ifbeam v2_4_3)
-create_product_variables(nucondb v2_4_3)
-create_product_variables(ifdh_art v2_07_07)
+create_product_variables(libwda v2_30_0)
+create_product_variables(ifdhc v2_6_7a)
+create_product_variables(ifdhc_config v2_6_7)
+create_product_variables(ifbeam v2_5_13a)
+create_product_variables(nucondb v2_5_13a)
+create_product_variables(ifdh_art v2_07_09)
 
 # nu_extras
 create_product_variables(cstxsd v4_0_0h)
