@@ -1,0 +1,33 @@
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build ifdh_art and dependencies.
+########################################################################
+
+basequal=${1}
+
+# Specify version to bootstrap and setup UPS.
+check_ups @UPS_VERSION@
+
+if [[ -z "${version_set}" ]]; then
+  echo "ERROR: version set must be specified for ifdh_art and artdaq_core"
+  return 1
+fi
+
+build_bundle art-@ART_SUITE_DOT_VERSION@ ${basequal} || return
+
+ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
+do_build cmake v3_14_3
+
+do_build libwda @LIBWDA_VERSION@
+do_build ifdhc @IFDHC_VERSION@ ${basequal}:@PYQUAL@
+build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
+do_build ifbeam @IFBEAM_VERSION@ ${basequal}:@PYQUAL@
+do_build nucondb @NUCONDB_VERSION@ ${basequal}:@PYQUAL@
+
+build_cet -G art-framework-suite -p ifdh-art ifdh_art @IFDH_ART_VERSION@ ${basequal}:${version_set}
+
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:

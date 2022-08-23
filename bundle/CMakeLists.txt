@@ -114,5 +114,7 @@ CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite-cfg.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite-cfg-${NULITE_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite_base-cfg.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite_base-cfg-${NULITE_DOT_VERSION} @ONLY )
+CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/ifdh-cfg.in
+                 ${CMAKE_CURRENT_BINARY_DIR}/ifdh-cfg-${IFDH_ART_DOT_VERSION} @ONLY )
 CONFIGURE_FILE ( ${CMAKE_CURRENT_SOURCE_DIR}/nulite.html.in
                  ${CMAKE_CURRENT_BINARY_DIR}/nulite-${NULITE_VERSION}.html @ONLY )
