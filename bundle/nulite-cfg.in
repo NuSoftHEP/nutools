@@ -40,9 +40,9 @@ build_cet -p artdaq-core artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_
 build_cet -p "ifdh-art/ifdh_art.git" ifdh_art @IFDH_ART_VERSION@ ${basequal}:${version_set}
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}:${version_set}
 
-build_cet nusimdata @NUSIMDATA_VERSION@ ${basequal}
-build_cet nutools @NUTOOLS_VERSION@ ${basequal}
-build_cet geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}:@version_set@
+build_cet -G NuSoftHEP nusimdata @NUSIMDATA_VERSION@ ${basequal}
+build_cet -G NuSoftHEP nutools @NUTOOLS_VERSION@ ${basequal}
+build_cet -G NuSoftHEP geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}:@version_set@
 build_cet ppfx @PPFX_VERSION@ ${basequal}
 
 return 0
