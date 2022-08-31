@@ -61,7 +61,7 @@ create_version_variables(gallery v1_18_05)
 create_version_variables(toyExperiment v0_07_04a)
 
 create_version_variables(cry v1_7n)
-create_version_variables(TRACE v3_17_01)
+create_version_variables(TRACE v3_17_05)
 create_version_variables(artdaq_core v3_09_02)
 
 # geant4
