@@ -51,9 +51,9 @@ fi
 
 build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
 
-build_cet -p trace-git -w v1_04_00 TRACE @TRACE_VERSION@ -nq-
+build_cet -G art-daq -p trace TRACE @TRACE_VERSION@ -nq-
 
-build_cet -p artdaq-core artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}${pylabel}:@version_set@
+build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_set@
 
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
@@ -65,8 +65,8 @@ build_cet -G NuSoftHEP nugen @NUGEN_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nurandom @NURANDOM_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nutools @NUTOOLS_VERSION@ ${basequal}${pylabel}
 # extras
-build_cet -G LArSoft systematicstools @SYSTEMATICSTOOLS_VERSION@ ${basequal}
-build_cet -G LArSoft nusystematics @NUSYSTEMATICS_VERSION@ ${basequal}
+##build_cet -G LArSoft systematicstools @SYSTEMATICSTOOLS_VERSION@ ${basequal}
+##build_cet -G LArSoft nusystematics @NUSYSTEMATICS_VERSION@ ${basequal}
 build_cet ppfx @PPFX_VERSION@ ${basequal}${pylabel}
 
 # Local Variables:
