@@ -30,13 +30,13 @@ create_version_variables(python3 NAME python v3_9_2)
 create_pyqual_variables()
 
 # CMake and cetmodules are special: define as many versions as necessary.
-create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0 v3_22_0 v3_22_2)
+create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0 v3_22_0 v3_22_2 v3_24_1)
 create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02 v8_20_00)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00)
+                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
@@ -137,16 +137,16 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_25_03)
-create_version_variables(nuevdb v1_06_04)
-create_version_variables(nug4 v1_12_03)
-create_version_variables(nugen v1_15_11)
+create_version_variables(nusimdata v1_26_00)
+create_version_variables(nuevdb v1_07_00)
+create_version_variables(nug4 v1_13_00)
+create_version_variables(nugen v1_16_00)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_08_02)
+create_version_variables(nurandom v1_09_00)
 create_version_variables(systematicstools v01_00_04)
 create_version_variables(nusystematics v01_00_15)
 
-create_version_variables(nutools v3_12_04)
+create_version_variables(nutools v3_13_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
