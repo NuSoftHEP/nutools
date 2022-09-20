@@ -208,6 +208,7 @@ namespace evgb {
     std::string              fGeomScan;          ///< configuration for geometry scan to determine max pathlengths
     std::string              fMaxPathOutInfo;    ///< output info if writing PathLengthList from GeomScan
     unsigned int             fDebugFlags;        ///< set bits to enable debug info
+    bool                     fBlenderDist;       ///< get neutrino's travel distance from blender (default: true)
   };
 }
 #endif //EVGB_GENIEHELPER_H

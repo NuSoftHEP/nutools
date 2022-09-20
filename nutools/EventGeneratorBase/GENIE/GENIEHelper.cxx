@@ -279,6 +279,7 @@ namespace evgb {
     , fFiducialCut       (pset.get< std::string              >("FiducialCut",    "none") )
     , fGeomScan          (pset.get< std::string              >("GeomScan",    "default") )
     , fDebugFlags        (pset.get< unsigned int             >("DebugFlags",          0) )
+    , fBlenderDist       (pset.get< bool                     >("BlenderDist",      true) )
   {
 
     // fEnvironment is (generally) deprecated ... print out any settings
@@ -1710,7 +1711,7 @@ namespace evgb {
     genie::flux::GFluxBlender* blender =
       dynamic_cast<genie::flux::GFluxBlender*>(fFluxD2GMCJD);
     if ( blender ) {
-      flux.fdk2gen = blender->TravelDist();
+      if ( fBlenderDist ) flux.fdk2gen = blender->TravelDist();
       // / if mixing flavors print the state of the blender
       if ( fDebugFlags & 0x02 ) blender->PrintState();
     }
