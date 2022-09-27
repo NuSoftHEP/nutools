@@ -95,8 +95,8 @@ create_product_variables(dk2nugenie v01_08_00_ub4)
 create_product_variables(dk2nudata v01_08_00)
 create_product_variables(ppfx v02_11_04)
 create_product_variables(nusimdata v1_15_05)
-create_product_variables(nutools v2_27_10)
-create_product_variables(nulite v2_27_10)
+create_product_variables(nutools v2_27_11)
+create_product_variables(nulite v2_27_11)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
