@@ -276,6 +276,7 @@ namespace evgb {
     , fGHepPrintLevel    (pset.get< int                      >("GHepPrintLevel",     -1) ) // see GHepRecord::SetPrintLevel() -1=no-print
     , fMixerConfig       (pset.get< std::string              >("MixerConfig",    "none") )
     , fMixerBaseline     (pset.get< double                   >("MixerBaseline",      0.) )
+    , fUseBlenderDist    (pset.get< bool                     >("UseBlenderDist",     true) )
     , fFiducialCut       (pset.get< std::string              >("FiducialCut",    "none") )
     , fGeomScan          (pset.get< std::string              >("GeomScan",    "default") )
     , fDebugFlags        (pset.get< unsigned int             >("DebugFlags",          0) )
@@ -1710,7 +1711,7 @@ namespace evgb {
     genie::flux::GFluxBlender* blender =
       dynamic_cast<genie::flux::GFluxBlender*>(fFluxD2GMCJD);
     if ( blender ) {
-      flux.fdk2gen = blender->TravelDist();
+      if ( fUseBlenderDist ) flux.fdk2gen = blender->TravelDist();
       // / if mixing flavors print the state of the blender
       if ( fDebugFlags & 0x02 ) blender->PrintState();
     }

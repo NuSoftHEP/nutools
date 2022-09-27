@@ -204,6 +204,7 @@ namespace evgb {
     int                      fGHepPrintLevel;    ///< GHepRecord::SetPrintLevel(), -1=no-print
     std::string              fMixerConfig;       ///< configuration string for genie GFlavorMixerI
     double                   fMixerBaseline;     ///< baseline distance if genie flux can't calculate it
+    bool                     fUseBlenderDist;    ///< get neutrino's travel distance from blender (default: true)
     std::string              fFiducialCut;       ///< configuration for geometry selector
     std::string              fGeomScan;          ///< configuration for geometry scan to determine max pathlengths
     std::string              fMaxPathOutInfo;    ///< output info if writing PathLengthList from GeomScan
