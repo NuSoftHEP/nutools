@@ -53,7 +53,7 @@ build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
 
 build_cet -p trace-git -w v1_04_00 TRACE @TRACE_VERSION@ -nq-
 
-build_cet -p artdaq-core artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}${pylabel}:@version_set@
+build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}${pylabel}:@version_set@
 
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
