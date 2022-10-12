@@ -43,7 +43,6 @@
       <li>Download the script.</li>
       <li>chmod +x pullProducts</li>
       <li>Scientific Linux 7.x: <pre>./pullProducts &lt;product-directory&gt; slf7 nulite-@NULITE_VERSION@ @version_set@-&lt;@supported_quals_string@&gt; &lt;prof|debug&gt;</pre></li>
-      <li>Ubuntu LTS 18: <pre>./pullProducts &lt;product-directory&gt; u18 nulite-@NULITE_VERSION@ @version_set@-&lt;@supported_quals_string@&gt; &lt;prof|debug&gt;</pre></li>
     </ul></li>
   </ul></li>
   <li>See <a href="https://cdcvs.fnal.gov/redmine/projects/cet-is-public/wiki/AboutQualifiers">About Qualifiers</a> for qualifier descriptions.</li>
@@ -95,6 +94,7 @@ The following products are part of the full nu distribution:
 <tr><td>&nbsp;&nbsp;  art     </td>  <td> @ART_VERSION@ </td>  <td>nu:&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  artdaq_core   </td>  <td> @ARTDAQ_CORE_VERSION@ </td>  <td>&lt;@supported_quals_string@&gt;:@version_set@</td></tr>
 <tr><td>&nbsp;&nbsp;  nusimdata      </td>  <td> @NUSIMDATA_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
+<tr><td>&nbsp;&nbsp;  nufinder      </td>  <td> @NUFINDER_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  nutools      </td>  <td> @NUTOOLS_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  nuevdb      </td>  <td> @NUEVDB_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>
 <tr><td>&nbsp;&nbsp;  nug4      </td>  <td> @NUG4_VERSION@	</td>  <td>&lt;@supported_quals_string@&gt;</td></tr>

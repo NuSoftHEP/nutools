@@ -18,7 +18,7 @@ include(bootstrapModules)
 # Define version set for desired version of art suite.
 set(version_set s117)
 # for use in html
-set( supported_quals_string "e19|e20|c7")
+set( supported_quals_string "e20|c7")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -138,6 +138,7 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
 create_version_variables(nusimdata v1_26_00)
+create_version_variables(nufinder v1_00_00)
 create_version_variables(nuevdb v1_07_00)
 create_version_variables(nug4 v1_13_00)
 create_version_variables(nugen v1_16_00)

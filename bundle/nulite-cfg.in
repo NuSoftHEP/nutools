@@ -57,6 +57,7 @@ build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_set@
 
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
+build_cet -f NULL -G NuSoftHEP nufinder @NUFINDER_VERSION@
 build_cet -G NuSoftHEP nusimdata @NUSIMDATA_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nuevdb @NUEVDB_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nug4 @NUG4_VERSION@ ${basequal}${pylabel}
