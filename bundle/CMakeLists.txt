@@ -36,11 +36,11 @@ create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02 
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02)
+                           v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
-create_version_variables(mrb v6_03_01)
+create_version_variables(mrb v6_07_04)
 
 # art_suite
 set(suite_rc_level)
@@ -141,7 +141,7 @@ create_version_variables(nusimdata v1_26_01)
 create_version_variables(nufinder v1_00_00)
 create_version_variables(nuevdb v1_07_01)
 create_version_variables(nug4 v1_13_01)
-create_version_variables(nugen v1_16_02)
+create_version_variables(nugen v1_16_03)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_09_00)
 create_version_variables(systematicstools v01_00_04)
@@ -156,7 +156,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_15)
+create_version_variables(ppfx v02_14_16)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
