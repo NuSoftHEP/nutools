@@ -36,7 +36,7 @@ create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02 
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
+                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
