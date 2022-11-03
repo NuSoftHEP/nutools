@@ -66,9 +66,9 @@ create_version_variables(artdaq_core v3_09_02)
 
 # geant4
 create_version_variables(geant4 v4_11_0_p03b)
-create_version_variables(xerces_c v3_2_3a)
-create_version_variables(vecgeom v01_01_05c)
-create_version_variables(qt v5_12_3a)
+create_version_variables(xerces_c v3_2_3c)
+create_version_variables(vecgeom v1_2_0b)
+create_version_variables(qt v5_15_6)
 create_version_variables(g4abla v3_1)
 create_version_variables(g4emlow v8_0)
 create_version_variables(g4incl v1_0)
