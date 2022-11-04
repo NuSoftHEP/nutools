@@ -55,7 +55,11 @@ build_noarch g4pii        @G4PII_VERSION@
 build_noarch g4radiative  @G4RADIATIVE_VERSION@
 build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
-do_build geant4 @GEANT4_VERSION@ ${basequal}
+if [[ "${basequal}" == c7 ]]; then
+  echo "INFO: geant4 v4_11_xx does not support older versions of clang, such as c7"
+else
+  do_build geant4 @GEANT4_VERSION@ ${basequal}
+fi
 
 # TAUOLA C++.
 build_label=${pyqual} \

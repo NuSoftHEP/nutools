@@ -60,8 +60,12 @@ build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_s
 build_cet -f NULL -G NuSoftHEP nufinder @NUFINDER_VERSION@
 build_cet -G NuSoftHEP nusimdata @NUSIMDATA_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nuevdb @NUEVDB_VERSION@ ${basequal}${pylabel}
-build_cet -G NuSoftHEP nug4 @NUG4_VERSION@ ${basequal}${pylabel}
-build_cet -G NuSoftHEP geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}${pylabel}:@version_set@
+if [[ "${basequal}" == c7 ]]; then
+  echo "INFO: geant4 v4_11_xx does not support older versions of clang, such as c7"
+else
+  build_cet -G NuSoftHEP nug4 @NUG4_VERSION@ ${basequal}${pylabel}
+  build_cet -G NuSoftHEP geant4reweight @GEANT4REWEIGHT_VERSION@ ${basequal}${pylabel}:@version_set@
+fi
 build_cet -G NuSoftHEP nugen @NUGEN_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nurandom @NURANDOM_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nutools @NUTOOLS_VERSION@ ${basequal}${pylabel}
