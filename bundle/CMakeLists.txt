@@ -18,7 +18,7 @@ include(bootstrapModules)
 # Define version set for desired version of art suite.
 set(version_set s117)
 # for use in html
-set( supported_quals_string "e20|c7")
+set( supported_quals_string "e20")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -81,7 +81,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_15_00)
+create_version_variables(geant4reweight v01_16_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0)
@@ -149,7 +149,7 @@ create_version_variables(nusystematics v01_00_15)
 
 create_version_variables(nutools v3_13_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
