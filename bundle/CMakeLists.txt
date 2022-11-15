@@ -40,7 +40,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
-create_version_variables(mrb v6_07_04)
+create_version_variables(mrb v6_07_07)
 
 # art_suite
 set(suite_rc_level)
