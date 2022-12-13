@@ -22,7 +22,7 @@ set( supported_quals_string "e20|c7")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
-create_version_variables(ups v6_0_8)
+create_version_variables(ups v6_1_0)
 
 # Handle Python version(s).
 create_version_variables(python v3_9_2)
@@ -141,22 +141,22 @@ create_version_variables(nusimdata v1_26_02)
 create_version_variables(nufinder v1_01_01)
 create_version_variables(nuevdb v1_07_03)
 create_version_variables(nug4 v1_13_03)
-create_version_variables(nugen v1_17_03)
+create_version_variables(nugen v1_17_04)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_09_00)
 create_version_variables(systematicstools v01_02_00)
-create_version_variables(nusystematics v01_02_03)
+create_version_variables(nusystematics v01_02_04)
 
 create_version_variables(nutools v3_14_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_15_03)
+create_version_variables(ppfx v02_15_04)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
