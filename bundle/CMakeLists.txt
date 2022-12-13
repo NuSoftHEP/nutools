@@ -39,8 +39,8 @@ create_version_variables(cetmodules
                            v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
 # mrb
 create_version_variables( hub v2_14_2 )
-create_version_variables( gh v2_5_1b )
-create_version_variables(mrb v6_07_07)
+create_version_variables( gh v2_14_4 )
+create_version_variables(mrb v6_07_08)
 
 # art_suite
 set(suite_rc_level)
@@ -85,11 +85,11 @@ create_version_variables(geant4reweight v01_14_04)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_6_10)
-create_version_variables(ifdhc_config v2_6_10)
-create_version_variables(ifbeam v2_5_16)
-create_version_variables(nucondb v2_5_16)
-create_version_variables(ifdh_art v2_13_13)
+create_version_variables(ifdhc v2_6_11)
+create_version_variables(ifdhc_config v2_6_11)
+create_version_variables(ifbeam v2_5_17)
+create_version_variables(nucondb v2_5_17)
+create_version_variables(ifdh_art v2_13_14)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
