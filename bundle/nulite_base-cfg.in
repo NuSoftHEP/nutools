@@ -66,9 +66,9 @@ build_label=${pyqual} \
   build_bundle @TAUOLA_DIST_NAME@-@TAUOLA_DIST_DOT_VERSION@ ${basequal} || return
 
 # GENIE.
-do_build genie @GENIE_VERSION@ ${basequal}${pylabel}
-do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
-do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
+do_build genie @GENIE_VERSION@ ${basequal}${build_label:+:${build_label}}
+do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}
+do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${build_label:+:${build_label}}
 
 # IFDH.
 # use the ifdh bundle and call it from nulite-cfg
