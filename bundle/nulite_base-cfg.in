@@ -66,6 +66,9 @@ build_label=${pyqual} \
   build_bundle @TAUOLA_DIST_NAME@-@TAUOLA_DIST_DOT_VERSION@ ${basequal} || return
 
 # GENIE.
+if [[ ${build_label} == inclxx ]]; then
+  do_pull inclxx @INCLXX_VERSION@  ${basequal}
+fi
 do_build genie @GENIE_VERSION@ ${basequal}${build_label:+:${build_label}}
 do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}
 do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${build_label:+:${build_label}}
@@ -92,7 +95,7 @@ build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 # pick up libtorch on appropriate platforms
 echo "check to see if we can build libtorch on ${flvr}"
 if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
+  build_label="" build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
 fi
 
 # Data-only packages.

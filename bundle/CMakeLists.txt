@@ -22,7 +22,7 @@ set( supported_quals_string "e20")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
-create_version_variables(ups v6_0_8)
+create_version_variables(ups v6_1_0)
 
 # Handle Python version(s).
 create_version_variables(python v3_9_2)
@@ -40,7 +40,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_5_1b )
-create_version_variables(mrb v6_07_04)
+create_version_variables(mrb v6_07_09)
 
 # art_suite
 set(suite_rc_level)
@@ -100,6 +100,7 @@ create_version_variables(genie_phyopt2 v3_00_06)
 create_version_variables(genie_xsec v3_00_04a)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
+create_version_variables(inclxx v5_2_9_5a)
 create_version_variables(dk2nudata v01_10_01a)
 create_version_variables(dk2nugenie v01_10_01b)
 create_version_variables(protobuf v3_12_3a)
