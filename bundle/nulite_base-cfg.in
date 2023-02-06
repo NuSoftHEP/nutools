@@ -75,6 +75,8 @@ if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" 
   do_build castxml @CASTXML_VERSION@
 fi
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
+# pycurl
+do_build pycurl @PYCURL_VERSION@ ${pyqual}
 
 # Tensorflow.
 echo "check to see if we can build tensorflow on ${flvr}"

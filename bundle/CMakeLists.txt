@@ -28,6 +28,7 @@ create_version_variables(ups v6_1_0)
 create_version_variables(python v3_9_2)
 create_version_variables(python3 NAME python v3_9_2)
 create_pyqual_variables()
+create_version_variables(pycurl v7_45_2)
 
 # CMake and cetmodules are special: define as many versions as necessary.
 create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0 v3_22_0 v3_22_2 v3_24_1)
@@ -149,7 +150,7 @@ create_version_variables(nusystematics v01_02_06)
 
 create_version_variables(nutools v3_14_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix e) # Reset when no longer needed
+set(nulite_suffix f) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
