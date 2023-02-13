@@ -16,7 +16,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s117)
+set(version_set s117a)
 # for use in html
 set( supported_quals_string "e20")
 
@@ -49,20 +49,20 @@ set(art_suffix) # Reset when no longer needed
 create_version_variables(canvas v3_12_05)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_09_05)
+create_version_variables(canvas_root_io v1_09_05a)
 create_version_variables(art v3_09_04)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_08_05)
+create_version_variables(art_root_io v1_08_06)
 
 # lite framework
-create_version_variables(gallery v1_18_05)
+create_version_variables(gallery v1_08_06)
 
 # Tutorial
-create_version_variables(toyExperiment v0_07_04a)
+create_version_variables(toyExperiment v0_07_04b)
 
 create_version_variables(cry v1_7n)
 create_version_variables(TRACE v3_17_05)
-create_version_variables(artdaq_core v3_09_02)
+create_version_variables(artdaq_core v3_09_06)
 
 # geant4
 create_version_variables(geant4 v4_11_0_p03b)
@@ -81,7 +81,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_16_01)
+create_version_variables(geant4reweight v01_16_02)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -138,17 +138,17 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_26_02)
+create_version_variables(nusimdata v1_26_03)
 create_version_variables(nufinder v1_01_01)
-create_version_variables(nuevdb v1_07_03)
-create_version_variables(nug4 v1_14_01)
-create_version_variables(nugen v1_16_05)
+create_version_variables(nuevdb v1_07_04)
+create_version_variables(nug4 v1_14_02)
+create_version_variables(nugen v1_16_06)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_09_00)
+create_version_variables(nurandom v1_09_01)
 create_version_variables(systematicstools v01_00_04)
 create_version_variables(nusystematics v01_00_15)
 
-create_version_variables(nutools v3_13_03)
+create_version_variables(nutools v3_13_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
