@@ -71,7 +71,7 @@ do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 
 # pygccxml and castxml
 if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  do_build -m clang v15_0_7
+  do_pull -mn clang v15_0_7
   do_build castxml @CASTXML_VERSION@
 fi
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
