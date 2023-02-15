@@ -103,7 +103,7 @@ create_version_variables(lhapdf v6_5_3)
 create_version_variables(log4cpp v1_1_3d)
 create_version_variables(dk2nudata v01_10_01c)
 create_version_variables(dk2nugenie v01_10_01d)
-create_version_variables(protobuf v3_12_3a)
+create_version_variables(protobuf v3_21_12)
 create_version_variables(pygccxml v2_2_1b)
 # tensorflow
 create_version_variables(eigen v3_4_0)
