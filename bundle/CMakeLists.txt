@@ -104,7 +104,7 @@ create_version_variables(log4cpp v1_1_3c)
 create_version_variables(dk2nudata v01_10_01a)
 create_version_variables(dk2nugenie v01_10_01a)
 create_version_variables(protobuf v3_12_3a)
-create_version_variables(pygccxml v2_1_0c)
+create_version_variables(pygccxml v2_2_1a)
 # tensorflow
 create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
@@ -160,7 +160,7 @@ create_version_variables(nu ${NULITE_VERSION})
 create_version_variables(ppfx v02_15_06)
 
 # NOvA
-create_version_variables(castxml v0_4_2)
+create_version_variables(castxml v0_5_1)
 
 # Initialize CMake variables containing shell fragments used by bundle
 # configurations.
