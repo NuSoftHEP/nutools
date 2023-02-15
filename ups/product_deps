@@ -251,7 +251,7 @@ libdir	fq_dir		lib
 product		version		qual	flags		<table_format=2>
 art_root_io	v1_11_01	-
 cry		v1_7p		-
-nusimdata	v1_26_02	-
+nusimdata	v1_27_00	-
 cetmodules	v3_19_02	-	only_for_build
 end_product_list
 ####################################

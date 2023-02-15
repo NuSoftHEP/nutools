@@ -138,7 +138,7 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_26_02)
+create_version_variables(nusimdata v1_27_00)
 create_version_variables(nufinder v1_01_01)
 create_version_variables(nuevdb v1_07_03)
 create_version_variables(nug4 v1_13_03)
