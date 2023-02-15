@@ -70,11 +70,10 @@ do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 # use the ifdh bundle and call it from nulite-cfg
 
 # pygccxml and castxml
-if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  do_pull -mn clang v15_0_7
-  do_build castxml @CASTXML_VERSION@
-fi
+CASTXML_PULL_ONLY=1 \
+  build_bundle castxml-@CASTXML_DOT_VERSION@ || return
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
+
 # pycurl
 do_build pycurl @PYCURL_VERSION@ ${pyqual}
 
