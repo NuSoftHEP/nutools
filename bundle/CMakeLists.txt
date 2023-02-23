@@ -59,7 +59,7 @@ create_version_variables(art_root_io v1_11_02)
 create_version_variables(gallery v1_20_01)
 
 # Tutorial
-create_version_variables(toyExperiment v0_08_01)
+create_version_variables(toyExperiment v0_08_02)
 
 create_version_variables(cry v1_7p)
 create_version_variables(TRACE v3_17_07)
@@ -82,7 +82,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_14_04)
+create_version_variables(geant4reweight v01_17_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -146,9 +146,9 @@ create_version_variables(nuevdb v1_08_00)
 create_version_variables(nug4 v1_15_00)
 create_version_variables(nugen v1_18_00)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_09_00)
-create_version_variables(systematicstools v01_02_00)
-create_version_variables(nusystematics v01_02_06)
+create_version_variables(nurandom v1_10_00)
+create_version_variables(systematicstools v01_03_00)
+create_version_variables(nusystematics v01_03_00)
 
 create_version_variables(nutools v3_15_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
