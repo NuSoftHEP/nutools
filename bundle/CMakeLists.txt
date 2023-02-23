@@ -31,13 +31,13 @@ create_pyqual_variables()
 create_version_variables(pycurl v7_45_2)
 
 # CMake and cetmodules are special: define as many versions as necessary.
-create_version_variables(cmake LIST v3_22_2 v3_24_1)
+create_version_variables(cmake LIST v3_22_2 v3_24_1 v3_25_2)
 create_version_variables(cetbuildtools LIST v8_20_00)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_16_00 v3_19_02 v3_20_00 v3_20_00)
+                           v3_13_02 v3_16_00 v3_19_02 v3_20_00 v3_21_00)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_22_1 )
@@ -152,7 +152,7 @@ create_version_variables(nusystematics v01_03_00)
 
 create_version_variables(nutools v3_15_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix rc0) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
