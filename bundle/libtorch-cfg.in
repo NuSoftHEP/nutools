@@ -16,18 +16,17 @@ CMAKE_VERSION="${cmakes[@]: -1}"
 # Compilers.
 @BUILD_COMPILERS@
 
-# Python (required for build only).
-do_build -m sqlite @SQLITE_VERSION@
-do_build -m python @PYTHON_VERSION@
-
+# libtorch dependencies.
 do_build openblas @OPENBLAS_VERSION@ ${basequal}
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+do_build tbb @TBB_VERSION@ ${basequal}
+
+# Build-only dependencies.
+do_build -m sqlite @SQLITE_VERSION@
+do_build -m python @PYTHON_VERSION@
 build_noarch -m pybind11 @PYBIND11_VERSION@
 build_noarch -m eigen @EIGEN_VERSION@
-build_type=prof do_build -m fftw @FFTW_VERSION@ ${basequal}
-##################
-
-# Other packages required by libtorch.
+do_build -m fftw @FFTW_VERSION@
 do_build -m gmp @GMP_VERSION@
 do_build -m mpfr @MPFR_VERSION@
 
