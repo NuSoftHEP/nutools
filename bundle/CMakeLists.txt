@@ -16,7 +16,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s119)
+set(version_set s120)
 # for use in html
 set( supported_quals_string "e20|e26|c7|c14")
 
@@ -37,11 +37,11 @@ create_version_variables(cetbuildtools LIST v8_20_00)
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_16_00 v3_19_02 v3_20_00)
+                           v3_16_00 v3_19_02 v3_20_00 v3_20_00)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_22_1 )
-create_version_variables(mrb v6_07_10)
+create_version_variables(mrb v6_08_00)
 
 # art_suite
 set(suite_rc_level)
@@ -53,7 +53,7 @@ create_version_variables(studio v1_02_00)
 create_version_variables(canvas_root_io v1_11_01)
 create_version_variables(art v3_12_00)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_11_01)
+create_version_variables(art_root_io v1_11_02)
 
 # lite framework
 create_version_variables(gallery v1_20_01)
@@ -63,7 +63,7 @@ create_version_variables(toyExperiment v0_08_01)
 
 create_version_variables(cry v1_7p)
 create_version_variables(TRACE v3_17_07)
-create_version_variables(artdaq_core v3_09_05)
+create_version_variables(artdaq_core v3_09_07)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01f)
@@ -115,8 +115,8 @@ create_version_variables(sqlite v3_39_02_00)
 create_version_variables(openblas v0_3_21)
 create_version_variables(pybind11 v2_10_0)
 create_version_variables(fftw v3_3_10)
-create_version_variables(gmp v6_2_0)
-create_version_variables(mpfr v4_1_0)
+create_version_variables(gmp v6_2_1)
+create_version_variables(mpfr v4_2_0)
 create_version_variables(grpc v1_35_0)
 create_version_variables(opencv v4_2_0b)
 create_version_variables(libtorch v1_6_0d)
@@ -140,9 +140,9 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 # nutools
 create_version_variables(nusimdata v1_27_00)
 create_version_variables(nufinder v1_01_01)
-create_version_variables(nuevdb v1_07_03)
-create_version_variables(nug4 v1_13_03)
-create_version_variables(nugen v1_17_06)
+create_version_variables(nuevdb v1_08_00)
+create_version_variables(nug4 v1_15_00)
+create_version_variables(nugen v1_18_00)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_09_00)
 create_version_variables(systematicstools v01_02_00)
@@ -157,7 +157,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_15_06)
+create_version_variables(ppfx v02_16_00)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
