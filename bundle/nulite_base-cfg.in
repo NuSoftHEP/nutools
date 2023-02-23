@@ -88,9 +88,9 @@ echo "check to see if we can build tensorflow on ${flvr}"
 
 # pick up libtorch on appropriate platforms
 echo "check to see if we can build libtorch on ${flvr}"
-#if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-#  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
-#fi
+if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
+  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
+fi
 
 # Data-only packages.
 # genie_phyopt v3_02_00 -q dkcharm is part of the dkcharmtau tarball!
