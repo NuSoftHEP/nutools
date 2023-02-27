@@ -87,10 +87,12 @@ echo "check to see if we can build tensorflow on ${flvr}"
 ##build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 
 # pick up libtorch on appropriate platforms
-echo "check to see if we can build libtorch on ${flvr}"
-if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
-fi
+echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
+[ "$basequal" = c7 ] ||
+  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
+  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
+  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
+  return
 
 # Data-only packages.
 # genie_phyopt v3_02_00 -q dkcharm is part of the dkcharmtau tarball!
