@@ -119,17 +119,17 @@ create_version_variables(pybind11 v2_10_0)
 create_version_variables(fftw v3_3_10)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
-create_version_variables(grpc v1_35_0)
+create_version_variables(grpc v1_35_0a)
 create_version_variables(opencv v4_7_0a)
 create_version_variables(libtorch v1_13_1a)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables(triton v2_3_0d)
+create_version_variables(triton v2_25_0)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # TAUOLA C++ and friends
 create_version_variables(hepmc3 v3_2_5)
 create_version_variables(pythia8 v8_3_08)
-create_version_variables(tauola v1_1_8j)
+create_version_variables(tauola v1_1_8k)
 create_version_variables(tauola_dist NAME tauola ${TAUOLA_VERSION})
 
 # CodeSynthesis XSD for NoVA.
