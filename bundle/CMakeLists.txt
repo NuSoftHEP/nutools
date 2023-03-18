@@ -22,7 +22,7 @@ set( supported_quals_string "e20|e26|c7|c14")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
-create_version_variables(ups v6_1_0)
+create_version_variables(ups v6_1_1)
 
 # Handle Python version(s).
 create_version_variables(python v3_9_13)
