@@ -84,7 +84,7 @@ echo "check to see if we can build tensorflow on ${flvr}"
 #fi
 
 # Triton.
-build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
+[ "$basequal" = c7 ] || build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 
 # pick up libtorch on appropriate platforms
 echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
