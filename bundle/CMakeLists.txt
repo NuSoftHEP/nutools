@@ -95,13 +95,13 @@ create_version_variables(ifdh_art v2_15_04)
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_02_02_p01a)
+create_version_variables(genie v3_02_02_p01b)
 create_version_variables(genie_phyopt v3_02_00)
 create_version_variables(genie_xsec v3_02_00)
 create_version_variables(lhapdf v6_5_3)
 create_version_variables(log4cpp v1_1_3d)
 create_version_variables(dk2nudata v01_10_01c)
-create_version_variables(dk2nugenie v01_10_01e)
+create_version_variables(dk2nugenie v01_10_01f)
 create_version_variables(protobuf v3_21_12)
 create_version_variables(pygccxml v2_2_1b)
 # tensorflow
@@ -143,22 +143,22 @@ create_version_variables(nusimdata v1_27_00)
 create_version_variables(nufinder v1_01_01)
 create_version_variables(nuevdb v1_08_00)
 create_version_variables(nug4 v1_15_00)
-create_version_variables(nugen v1_18_01)
+create_version_variables(nugen v1_18_02)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_10_00)
 create_version_variables(systematicstools v01_03_00)
-create_version_variables(nusystematics v01_03_01)
+create_version_variables(nusystematics v01_03_02)
 
 create_version_variables(nutools v3_15_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_17_01)
+create_version_variables(ppfx v02_17_02)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
