@@ -94,12 +94,12 @@ if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-
 fi
 
 # Data-only packages.
-# genie_phyopt v3_02_00 -q dkcharm is part of the dkcharmtau tarball!
-##build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
+build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1802a00000-k250-e1000
-build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
-build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211b-k250-e1000
+build_noarch genie_xsec @GENIE_XSEC_VERSION@ AR2320i00000-k250-e100
+##build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
+##build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211b-k250-e1000
 
 
 # Local Variables:
