@@ -76,6 +76,8 @@ do_build pygccxml @PYGCCXML_VERSION@ ${pyqual}
 
 # pycurl
 do_build pycurl @PYCURL_VERSION@ ${pyqual}
+# protobuf
+do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 
 # Tensorflow.
 echo "check to see if we can build tensorflow on ${flvr}"
