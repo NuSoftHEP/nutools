@@ -102,7 +102,7 @@ create_version_variables(lhapdf v6_5_3)
 create_version_variables(log4cpp v1_1_3d)
 create_version_variables(dk2nudata v01_10_01c)
 create_version_variables(dk2nugenie v01_10_01h)
-create_version_variables(protobuf v3_21_12)
+create_version_variables(protobuf v3_15_8)
 create_version_variables(pygccxml v2_2_1b)
 # tensorflow
 create_version_variables(eigen v3_4_0)
@@ -118,11 +118,11 @@ create_version_variables(pybind11 v2_10_0)
 create_version_variables(fftw v3_3_10)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
-create_version_variables(grpc v1_35_0a)
-create_version_variables(opencv v4_7_0a)
-create_version_variables(libtorch v1_13_1a)
+create_version_variables(grpc v1_35_0b)
+#create_version_variables(opencv v4_7_0a)
+create_version_variables(libtorch v1_13_1b)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables(triton v2_25_0)
+create_version_variables(triton v2_25_0a)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # TAUOLA C++ and friends
@@ -151,7 +151,7 @@ create_version_variables(nusystematics v01_03_03)
 
 create_version_variables(nutools v3_15_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
