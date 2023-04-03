@@ -31,7 +31,7 @@ create_pyqual_variables()
 create_version_variables(pycurl v7_45_2)
 
 # CMake and cetmodules are special: define as many versions as necessary.
-create_version_variables(cmake LIST v3_22_2 v3_24_1 v3_25_2)
+create_version_variables(cmake LIST v3_20_0 v3_22_2 v3_24_1 v3_25_2)
 create_version_variables(cetbuildtools LIST v8_20_00)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
@@ -86,18 +86,18 @@ create_version_variables(geant4reweight v01_18_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_6_18)
-create_version_variables(ifdhc_config v2_6_18)
-create_version_variables(ifbeam v2_5_21)
-create_version_variables(nucondb v2_5_21)
-create_version_variables(ifdh_art v2_15_04)
+create_version_variables(ifdhc v2_6_19)
+create_version_variables(ifdhc_config v2_6_19)
+create_version_variables(ifbeam v2_5_22)
+create_version_variables(nucondb v2_5_22)
+create_version_variables(ifdh_art v2_15_05)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
 create_version_variables(genie v3_04_00a)
-create_version_variables(genie_phyopt v3_02_00)
-create_version_variables(genie_xsec v3_02_00)
+create_version_variables(genie_phyopt v3_04_00)
+create_version_variables(genie_xsec v3_04_00)
 create_version_variables(lhapdf v6_5_3)
 create_version_variables(log4cpp v1_1_3d)
 create_version_variables(dk2nudata v01_10_01c)
@@ -107,7 +107,11 @@ create_version_variables(pygccxml v2_2_1b)
 # tensorflow
 create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
-create_version_variables(tensorflow v2_6_0)
+create_version_variables(cython v0_29_33)
+create_version_variables(giflib v5_2_1)
+create_version_variables(libpng v1_6_37)
+create_version_variables(libjpeg_turbo v2_1_0)
+create_version_variables(tensorflow v2_6_4)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 
 create_version_variables(sqlite v3_39_02_00)
