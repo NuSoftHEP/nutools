@@ -17,11 +17,17 @@ check_ups @UPS_VERSION@
 
 # packages needed only for the build
 do_build -m bazelisk @BAZELISK_VERSION@
+do_build -m giflib @GIFLIB_VERSION@
+do_build -m libpng @LIBPNG_VERSION@
+do_build -m libjpeg_turbo @LIBJPEG_TURBO_VERSION@
 
 # Tensorflow.
 do_build sqlite @SQLITE_VERSION@
 do_build python ${pyver}
 build_noarch pybind11 @PYBIND11_VERSION@
+do_build -m cython @CYTHON_VERSION@ ${pyqual}
+do_build -m openblas @OPENBLAS_VERSION@ ${basequal}
+do_build -m numpy @NUMPY_VERSION@ ${basequal}:${pyqual}
 build_noarch -m eigen @EIGEN_VERSION@
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 do_build grpc @GRPC_VERSION@ ${basequal}
