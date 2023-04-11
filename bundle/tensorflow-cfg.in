@@ -19,6 +19,7 @@ check_ups @UPS_VERSION@
 do_build -m bazelisk @BAZELISK_VERSION@
 do_build -m giflib @GIFLIB_VERSION@
 do_build -m libpng @LIBPNG_VERSION@
+do_build -m nasm @NASM_VERSION@
 do_build -m libjpeg_turbo @LIBJPEG_TURBO_VERSION@
 
 # Tensorflow.
