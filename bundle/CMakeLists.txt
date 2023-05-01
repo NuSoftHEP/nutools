@@ -16,58 +16,58 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s117)
+set(version_set s120)
 # for use in html
-set( supported_quals_string "e20|c7")
+set( supported_quals_string "e20|e26|c7|c14")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
-create_version_variables(ups v6_1_0)
+create_version_variables(ups v6_1_1)
 
 # Handle Python version(s).
-create_version_variables(python v3_9_2)
-create_version_variables(python3 NAME python v3_9_2)
+create_version_variables(python v3_9_13)
+create_version_variables(python3 NAME python v3_9_13)
 create_pyqual_variables()
 create_version_variables(pycurl v7_45_2)
 
 # CMake and cetmodules are special: define as many versions as necessary.
-create_version_variables(cmake LIST v3_17_3 v3_18_2 v3_19_6 v3_20_0 v3_22_0 v3_22_2 v3_24_1)
-create_version_variables(cetbuildtools LIST v8_18_05 v8_18_06 v8_19_01 v8_19_02 v8_20_00)
+create_version_variables(cmake LIST v3_20_0 v3_22_2 v3_24_1 v3_25_2)
+create_version_variables(cetbuildtools LIST v8_20_00)
 # cetmodules v1_04_00 is required by TRACE >= v3_14_00.
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
+                           v3_13_02 v3_16_00 v3_19_02 v3_20_00 v3_21_00)
 # mrb
 create_version_variables( hub v2_14_2 )
-create_version_variables( gh v2_14_4 )
-create_version_variables(mrb v6_07_08)
+create_version_variables( gh v2_22_1 )
+create_version_variables(mrb v6_08_00)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix) # Reset when no longer needed
-set(art_suffix) # Reset when no longer needed
-create_version_variables(canvas v3_12_05)
+set(stack_suffix b) # Reset when no longer needed
+set(art_suffix b) # Reset when no longer needed
+create_version_variables(canvas v3_14_00)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_09_05)
-create_version_variables(art v3_09_04)
+create_version_variables(canvas_root_io v1_11_01)
+create_version_variables(art v3_12_00)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_08_05)
+create_version_variables(art_root_io v1_11_02)
 
 # lite framework
-create_version_variables(gallery v1_18_05)
+create_version_variables(gallery v1_20_01)
 
 # Tutorial
-create_version_variables(toyExperiment v0_07_04a)
+create_version_variables(toyExperiment v0_08_02)
 
-create_version_variables(cry v1_7n)
-create_version_variables(TRACE v3_17_05)
-create_version_variables(artdaq_core v3_09_02)
+create_version_variables(cry v1_7p)
+create_version_variables(TRACE v3_17_07)
+create_version_variables(artdaq_core v3_09_07)
 
 # geant4
-create_version_variables(geant4 v4_10_6_p01e)
-create_version_variables(xerces_c v3_2_3a)
+create_version_variables(geant4 v4_10_6_p01f)
+create_version_variables(xerces_c v3_2_3c)
 create_version_variables(vecgeom v01_01_05c)
 create_version_variables(qt v5_12_3a)
 create_version_variables(g4abla v3_1)
@@ -82,7 +82,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_14_04)
+create_version_variables(geant4reweight v01_18_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -90,43 +90,50 @@ create_version_variables(ifdhc v2_6_19)
 create_version_variables(ifdhc_config v2_6_19)
 create_version_variables(ifbeam v2_5_22)
 create_version_variables(nucondb v2_5_22)
-create_version_variables(ifdh_art v2_13_18)
+create_version_variables(ifdh_art v2_15_05)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_04_00)
+create_version_variables(genie v3_04_00a)
 create_version_variables(genie_phyopt v3_04_00)
 create_version_variables(genie_xsec v3_04_00)
-create_version_variables(lhapdf v6_3_0)
-create_version_variables(log4cpp v1_1_3c)
-create_version_variables(dk2nudata v01_10_01a)
-create_version_variables(dk2nugenie v01_10_01g)
-create_version_variables(protobuf v3_12_3a)
-create_version_variables(pygccxml v2_1_0c)
+create_version_variables(lhapdf v6_5_3)
+create_version_variables(log4cpp v1_1_3d)
+create_version_variables(dk2nudata v01_10_01c)
+create_version_variables(dk2nugenie v01_10_01h)
+create_version_variables(protobuf v3_15_8)
+create_version_variables(pygccxml v2_2_1b)
 # tensorflow
 create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
-create_version_variables(tensorflow v2_6_0)
+create_version_variables(cython v0_29_33)
+create_version_variables(giflib v5_2_1)
+create_version_variables(libpng v1_6_37)
+create_version_variables(nasm v2_14_02)
+create_version_variables(libjpeg_turbo v2_1_0)
+create_version_variables(tensorflow v2_6_4)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 
-create_version_variables(sqlite v3_34_01_00)
-create_version_variables(openblas v0_3_13)
-create_version_variables(pybind11 v2_6_2)
-create_version_variables(fftw v3_3_9)
+create_version_variables(sqlite v3_39_02_00)
+create_version_variables(openblas v0_3_21)
+create_version_variables(numpy v1_22_3c)
+create_version_variables(tbb v2021_7_0)
+create_version_variables(pybind11 v2_10_0)
+create_version_variables(fftw v3_3_10)
 create_version_variables(gmp v6_2_0)
 create_version_variables(mpfr v4_1_0)
-create_version_variables(grpc v1_35_0)
-create_version_variables(opencv v4_2_0b)
-create_version_variables(libtorch v1_6_0d)
+create_version_variables(grpc v1_35_0b)
+#create_version_variables(opencv v4_7_0a)
+create_version_variables(libtorch v1_13_1b)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables(triton v2_3_0d)
+create_version_variables(triton v2_25_0a)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # TAUOLA C++ and friends
-create_version_variables(hepmc3 v3_2_3)
-create_version_variables(pythia8 v8_3_05)
-create_version_variables(tauola v1_1_8i)
+create_version_variables(hepmc3 v3_2_5)
+create_version_variables(pythia8 v8_3_08)
+create_version_variables(tauola v1_1_8k)
 create_version_variables(tauola_dist NAME tauola ${TAUOLA_VERSION})
 
 # CodeSynthesis XSD for NoVA.
@@ -137,29 +144,29 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_26_02)
+create_version_variables(nusimdata v1_27_00)
 create_version_variables(nufinder v1_01_01)
-create_version_variables(nuevdb v1_07_03)
-create_version_variables(nug4 v1_13_03)
-create_version_variables(nugen v1_17_10)
+create_version_variables(nuevdb v1_08_00)
+create_version_variables(nug4 v1_15_00)
+create_version_variables(nugen v1_18_04)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_09_00)
-create_version_variables(systematicstools v01_02_00)
-create_version_variables(nusystematics v01_02_10)
+create_version_variables(nurandom v1_10_00)
+create_version_variables(systematicstools v01_03_00)
+create_version_variables(nusystematics v01_03_04)
 
-create_version_variables(nutools v3_14_03)
+create_version_variables(nutools v3_15_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_15_10)
+create_version_variables(ppfx v02_17_04)
 
 # NOvA
-create_version_variables(castxml v0_4_2)
+create_version_variables(castxml v0_5_1)
 
 # Initialize CMake variables containing shell fragments used by bundle
 # configurations.

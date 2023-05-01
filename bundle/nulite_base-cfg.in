@@ -17,13 +17,13 @@ fi
 check_ups @UPS_VERSION@
 
 # initialize spack
-init_spack
+##init_spack
 # # add spack packages here
-add_spack_command spack install --cache-only libpng@1.6.37%gcc@4.8.5 arch=x86_64
-add_spack_command spack install --cache-only libjpeg-turbo@2.1.0%gcc@4.8.5 arch=x86_64
-add_spack_command spack install --cache-only giflib@5.2.1%gcc@4.8.5 arch=x86_64
-add_spack_command spack module ups_version refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
-add_spack_command spack module ups_table refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
+##add_spack_command spack install --cache-only libpng@1.6.37%gcc@4.8.5 arch=x86_64
+##add_spack_command spack install --cache-only libjpeg-turbo@2.1.0%gcc@4.8.5 arch=x86_64
+##add_spack_command spack install --cache-only giflib@5.2.1%gcc@4.8.5 arch=x86_64
+##add_spack_command spack module ups_version refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
+##add_spack_command spack module ups_table refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
 
 # Canvas.
 # If sphinx is not already available, it needs to be built separately.
@@ -70,28 +70,34 @@ do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 # use the ifdh bundle and call it from nulite-cfg
 
 # pygccxml and castxml
-if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  do_build -m clang v5_0_1
-  do_build castxml @CASTXML_VERSION@
-fi
+CASTXML_PULL_ONLY=1 \
+  build_bundle castxml-@CASTXML_DOT_VERSION@ || return
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
+
 # pycurl
 do_build pycurl @PYCURL_VERSION@ ${pyqual}
+# protobuf and grpc
+do_build protobuf @PROTOBUF_VERSION@ ${basequal}
+do_build grpc @GRPC_VERSION@ ${basequal}
 
 # Tensorflow.
-echo "check to see if we can build tensorflow on ${flvr}"
-if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
+echo "check to see if we can build tensorflow on ${flvr} with -q +$basequal"
+[ "$basequal" = c7 ] ||
+  [ "$basequal" = c14 ] ||
+  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
+  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
   build_bundle tensorflow-@TENSORFLOW_DIST_DOT_VERSION@ ${basequal} || return
-fi
 
 # Triton.
-build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
+[ "$basequal" = c7 ] || build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 
 # pick up libtorch on appropriate platforms
-echo "check to see if we can build libtorch on ${flvr}"
-if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then
-  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ ${basequal} || return
-fi
+echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
+[ "$basequal" = c7 ] ||
+  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
+  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
+  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
+  return
 
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm

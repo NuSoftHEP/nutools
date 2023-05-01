@@ -249,10 +249,10 @@ libdir	fq_dir		lib
 #
 ####################################
 product		version		qual	flags		<table_format=2>
-art_root_io	v1_08_05	-
-cry		v1_7n		-
-nusimdata	v1_26_02	-
-cetmodules	v3_16_00	-	only_for_build
+art_root_io	v1_11_02	-
+cry		v1_7p		-
+nusimdata	v1_27_00	-
+cetmodules	v3_20_00	-	only_for_build
 end_product_list
 ####################################
 
@@ -308,8 +308,12 @@ end_product_list
 #
 ####################################
 qualifier	nusimdata	art_root_io	cry		notes
+c14:debug	c14:debug	c14:debug	c14:debug
+c14:prof	c14:prof	c14:prof	c14:prof
 c7:debug	c7:debug	c7:debug	c7:debug
 c7:prof		c7:prof		c7:prof		c7:prof
+e26:debug	e26:debug	e26:debug	e26:debug
+e26:prof	e26:prof	e26:prof	e26:prof
 e20:debug	e20:debug	e20:debug	e20:debug
 e20:prof	e20:prof	e20:prof	e20:prof
 end_qualifier_list
