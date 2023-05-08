@@ -39,8 +39,8 @@ create_version_variables(cetmodules
                            v2_29_06 v2_29_09 v2_30_01 v2_31_01 v3_06_01 v3_13_02 v3_16_00 v3_19_02 v3_20_00)
 # mrb
 create_version_variables( hub v2_14_2 )
-create_version_variables( gh v2_5_1b )
-create_version_variables(mrb v6_07_09)
+create_version_variables( gh v2_14_4 )
+create_version_variables(mrb v6_08_00)
 
 # art_suite
 set(suite_rc_level)
@@ -85,24 +85,23 @@ create_version_variables(geant4reweight v01_16_03)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_6_11)
-create_version_variables(ifdhc_config v2_6_11)
-create_version_variables(ifbeam v2_5_17)
-create_version_variables(nucondb v2_5_17)
-create_version_variables(ifdh_art v2_13_14)
+create_version_variables(ifdhc v2_6_19)
+create_version_variables(ifdhc_config v2_6_19)
+create_version_variables(ifbeam v2_5_22)
+create_version_variables(nucondb v2_5_22)
+create_version_variables(ifdh_art v2_13_18)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_02_02a)
-create_version_variables(genie_phyopt v3_00_04)
-create_version_variables(genie_phyopt2 v3_00_06)
-create_version_variables(genie_xsec v3_00_04a)
+create_version_variables(genie v3_04_00)
+create_version_variables(genie_phyopt v3_04_00)
+create_version_variables(genie_xsec v3_04_00)
 create_version_variables(lhapdf v6_3_0)
 create_version_variables(log4cpp v1_1_3c)
 create_version_variables(inclxx v5_2_9_5a)
 create_version_variables(dk2nudata v01_10_01a)
-create_version_variables(dk2nugenie v01_10_01b)
+create_version_variables(dk2nugenie v01_10_01g)
 create_version_variables(protobuf v3_12_3a)
 create_version_variables(pygccxml v2_1_0c)
 # tensorflow
@@ -142,7 +141,7 @@ create_version_variables(nusimdata v1_26_03)
 create_version_variables(nufinder v1_01_01)
 create_version_variables(nuevdb v1_07_04)
 create_version_variables(nug4 v1_14_03)
-create_version_variables(nugen v1_16_06)
+create_version_variables(nugen v1_16_07)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_09_01)
 create_version_variables(systematicstools v01_00_04)
@@ -150,14 +149,14 @@ create_version_variables(nusystematics v01_00_15)
 
 create_version_variables(nutools v3_13_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_14_18)
+create_version_variables(ppfx v02_14_19)
 
 # NOvA
 create_version_variables(castxml v0_4_2)
