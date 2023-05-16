@@ -45,8 +45,8 @@ create_version_variables(mrb v6_08_00)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix b) # Reset when no longer needed
-set(art_suffix b) # Reset when no longer needed
+set(stack_suffix c) # Reset when no longer needed
+set(art_suffix c) # Reset when no longer needed
 create_version_variables(canvas v3_14_00)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
