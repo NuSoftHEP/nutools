@@ -16,15 +16,6 @@ fi
 # Specify version to bootstrap and setup UPS.
 check_ups @UPS_VERSION@
 
-# initialize spack
-##init_spack
-# # add spack packages here
-##add_spack_command spack install --cache-only libpng@1.6.37%gcc@4.8.5 arch=x86_64
-##add_spack_command spack install --cache-only libjpeg-turbo@2.1.0%gcc@4.8.5 arch=x86_64
-##add_spack_command spack install --cache-only giflib@5.2.1%gcc@4.8.5 arch=x86_64
-##add_spack_command spack module ups_version refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
-##add_spack_command spack module ups_table refresh -y libjpeg-turbo@2.1.0 libpng@1.6.37 giflib@5.2.1 zlib@1.2.7
-
 # Canvas.
 # If sphinx is not already available, it needs to be built separately.
 SPHINX_PULL_ONLY=1
