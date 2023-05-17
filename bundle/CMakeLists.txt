@@ -163,7 +163,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_17_04)
+create_version_variables(ppfx v02_17_05)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
