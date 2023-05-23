@@ -63,7 +63,7 @@ create_version_variables(toyExperiment v0_08_03)
 
 create_version_variables(cry v1_7p)
 create_version_variables(TRACE v3_17_09)
-create_version_variables(artdaq_core v3_09_10)
+create_version_variables(artdaq_core v3_09_11)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01f)
@@ -156,7 +156,7 @@ create_version_variables(nusystematics v01_03_06)
 
 create_version_variables(nutools v3_15_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
