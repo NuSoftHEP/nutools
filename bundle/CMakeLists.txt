@@ -86,11 +86,11 @@ create_version_variables(geant4reweight v01_18_01)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_6_19)
-create_version_variables(ifdhc_config v2_6_19)
-create_version_variables(ifbeam v2_5_22)
-create_version_variables(nucondb v2_5_22)
-create_version_variables(ifdh_art v2_15_05)
+create_version_variables(ifdhc v2_6_20)
+create_version_variables(ifdhc_config v2_6_20)
+create_version_variables(ifbeam v2_5_23)
+create_version_variables(nucondb v2_5_23)
+create_version_variables(ifdh_art v2_15_06)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -148,22 +148,22 @@ create_version_variables(nusimdata v1_27_01)
 create_version_variables(nufinder v1_01_01)
 create_version_variables(nuevdb v1_08_01)
 create_version_variables(nug4 v1_15_01)
-create_version_variables(nugen v1_19_01)
+create_version_variables(nugen v1_19_02)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_10_01)
 create_version_variables(systematicstools v01_03_01)
-create_version_variables(nusystematics v01_03_06)
+create_version_variables(nusystematics v01_03_07)
 
 create_version_variables(nutools v3_15_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_17_05)
+create_version_variables(ppfx v02_17_06)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
