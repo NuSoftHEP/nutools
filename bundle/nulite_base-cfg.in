@@ -54,13 +54,12 @@ build_label=${pyqual} \
 
 # GENIE.
 # build ${basequal}, ${basequal}:geant4, and maybe ${basequal}:inclxx
-do_build genie v3_04_00 ${basequal}
-do_build genie v3_04_00 ${basequal}:geant4
+do_build genie @GENIE_VERSION@ ${basequal}
+do_build genie @GENIE_VERSION@ ${basequal}:geant4
 [ "$basequal" = c7 ] || [ "$basequal" = c14 ] ||
-   ( do_pull inclxx @INCLXX_VERSION@  ${basequal}
-     do_build genie v3_04_00 ${basequal}:inclxx
+   ( do_build inclxx @INCLXX_VERSION@  ${basequal}
+     do_build genie @GENIE_VERSION@ ${basequal}:inclxx
    )
-do_build genie @GENIE_VERSION@ ${basequal}${pylabel}
 do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
 do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 
