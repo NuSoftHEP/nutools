@@ -9,8 +9,8 @@ include( bootstrapModules )
 set (version_set s78)
 set( cet_qualifier e17 )
 
-create_product_variables(ups v6_0_8)
-create_product_variables( mrb           v3_05_03 )
+create_product_variables(ups v6_1_1)
+create_product_variables( mrb v4_04_06 )
 create_product_variables( hub           v2_12_4 )
 
 create_product_variables(python v2_7_14b)
@@ -93,10 +93,10 @@ create_product_variables(pdfsets v5_9_1b)
 create_product_variables(log4cpp v1_1_3a)
 create_product_variables(dk2nugenie v01_08_00_ub4)
 create_product_variables(dk2nudata v01_08_00)
-create_product_variables(ppfx v02_11_05)
+create_product_variables(ppfx v02_11_06)
 create_product_variables(nusimdata v1_15_05)
 create_product_variables(nutools v2_27_11)
-create_product_variables(nulite v2_27_11a)
+create_product_variables(nulite v2_27_11b)
 
 # NOvA
 create_product_variables(castxml v0_00_00_f20180122)
