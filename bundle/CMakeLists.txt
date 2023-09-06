@@ -82,7 +82,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_18_01)
+create_version_variables(geant4reweight v01_19_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -157,7 +157,7 @@ create_version_variables(nusystematics v01_03_11)
 
 create_version_variables(nutools v3_15_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix j) # Reset when no longer needed
+set(nulite_suffix k) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
