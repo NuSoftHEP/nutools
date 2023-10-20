@@ -83,6 +83,9 @@ if [[ "${flvr}" != "Darwin64bit+15" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" 
 fi
 do_build pygccxml @PYGCCXML_VERSION@ ${pyqual} 
 
+# stan, stan_math, sundials
+build_bundle @STAN_NAME@-@STAN_DOT_VERSION@ ${basequal} || return
+
 # Tensorflow.
 echo "check to see if we can build tensorflow on ${flvr}"
 if [[ "${flvr}" != "Linux64bit+4.15-2.27" ]] && [[ "${flvr}" != "Linux64bit+5.4-2.31" ]]; then

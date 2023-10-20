@@ -22,7 +22,7 @@ set( supported_quals_string "e20")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
-create_version_variables(ups v6_1_0)
+create_version_variables(ups v6_1_1)
 
 # Handle Python version(s).
 create_version_variables(python v3_9_2)
@@ -109,6 +109,11 @@ create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
 create_version_variables(tensorflow v2_6_0)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
+# stan
+create_version_variables( sundials v6_5_0 )
+create_version_variables( stan_math v4_5_0a )
+create_version_variables( stan v2_31_0a )
+create_version_variables(stan_dist NAME stan ${STAN_VERSION})
 
 create_version_variables(sqlite v3_34_01_00)
 create_version_variables(openblas v0_3_13)
@@ -149,7 +154,7 @@ create_version_variables(nusystematics v01_00_15)
 
 create_version_variables(nutools v3_13_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix c) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
@@ -189,6 +194,8 @@ distribution(libtorch_dist)
 distribution(triton_dist)
 # tensorflow.
 distribution(tensorflow_dist)
+# stan
+distribution(stan_dist)
 
 # Tauola C++ & friends.
 distribution(tauola_dist)
