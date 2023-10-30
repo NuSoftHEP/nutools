@@ -107,7 +107,11 @@ create_version_variables(pygccxml v2_1_0c)
 # tensorflow
 create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
-create_version_variables(tensorflow v2_6_0)
+create_version_variables(giflib v5_2_1)
+create_version_variables(libpng v1_6_37)
+create_version_variables(nasm v2_14_02)
+create_version_variables(libjpeg_turbo v2_1_0)
+create_version_variables(tensorflow v2_6_0a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 
 create_version_variables(sqlite v3_34_01_00)
