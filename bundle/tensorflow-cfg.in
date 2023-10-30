@@ -17,6 +17,10 @@ check_ups @UPS_VERSION@
 
 # packages needed only for the build
 do_build -m bazelisk @BAZELISK_VERSION@
+do_build giflib @GIFLIB_VERSION@
+do_build libpng @LIBPNG_VERSION@
+do_build -m nasm @NASM_VERSION@
+do_build libjpeg_turbo @LIBJPEG_TURBO_VERSION@
 
 # Tensorflow.
 do_build sqlite @SQLITE_VERSION@
