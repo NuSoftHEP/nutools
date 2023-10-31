@@ -107,7 +107,11 @@ create_version_variables(pygccxml v2_1_0c)
 # tensorflow
 create_version_variables(eigen v3_4_0)
 create_version_variables(bazelisk v1_10_1b)
-create_version_variables(tensorflow v2_6_0)
+create_version_variables(giflib v5_2_1)
+create_version_variables(libpng v1_6_37)
+create_version_variables(nasm v2_14_02)
+create_version_variables(libjpeg_turbo v2_1_0)
+create_version_variables(tensorflow v2_6_0a)
 create_version_variables(tensorflow_dist NAME tensorflow ${TENSORFLOW_VERSION})
 # stan
 create_version_variables( sundials v6_5_0 )
@@ -154,7 +158,7 @@ create_version_variables(nusystematics v01_00_15)
 
 create_version_variables(nutools v3_13_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix d) # Reset when no longer needed
+set(nulite_suffix e) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
