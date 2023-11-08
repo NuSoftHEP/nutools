@@ -1,0 +1,34 @@
+########################################################################
+# Distribution build configuration for @DIST_BUILD_SPEC@
+#
+#   Build ifdh_art and dependencies.
+########################################################################
+
+basequal=${1}
+
+# Specify version to bootstrap and setup UPS.
+check_ups @UPS_VERSION@
+
+for cv in @CMAKE_VERSION_LIST@; do
+  do_build cmake ${cv}
+done
+
+# Compilers.
+@BUILD_COMPILERS@
+
+# Handle Python.
+@INIT_PYQUAL_VARS@
+
+do_build sqlite @SQLITE_VERSION@
+do_build python ${pyver}
+do_build libwda @LIBWDA_VERSION@
+build_noarch ifdhc_config @IFDHC_CONFIG_VERSION@
+do_build ifdhc @IFDHC_VERSION@ ${basequal}:${pyqual}
+do_build ifbeam @IFBEAM_VERSION@ ${basequal}:${pyqual}
+do_build nucondb @NUCONDB_VERSION@ ${basequal}:${pyqual}
+
+
+# Local Variables:
+# mode: sh
+# eval: (sh-set-shell "bash")
+# End:
