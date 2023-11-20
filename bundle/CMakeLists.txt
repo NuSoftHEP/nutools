@@ -86,10 +86,10 @@ create_version_variables(geant4reweight v01_20_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_7)
-create_version_variables(ifdhc_config v2_7)
-create_version_variables(ifbeam v2_6)
-create_version_variables(nucondb v2_6)
+create_version_variables(ifdhc v2_6_20)
+create_version_variables(ifdhc_config v2_6_20)
+create_version_variables(ifbeam v2_5_23)
+create_version_variables(nucondb v2_5_23)
 create_version_variables(ifdh_art v2_15_06)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
