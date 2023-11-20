@@ -151,13 +151,13 @@ create_version_variables(nuevdb v1_08_02)
 create_version_variables(nug4 v1_15_02)
 create_version_variables(nugen v1_19_06)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_10_02)
+create_version_variables(nurandom v1_10_03)
 create_version_variables(systematicstools v01_03_03)
 create_version_variables(nusystematics v01_03_12)
 
 create_version_variables(nutools v3_15_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
