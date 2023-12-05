@@ -14,7 +14,7 @@ cmakes=(@CMAKE_VERSION_LIST@)
 CMAKE_VERSION="${cmakes[@]: -1}"
 
 # ninja for grpc
-do_build ninja v1_10_0
+do_build ninja @NINJA_VERSION@
 
 # Compilers.
 @BUILD_COMPILERS@
