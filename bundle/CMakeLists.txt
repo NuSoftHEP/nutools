@@ -137,7 +137,7 @@ create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 # TAUOLA C++ and friends
 create_version_variables(hepmc3 v3_2_7)
 create_version_variables(pythia8 v8_3_10)
-create_version_variables(tauola v1_1_8k)
+create_version_variables(tauola v1_1_8l)
 create_version_variables(tauola_dist NAME tauola ${TAUOLA_VERSION})
 
 # CodeSynthesis XSD for NoVA.
