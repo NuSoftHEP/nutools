@@ -24,6 +24,10 @@ build_bundle canvas_product_stack-@CANVAS_STACK_DOT_VERSION@ ${basequal} || retu
 # Handle Python.
 @INIT_PYQUAL_VARS@
 
+for cv in @CMAKE_VERSION_LIST@; do
+  do_build cmake ${cv}
+done
+
 do_build cry @CRY_VERSION@ ${basequal}
 
 # LHAPDF.
