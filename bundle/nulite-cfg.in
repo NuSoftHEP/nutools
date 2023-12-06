@@ -32,7 +32,7 @@ ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 for _cps_cetmodules_ver in @CETMODULES_VERSION_LIST@; do
   ensure_support_package -f NULL -- cetmodules ${_cps_cetmodules_ver}
 done
-ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
+##ensure_cetbuildtools @CETBUILDTOOLS_VERSION_LIST@
 ensure_support_package -f NULL studio @STUDIO_VERSION@
 
 # mrb
