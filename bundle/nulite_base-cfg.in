@@ -65,7 +65,6 @@ do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
 
 # IFDH.
 # use the ifdh bundle and call it from nulite-cfg
-
 # pygccxml and castxml
 CASTXML_PULL_ONLY=1 \
   build_bundle castxml-@CASTXML_DOT_VERSION@ || return
@@ -75,26 +74,27 @@ do_build pygccxml @PYGCCXML_VERSION@ ${pyqual}
 do_build pycurl @PYCURL_VERSION@ ${pyqual}
 # protobuf and grpc
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
-do_build grpc @GRPC_VERSION@ ${basequal}
+##do_build grpc @GRPC_VERSION@ ${basequal}
 
 # Tensorflow.
-echo "check to see if we can build tensorflow on ${flvr} with -q +$basequal"
-[ "$basequal" = c7 ] ||
-  [ "$basequal" = c14 ] ||
-  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
-  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
-  build_bundle tensorflow-@TENSORFLOW_DIST_DOT_VERSION@ ${basequal} || return
+##echo "check to see if we can build tensorflow on ${flvr} with -q +$basequal"
+##[ "$basequal" = c7 ] ||
+##  [ "$basequal" = c14 ] ||
+##  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
+##  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
+##  build_bundle tensorflow-@TENSORFLOW_DIST_DOT_VERSION@ ${basequal} || return
 
 # Triton.
-[ "$basequal" = c7 ] || build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
+# (triton depends on grpc)
+##[ "$basequal" = c7 ] || build_bundle triton-@TRITON_DIST_DOT_VERSION@ ${basequal} || return
 
 # pick up libtorch on appropriate platforms
-echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
-[ "$basequal" = c7 ] ||
-  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
-  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
-  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
-  return
+##echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
+##[ "$basequal" = c7 ] ||
+##  [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
+##  [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
+##  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
+##  return
 
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
