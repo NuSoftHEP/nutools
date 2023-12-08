@@ -25,6 +25,7 @@ do_build ninja @NINJA_VERSION@
 #  triton
 do_build sqlite @SQLITE_VERSION@
 do_build python ${pyver}
+do_build abseil_cpp @ABSEIL_CPP_VERSION@ ${basequal}
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 #do_build opencv @OPENCV_VERSION@ ${basequal}:${pyqual}
 do_build grpc @GRPC_VERSION@ ${basequal}
