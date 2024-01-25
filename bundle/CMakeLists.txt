@@ -128,6 +128,7 @@ create_version_variables(grpc v1_35_0b)
 #create_version_variables(opencv v4_7_0a)
 create_version_variables(libtorch v2_1_1)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
+create_version_variables(torch_scatter v2_1_2)
 create_version_variables(triton v2_25_0b)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
@@ -157,7 +158,7 @@ create_version_variables(nusystematics v01_03_12)
 
 create_version_variables(nutools v3_15_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix c) # Reset when no longer needed
+set(nulite_suffix d) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})

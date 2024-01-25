@@ -93,8 +93,10 @@ echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
 [ "$basequal" = c7 ] ||
   [ "$flvr" = "Linux64bit+4.15-2.27" ] ||
   [ "$flvr" = "Linux64bit+5.4-2.31" ] ||
-  build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
+  build_bundle libtorch-@LIBTORCH_DIST_DOT_VERSION@ $basequal ||
   return
+# temp until there is a new libtorch release
+do_build torch_scatter @TORCH_SCATTER_VERSION@ ${basequal}
 
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
