@@ -49,11 +49,12 @@ if [[ -z "${version_set}" ]]; then
   return 1
 fi
 
-build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
+# still waiting for an artdaq_core tag
+#build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
 
-build_cet -G art-daq -p trace TRACE @TRACE_VERSION@ -nq-
+#build_cet -G art-daq -p trace TRACE @TRACE_VERSION@ -nq-
 
-build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_set@
+#build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_set@
 
 build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
