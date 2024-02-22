@@ -38,7 +38,7 @@ create_version_variables(cmake LIST v3_14_3 v3_20_0 v3_22_2 v3_24_1 v3_25_2 v3_2
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02)
+                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
@@ -66,7 +66,7 @@ create_version_variables(toyExperiment v0_10_04)
 
 create_version_variables(cry v1_7q)
 create_version_variables(TRACE v3_17_09)
-create_version_variables(artdaq_core v3_09_16)
+create_version_variables(artdaq_core v3_09_17)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01g)
@@ -161,7 +161,7 @@ create_version_variables(nusystematics v01_04_02)
 
 create_version_variables(nutools v3_16_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
