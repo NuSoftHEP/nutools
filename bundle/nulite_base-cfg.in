@@ -80,6 +80,8 @@ do_build pycurl @PYCURL_VERSION@ ${pyqual}
 do_build abseil_cpp @ABSEIL_CPP_VERSION@ ${basequal}
 do_build protobuf @PROTOBUF_VERSION@ ${basequal}
 do_build grpc @GRPC_VERSION@ ${basequal}
+# eigen
+build_noarch eigen @EIGEN_VERSION@
 
 # Tensorflow.
 echo "check to see if we can build tensorflow on ${flvr} with -q +$basequal"
