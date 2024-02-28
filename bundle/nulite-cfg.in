@@ -28,6 +28,9 @@ for cv in @CMAKE_VERSION_LIST@; do
   do_build cmake ${cv}
 done
 
+# temporary ninja for newer cetmodules
+do_build ninja @NINJA_VERSION@
+
 ensure_cetpkgsupport @CETPKGSUPPORT_VERSION@
 for _cps_cetmodules_ver in @CETMODULES_VERSION_LIST@; do
   ensure_support_package -f NULL -- cetmodules ${_cps_cetmodules_ver}
