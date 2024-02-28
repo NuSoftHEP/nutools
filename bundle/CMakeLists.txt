@@ -16,9 +16,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s120a)
+set(version_set s120b)
 # for use in html
-set( supported_quals_string "e20|e26|c7|c14")
+set( supported_quals_string "e20|e26|c14")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -37,7 +37,7 @@ create_version_variables(cetbuildtools LIST v8_20_00)
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_20_00 v3_21_00 v3_21_01 v3_20_00)
+                           v3_20_00 v3_21_00 v3_21_01)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_22_1 )
@@ -45,25 +45,25 @@ create_version_variables(mrb v6_09_05)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix c) # Reset when no longer needed
-set(art_suffix c) # Reset when no longer needed
-create_version_variables(canvas v3_14_00)
+set(stack_suffix ) # Reset when no longer needed
+set(art_suffix ) # Reset when no longer needed
+create_version_variables(canvas v3_14_01)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_11_02)
-create_version_variables(art v3_12_00)
+create_version_variables(canvas_root_io v1_11_03)
+create_version_variables(art v3_12_01)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_11_03)
+create_version_variables(art_root_io v1_11_04)
 
 # lite framework
-create_version_variables(gallery v1_20_02)
+create_version_variables(gallery v1_20_03)
 
 # Tutorial
-create_version_variables(toyExperiment v0_08_03)
+create_version_variables(toyExperiment v0_08_04)
 
 create_version_variables(cry v1_7p)
-create_version_variables(TRACE v3_17_09)
-create_version_variables(artdaq_core v3_09_11)
+create_version_variables(TRACE v3_17_10)
+create_version_variables(artdaq_core v3_10_00)
 
 # geant4
 create_version_variables(geant4 v4_10_6_p01f)
@@ -90,7 +90,7 @@ create_version_variables(ifdhc v2_6_20)
 create_version_variables(ifdhc_config v2_6_20)
 create_version_variables(ifbeam v2_5_23)
 create_version_variables(nucondb v2_5_23)
-create_version_variables(ifdh_art v2_15_06)
+create_version_variables(ifdh_art v2_15_08)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -146,17 +146,17 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_27_03)
+create_version_variables(nusimdata v1_27_04)
 create_version_variables(nufinder v1_01_02)
-create_version_variables(nuevdb v1_08_03)
-create_version_variables(nug4 v1_15_03)
-create_version_variables(nugen v1_19_07)
+create_version_variables(nuevdb v1_08_04)
+create_version_variables(nug4 v1_15_04)
+create_version_variables(nugen v1_19_08)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_10_03)
-create_version_variables(systematicstools v01_03_03)
-create_version_variables(nusystematics v01_03_13)
+create_version_variables(nurandom v1_10_04)
+create_version_variables(systematicstools v01_03_04)
+create_version_variables(nusystematics v01_03_14)
 
-create_version_variables(nutools v3_15_05)
+create_version_variables(nutools v3_15_06)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
 set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
@@ -165,7 +165,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_18_04)
+create_version_variables(ppfx v02_18_05)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
