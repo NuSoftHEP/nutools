@@ -33,6 +33,7 @@ do_build -m mpfr @MPFR_VERSION@
 
 # Build libtorch.
 do_build libtorch @LIBTORCH_VERSION@ ${basequal}
+do_build torch_scatter @TORCH_SCATTER_VERSION@ ${basequal}
 
 # Local Variables:
 # mode: sh
