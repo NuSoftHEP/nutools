@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_20_05)
+create_version_variables(geant4reweight v01_20_06)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -150,26 +150,26 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_28_03)
-create_version_variables(nufinder v1_02_00)
-create_version_variables(nuevdb v1_09_03)
-create_version_variables(nug4 v1_16_03)
-create_version_variables(nugen v1_20_03)
+create_version_variables(nusimdata v1_28_04)
+create_version_variables(nufinder v1_02_01)
+create_version_variables(nuevdb v1_09_04)
+create_version_variables(nug4 v1_16_04)
+create_version_variables(nugen v1_20_04)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_03)
 create_version_variables(systematicstools v01_04_03)
-create_version_variables(nusystematics v01_04_03)
+create_version_variables(nusystematics v01_04_04)
 
-create_version_variables(nutools v3_16_03)
+create_version_variables(nutools v3_16_04)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_19_03)
+create_version_variables(ppfx v02_19_04)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
