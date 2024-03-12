@@ -132,7 +132,7 @@ create_version_variables(grpc v1_35_0c)
 #create_version_variables(opencv v4_7_0a)
 create_version_variables(libtorch v2_1_1b)
 create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_product_variables( torch_scatter   v2_1_2a )
+create_version_variables( torch_scatter   v2_1_2a )
 create_version_variables(triton v2_25_0d)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
