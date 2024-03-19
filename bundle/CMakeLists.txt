@@ -42,7 +42,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
-create_version_variables(mrb v6_09_05)
+create_version_variables(mrb v6_09_06)
 # ninja
 create_version_variables(ninja v1_11_1)
 
