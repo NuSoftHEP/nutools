@@ -150,19 +150,19 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_28_05)
+create_version_variables(nusimdata v1_28_06)
 create_version_variables(nufinder v1_02_01)
-create_version_variables(nuevdb v1_09_07)
-create_version_variables(nug4 v1_16_05)
-create_version_variables(nugen v1_20_06)
+create_version_variables(nuevdb v1_09_08)
+create_version_variables(nug4 v1_16_06)
+create_version_variables(nugen v1_20_07)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_11_04)
+create_version_variables(nurandom v1_11_05)
 create_version_variables(systematicstools v01_04_04)
-create_version_variables(nusystematics v01_04_06)
+create_version_variables(nusystematics v01_04_07)
 
-create_version_variables(nutools v3_16_05)
+create_version_variables(nutools v3_16_06)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
