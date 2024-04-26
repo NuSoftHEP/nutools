@@ -27,13 +27,12 @@ cet_cmake_env()
 # -D_GLIBCXX_USE_NANOSLEEP is needed to make std::this_thread::sleep_for available. (IFDatabase)
 cet_set_compiler_flags(DIAGS CAUTIOUS WERROR
                        NO_UNDEFINED
-                       EXTRA_FLAGS -pedantic 
-                                   $<$<COMPILE_LANGUAGE:CXX>:-D_GLIBCXX_USE_NANOSLEEP 
+                       EXTRA_FLAGS -pedantic
+                                   $<$<COMPILE_LANGUAGE:CXX>:-D_GLIBCXX_USE_NANOSLEEP
                                    -Wno-unused-local-typedefs -Wno-variadic-macros>)
 cet_report_compiler_flags(REPORT_THRESHOLD VERBOSE)
 
 find_package(art REQUIRED)
-find_package(art_root_io REQUIRED)
 find_package(canvas_root_io REQUIRED)
 find_package(nusimdata REQUIRED)
 find_package(cetlib REQUIRED)

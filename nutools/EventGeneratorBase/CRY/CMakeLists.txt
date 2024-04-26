@@ -1,6 +1,5 @@
-
-find_package(ROOT COMPONENTS Geom GeomPainter Core EG REQUIRED PUBLIC)
-find_package(CRY REQUIRED PUBLIC)
+find_package(ROOT COMPONENTS Geom GeomPainter Core EG REQUIRED EXPORT)
+find_package(CRY REQUIRED EXPORT)
 
 art_make_library(LIBRARIES PRIVATE
   CRY::CRY
