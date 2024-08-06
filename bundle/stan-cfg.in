@@ -1,0 +1,32 @@
+# build everything that does not depend on art
+
+basequal=${1}
+
+#require_buildfw_version 6.00.00 || return
+  if version_greater \
+   6.00.00     v$(print_version | sed -e 's&^.*[ \t]\{1,\}&&' -e 's&\.&_&g' ); then
+    echo "Need buildFW 6.00.00 or better." 1>&2
+    return 1
+  fi
+
+# specify version to bootstrap and setup ups
+check_ups @UPS_VERSION@
+
+# infrastructure
+for cv in @CMAKE_VERSION_LIST@; do
+  do_build cmake ${cv}
+done
+
+# Compilers.
+@BUILD_COMPILERS@
+
+# Handle Python.
+@INIT_PYQUAL_VARS@
+
+build_noarch eigen @EIGEN_VERSION@
+do_build sundials @SUNDIALS_VERSION@
+do_build stan_math @STAN_MATH_VERSION@
+do_build stan @STAN_VERSION@
+
+return 0
+

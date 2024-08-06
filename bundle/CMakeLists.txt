@@ -109,8 +109,12 @@ create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
 create_version_variables(inclxx v5_2_9_5f)
-# tensorflow
+# stan
 create_version_variables(eigen v23_08_01_66e8f)
+create_version_variables(sundials v7_1_1)
+create_version_variables(stan_math v4_9_0a)
+create_version_variables(stan v2_35_0a)
+# tensorflow
 create_version_variables(bazelisk v1_10_1b)
 create_version_variables(cython v0_29_33)
 create_version_variables(giflib v5_2_1)
@@ -197,6 +201,8 @@ distribution(nulite WITH_HTML)
 distribution(ifdh)
 distribution(ifdhc)
 
+# stan
+distribution(stan)
 # libtorch.
 distribution(libtorch_dist)
 # triton.
