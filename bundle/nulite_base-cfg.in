@@ -83,9 +83,6 @@ do_build grpc @GRPC_VERSION@ ${basequal}
 # eigen
 build_noarch eigen @EIGEN_VERSION@
 
-# stan
-build_bundle stan-@STAN_DOT_VERSION@ ${basequal} || return
-
 # Tensorflow.
 echo "check to see if we can build tensorflow on ${flvr} with -q +$basequal"
 [ "$basequal" = c7 ] ||
