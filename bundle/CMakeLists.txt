@@ -69,7 +69,7 @@ create_version_variables(TRACE v3_17_11)
 create_version_variables(artdaq_core v3_10_02)
 
 # geant4
-create_version_variables(geant4 v4_10_6_p01g)
+create_version_variables(geant4 v4_11_2_p01)
 create_version_variables(xerces_c v3_2_3e)
 create_version_variables(vecgeom v01_01_05c)
 create_version_variables(qt v5_12_3a)
