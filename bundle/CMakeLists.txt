@@ -38,7 +38,7 @@ create_version_variables(cmake LIST v3_14_3 v3_20_0 v3_22_2 v3_24_1 v3_25_2 v3_2
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01)
+                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01 v3_24_01)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_21_01)
+create_version_variables(geant4reweight v01_22_00)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
