@@ -57,15 +57,21 @@ build_label=${pyqual} \
   build_bundle @TAUOLA_DIST_NAME@-@TAUOLA_DIST_DOT_VERSION@ ${basequal} || return
 
 # GENIE.
-# build ${basequal}, ${basequal}:geant4, and maybe ${basequal}:inclxx
-do_build genie @GENIE_VERSION@ ${basequal}
+# build ${basequal}, ${basequal}:geant4, or maybe ${basequal}:inclxx
+do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
+if [[ ${build_label} == "geant4" ]]; then
 do_build genie @GENIE_VERSION@ ${basequal}:geant4
+do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}:geant4
+elif [[ ${build_label} == "inclxx" ]]; then
 [ "$basequal" = c7 ] || [ "$basequal" = c14 ] ||
    ( do_build inclxx @INCLXX_VERSION@  ${basequal}
      do_build genie @GENIE_VERSION@ ${basequal}:inclxx
+     do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}:inclxx
    )
-do_build dk2nudata @DK2NUDATA_VERSION@ ${basequal}${pylabel}
+else
+do_build genie @GENIE_VERSION@ ${basequal}
 do_build dk2nugenie @DK2NUGENIE_VERSION@ ${basequal}${pylabel}
+fi
 
 # IFDH.
 # use the ifdh bundle and call it from nulite-cfg
