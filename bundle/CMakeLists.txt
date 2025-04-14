@@ -99,7 +99,7 @@ create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
 create_version_variables(genie v3_04_02a)
-create_version_variables(genie_phyopt v3_04_00)
+create_version_variables(genie_phyopt v3_04_00a)
 create_version_variables(genie_xsec v3_04_00)
 create_version_variables(lhapdf v6_5_4)
 create_version_variables(log4cpp v1_1_3e)
@@ -158,15 +158,15 @@ create_version_variables(nusimdata v1_29_00)
 create_version_variables(nufinder v1_02_01)
 create_version_variables(nuevdb v1_09_10)
 create_version_variables(nug4 v1_16_08)
-create_version_variables(nugen v1_21_06)
+create_version_variables(nugen v1_21_07)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_05)
 create_version_variables(systematicstools v01_04_04)
-create_version_variables(nusystematics v1_05_06)
+create_version_variables(nusystematics v1_05_07)
 
 create_version_variables(nutools v3_17_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
