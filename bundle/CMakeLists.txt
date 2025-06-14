@@ -42,7 +42,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
-create_version_variables(mrb v6_09_06)
+create_version_variables(mrb v6_09_11)
 # ninja
 create_version_variables(ninja v1_11_1)
 
@@ -85,26 +85,26 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_20_10)
+create_version_variables(geant4reweight v01_20_12)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
 create_version_variables(ifdhc v2_7_2)
 create_version_variables(ifdhc_config v2_7_2)
-create_version_variables(ifbeam v2_6_2)
-create_version_variables(nucondb v2_6_2)
-create_version_variables(ifdh_art v2_17_07)
+create_version_variables(ifbeam v2_6_3)
+create_version_variables(nucondb v2_6_3)
+create_version_variables(ifdh_art v2_17_08)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_06_00)
-create_version_variables(genie_phyopt v3_04_00)
-create_version_variables(genie_xsec v3_04_00)
+create_version_variables(genie v3_06_00c)
+create_version_variables(genie_phyopt v3_06_00)
+create_version_variables(genie_xsec v3_06_00)
 create_version_variables(lhapdf v6_5_5)
 create_version_variables(log4cpp v1_1_3e)
 create_version_variables(dk2nudata v01_10_01h)
-create_version_variables(dk2nugenie v01_10_02)
+create_version_variables(dk2nugenie v01_10_02b)
 create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
@@ -141,9 +141,9 @@ create_version_variables(triton v2_25_0d)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
 # TAUOLA C++ and friends
-create_version_variables(hepmc3 v3_3_0)
-create_version_variables(pythia8 v8_3_13)
-create_version_variables(tauola v1_1_8m)
+create_version_variables(hepmc3 v3_3_1)
+create_version_variables(pythia8 v8_3_15)
+create_version_variables(tauola v1_1_8n)
 create_version_variables(tauola_dist NAME tauola ${TAUOLA_VERSION})
 
 # CodeSynthesis XSD for NoVA.
@@ -157,23 +157,23 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 create_version_variables(nusimdata v1_29_00)
 create_version_variables(nufinder v1_02_01)
 create_version_variables(nuevdb v1_09_10)
-create_version_variables(nug4 v1_16_07)
-create_version_variables(nugen v1_21_05)
+create_version_variables(nug4 v1_16_09)
+create_version_variables(nugen v1_21_08)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_05)
 create_version_variables(systematicstools v01_04_04)
-create_version_variables(nusystematics v1_05_05)
+create_version_variables(nusystematics v1_05_08)
 
 create_version_variables(nutools v3_20_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_20_04)
+create_version_variables(ppfx v02_20_05)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
