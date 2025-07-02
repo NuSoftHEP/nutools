@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_22_01)
+create_version_variables(geant4reweight v1_18_02)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -157,7 +157,7 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 create_version_variables(nusimdata v1_29_00)
 create_version_variables(nufinder v1_02_01)
 create_version_variables(nuevdb v1_09_10)
-create_version_variables(nug4 v1_18_01)
+create_version_variables(nug4 v1_18_02)
 create_version_variables(nugen v1_22_03)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_05)
