@@ -166,14 +166,14 @@ create_version_variables(nusystematics v1_05_09)
 
 create_version_variables(nutools v3_20_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx 3.00.04)
+create_version_variables(ppfx v02_20_06)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
