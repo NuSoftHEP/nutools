@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_4)
 create_version_variables(g4surface v2_1_1)
 create_version_variables(g4tendl v1_3_2)
-create_version_variables(geant4reweight v01_20_13)
+create_version_variables(geant4reweight v01_20_14)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
@@ -173,7 +173,7 @@ create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_20_06)
+create_version_variables(ppfx v02_20_07)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
