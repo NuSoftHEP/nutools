@@ -19,7 +19,7 @@ find_package(cetmodules 2.29.06 REQUIRED)
 project(nutools LANGUAGES CXX)
 
 include(CetCMakeEnv)
-set(${PROJECT_NAME}_CMAKE_PROJECT_VERSION_STRING 3.21.00-sbn01)
+set(${PROJECT_NAME}_CMAKE_PROJECT_VERSION_STRING 3.21.00-sbn)
 cet_cmake_env()
 
 # Find our own CMake modules, and tell everyone else where to find them.
