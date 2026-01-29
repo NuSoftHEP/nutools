@@ -117,7 +117,7 @@ build_noarch genie_xsec @GENIE_XSEC_VERSION@ AR2520i00000-k250-e1000
 build_noarch genie_xsec @GENIE_XSEC_VERSION@ AR2522i00000-k250-e1000
 ##build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1802a00000-k250-e1000
 ##build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211a-k250-e1000
-##build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211b-k250-e1000
+build_noarch genie_xsec @GENIE_XSEC_VERSION@ G1810a0211b-k250-e1000
 ##build_noarch genie_xsec @GENIE_XSEC_VERSION@ GDNu2001a00000-k120-e200
 
 
