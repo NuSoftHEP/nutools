@@ -161,7 +161,7 @@ create_version_variables(nug4 v1_17_03)
 create_version_variables(nugen v1_23_04)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_06)
-create_version_variables(systematicstools v1_04_05)
+create_version_variables(systematicstools v01_04_05)
 create_version_variables(nusystematics v1_05_13)
 
 create_version_variables(nutools v3_22_01)
