@@ -68,7 +68,8 @@ build_cet -G NuSoftHEP nutools @NUTOOLS_VERSION@ ${basequal}${pylabel}
 # extras
 build_cet -G LArSoft systematicstools @SYSTEMATICSTOOLS_VERSION@ ${basequal}
 build_cet -G LArSoft nusystematics @NUSYSTEMATICS_VERSION@ ${basequal}${build_label:+:${build_label}}
-build_cet -G kordosky -b @PPFX_DOT_VERSION@ ppfx @PPFX_VERSION@ ${basequal}${pylabel}
+# building ppfx requires an update to ups/product_deps
+##build_cet -G kordosky -b @PPFX_DOT_VERSION@ ppfx @PPFX_VERSION@ ${basequal}${pylabel}
 
 # Local Variables:
 # mode: sh
