@@ -38,11 +38,11 @@ create_version_variables(cmake LIST v3_14_3 v3_20_0 v3_22_2 v3_24_1 v3_25_2 v3_2
 create_version_variables(cetmodules1 v1_04_00)
 create_version_variables(cetmodules 
                          LIST
-                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01 v3_24_01)
+                           v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01 v3_27_04)
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
-create_version_variables(mrb v6_09_11)
+create_version_variables(mrb v6_09_13)
 # ninja
 create_version_variables(ninja v1_11_1)
 
@@ -85,26 +85,26 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_22_02)
+create_version_variables(geant4reweight v01_22_03)
 
 # ifdh
 create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_7_2)
-create_version_variables(ifdhc_config v2_7_2)
-create_version_variables(ifbeam v2_6_2)
-create_version_variables(nucondb v2_6_2)
-create_version_variables(ifdh_art v2_17_07)
+create_version_variables(ifdhc v2_8_0)
+create_version_variables(ifdhc_config v2_8_0)
+create_version_variables(ifbeam v2_6_3)
+create_version_variables(nucondb v2_6_3)
+create_version_variables(ifdh_art v2_17_08)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_06_02)
-create_version_variables(genie_phyopt v3_04_00)
-create_version_variables(genie_xsec v3_04_00)
+create_version_variables(genie v3_06_02c)
+create_version_variables(genie_phyopt v3_06_00)
+create_version_variables(genie_xsec v3_06_00)
 create_version_variables(lhapdf v6_5_5)
 create_version_variables(log4cpp v1_1_3e)
-create_version_variables(dk2nudata v01_10_01h)
-create_version_variables(dk2nugenie v01_10_02c)
+create_version_variables(dk2nudata v01_11_00)
+create_version_variables(dk2nugenie v01_11_00b)
 create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
@@ -154,26 +154,26 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_29_00)
-create_version_variables(nufinder v1_02_01)
-create_version_variables(nuevdb v1_09_10)
-create_version_variables(nug4 v1_18_02)
-create_version_variables(nugen v1_22_03)
+create_version_variables(nusimdata v1_29_03)
+create_version_variables(nufinder v1_03_01)
+create_version_variables(nuevdb v1_09_13)
+create_version_variables(nug4 v1_18_03)
+create_version_variables(nugen v1_22_04)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_11_05)
-create_version_variables(systematicstools v01_04_04)
-create_version_variables(nusystematics v1_06_02)
+create_version_variables(nurandom v1_11_06)
+create_version_variables(systematicstools v01_04_05)
+create_version_variables(nusystematics v1_06_03)
 
-create_version_variables(nutools v3_19_02)
+create_version_variables(nutools v3_19_03)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v3_00_02)
+create_version_variables(ppfx v3_00_04)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
