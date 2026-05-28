@@ -50,6 +50,9 @@ build_noarch g4pii        @G4PII_VERSION@
 build_noarch g4radiative  @G4RADIATIVE_VERSION@
 build_noarch g4surface    @G4SURFACE_VERSION@
 build_noarch g4tendl      @G4TENDL_VERSION@
+build_noarch g4channeling @G4CHANNELING_VERSION@
+build_noarch g4nudex @G4NUDEX_VERSION@
+build_noarch g4urrpt @G4URRPT_VERSION@
 do_build geant4 @GEANT4_VERSION@ ${basequal}
 
 # TAUOLA C++.

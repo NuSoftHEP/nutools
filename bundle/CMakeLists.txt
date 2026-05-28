@@ -85,6 +85,9 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v6_1_2)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
+create_version_variables(g4channeling v2_0)
+create_version_variables(g4nudex v1_0)
+create_version_variables(g4urrpt v1_1)
 create_version_variables(geant4reweight v01_23_01)
 
 # ifdh
