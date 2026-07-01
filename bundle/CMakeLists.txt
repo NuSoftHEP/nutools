@@ -42,7 +42,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
-create_version_variables(mrb v6_09_12)
+create_version_variables(mrb v6_09_13)
 # ninja
 create_version_variables(ninja v1_11_1)
 
@@ -88,12 +88,12 @@ create_version_variables(g4tendl v1_4)
 create_version_variables(geant4reweight v01_21_03)
 
 # ifdh
-create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_8_0)
-create_version_variables(ifdhc_config v2_8_0)
-create_version_variables(ifbeam v2_6_3)
-create_version_variables(nucondb v2_6_3)
-create_version_variables(ifdh_art v2_17_08)
+create_version_variables(libwda v2_30_1)
+create_version_variables(ifdhc v2_8_1)
+create_version_variables(ifdhc_config v2_8_1)
+create_version_variables(ifbeam v2_6_4)
+create_version_variables(nucondb v2_6_4)
+create_version_variables(ifdh_art v2_17_09)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
@@ -156,7 +156,7 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 # nutools
 create_version_variables(nusimdata v1_29_03)
 create_version_variables(nufinder v1_03_01)
-create_version_variables(nuevdb v1_09_13)
+create_version_variables(nuevdb v1_09_14)
 create_version_variables(nug4 v1_17_03)
 create_version_variables(nugen v1_23_04)
 # nurandom and nusystematics are only used by LArSoft
@@ -166,14 +166,14 @@ create_version_variables(nusystematics v1_05_13)
 
 create_version_variables(nutools v3_22_01)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_20_08)
+create_version_variables(ppfx v02_20_09)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
