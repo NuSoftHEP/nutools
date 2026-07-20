@@ -69,7 +69,7 @@ create_version_variables(TRACE v3_17_11)
 create_version_variables(artdaq_core v3_10_02)
 
 # geant4
-create_version_variables(geant4 v4_11_4_p01a)
+create_version_variables(geant4 v4_11_4_p02)
 create_version_variables(xerces_c v3_2_3e)
 create_version_variables(vecgeom v01_01_05c)
 create_version_variables(qt v5_12_3a)
@@ -88,26 +88,26 @@ create_version_variables(g4tendl v1_4)
 create_version_variables(g4channeling v2_0)
 create_version_variables(g4nudex v1_0)
 create_version_variables(g4urrpt v1_1)
-create_version_variables(geant4reweight v01_23_01)
+create_version_variables(geant4reweight v01_23_02)
 
 # ifdh
-create_version_variables(libwda v2_30_0a)
-create_version_variables(ifdhc v2_8_0)
-create_version_variables(ifdhc_config v2_8_0)
-create_version_variables(ifbeam v2_6_3)
-create_version_variables(nucondb v2_6_3)
-create_version_variables(ifdh_art v2_17_08)
+create_version_variables(libwda v2_30_1)
+create_version_variables(ifdhc v2_8_1)
+create_version_variables(ifdhc_config v2_8_1)
+create_version_variables(ifbeam v2_6_4)
+create_version_variables(nucondb v2_6_4)
+create_version_variables(ifdh_art v2_17_09)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_06_02e)
+create_version_variables(genie v3_06_02f)
 create_version_variables(genie_phyopt v3_06_00)
 create_version_variables(genie_xsec v3_06_00)
 create_version_variables(lhapdf v6_5_5)
 create_version_variables(log4cpp v1_1_3e)
 create_version_variables(dk2nudata v01_11_00)
-create_version_variables(dk2nugenie v01_11_00d)
+create_version_variables(dk2nugenie v01_11_00e)
 create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
@@ -159,24 +159,24 @@ create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 # nutools
 create_version_variables(nusimdata v1_29_03)
 create_version_variables(nufinder v1_03_01)
-create_version_variables(nuevdb v1_09_13)
-create_version_variables(nug4 v1_19_01)
-create_version_variables(nugen v1_24_01)
+create_version_variables(nuevdb v1_09_14)
+create_version_variables(nug4 v1_19_02)
+create_version_variables(nugen v1_24_02)
 # nurandom and nusystematics are only used by LArSoft
 create_version_variables(nurandom v1_11_06)
 create_version_variables(systematicstools v01_05_00)
-create_version_variables(nusystematics v1_07_01)
+create_version_variables(nusystematics v1_07_02)
 
 create_version_variables(nutools v3_23_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix a) # Reset when no longer needed
+set(nulite_suffix b) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_21_00)
+create_version_variables(ppfx v02_21_01)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
