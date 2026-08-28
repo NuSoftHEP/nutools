@@ -34,8 +34,8 @@ create_version_variables(pycurl v7_45_2)
 # cmake v3_14_3 needed for geant4 v4_10_6_p01g
 create_version_variables(cmake LIST v3_14_3 v3_20_0 v3_22_2 v3_24_1 v3_25_2 v3_27_4)
 ##create_version_variables(cetbuildtools LIST v8_20_00)
-# cetmodules v1_04_00 is required by TRACE >= v3_14_00.
-create_version_variables(cetmodules1 v1_04_00)
+# cetmodules v3_16_00 is required by TRACE v3_17_11.
+create_version_variables(cetmodules1 v3_16_00)
 create_version_variables(cetmodules 
                          LIST
                            v3_20_00 v3_21_00 v3_21_01 v3_21_02 v3_22_02 v3_24_01 v3_27_04)
