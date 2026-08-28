@@ -16,9 +16,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bootstrap)
 include(bootstrapModules)
 
 # Define version set for desired version of art suite.
-set(version_set s131)
+set(version_set s133)
 # for use in html
-set( supported_quals_string "e26|e28|c14")
+set( supported_quals_string "e28")
 
 # Package Management.
 create_version_variables(cetpkgsupport v1_14_01)
@@ -48,28 +48,28 @@ create_version_variables(ninja v1_11_1)
 
 # art_suite
 set(suite_rc_level)
-set(stack_suffix a) # Reset when no longer needed
-set(art_suffix a) # Reset when no longer needed
-create_version_variables(canvas v3_16_04)
+set(stack_suffix ) # Reset when no longer needed
+set(art_suffix ) # Reset when no longer needed
+create_version_variables(canvas v3_17_01)
 create_version_variables(canvas_stack ${CANVAS_VERSION}${stack_suffix})
 create_version_variables(studio v1_02_00)
-create_version_variables(canvas_root_io v1_13_06)
-create_version_variables(art v3_14_04)
+create_version_variables(canvas_root_io v1_14_02)
+create_version_variables(art v3_15_01)
 create_version_variables(art_suite NAME art ${ART_VERSION}${art_suffix})
-create_version_variables(art_root_io v1_13_06)
+create_version_variables(art_root_io v1_14_02)
 
 # lite framework
-create_version_variables(gallery v1_22_06)
+create_version_variables(gallery v1_23_02)
 
 # Tutorial
-create_version_variables(toyExperiment v0_10_06)
+#create_version_variables(toyExperiment v0_11_00)
 
 create_version_variables(cry v1_7q)
 create_version_variables(TRACE v3_17_11)
-create_version_variables(artdaq_core v3_10_02)
+create_version_variables(artdaq_core v3_13_01)
 
 # geant4
-create_version_variables(geant4 v4_11_2_p02)
+create_version_variables(geant4 v4_11_2_p02a)
 create_version_variables(xerces_c v3_2_3e)
 create_version_variables(vecgeom v01_01_05c)
 create_version_variables(qt v5_12_3a)
@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_21_03)
+create_version_variables(geant4reweight v01_24_00)
 
 # ifdh
 create_version_variables(libwda v2_30_1)
@@ -93,18 +93,18 @@ create_version_variables(ifdhc v2_8_1)
 create_version_variables(ifdhc_config v2_8_1)
 create_version_variables(ifbeam v2_6_4)
 create_version_variables(nucondb v2_6_4)
-create_version_variables(ifdh_art v2_17_09)
+create_version_variables(ifdh_art v2_18_03)
 # IFDH distribution.
 create_version_variables(ifdh ${IFDH_ART_VERSION})
 
 # nu_extras
-create_version_variables(genie v3_06_02b)
+create_version_variables(genie v3_06_02h)
 create_version_variables(genie_phyopt v3_06_00)
 create_version_variables(genie_xsec v3_06_00)
 create_version_variables(lhapdf v6_5_5)
 create_version_variables(log4cpp v1_1_3e)
-create_version_variables(dk2nudata v01_11_00)
-create_version_variables(dk2nugenie v01_11_00a)
+create_version_variables(dk2nudata v01_12_00a)
+create_version_variables(dk2nugenie v01_12_00b)
 create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
@@ -130,13 +130,13 @@ create_version_variables(numpy v1_24_3)
 create_version_variables(tbb v2021_9_0)
 create_version_variables(pybind11 v2_10_4)
 create_version_variables(fftw v3_3_10)
-create_version_variables(gmp v6_2_0)
+create_version_variables(gmp v6_2_1)
 create_version_variables(mpfr v4_1_0)
 create_version_variables(grpc v1_35_0c)
 #create_version_variables(opencv v4_7_0a)
 create_version_variables(libtorch v2_1_1b)
-create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION})
-create_version_variables( torch_scatter   v2_1_2a )
+create_version_variables(libtorch_dist NAME libtorch ${LIBTORCH_VERSION}b)
+create_version_variables( torch_scatter v2_1_2b )
 create_version_variables(triton v2_25_0d)
 create_version_variables(triton_dist NAME triton ${TRITON_VERSION})
 
@@ -154,26 +154,26 @@ create_version_variables(cstxsd v4_0_0j)
 create_version_variables(cstxsd_dist NAME cstxsd ${CSTXSD_VERSION})
 
 # nutools
-create_version_variables(nusimdata v1_29_03)
+create_version_variables(nusimdata v1_30_00)
 create_version_variables(nufinder v1_03_01)
-create_version_variables(nuevdb v1_09_14)
-create_version_variables(nug4 v1_17_03)
-create_version_variables(nugen v1_23_05)
+create_version_variables(nuevdb v1_10_00)
+create_version_variables(nug4 v1_20_00)
+create_version_variables(nugen v1_25_00)
 # nurandom and nusystematics are only used by LArSoft
-create_version_variables(nurandom v1_11_06)
-create_version_variables(systematicstools v01_04_05)
-create_version_variables(nusystematics v1_05_14)
+create_version_variables(nurandom v1_12_00)
+create_version_variables(systematicstools v01_06_00)
+create_version_variables(nusystematics v1_08_00)
 
-create_version_variables(nutools v3_22_01)
+create_version_variables(nutools v3_24_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix b) # Reset when no longer needed
+set(nulite_suffix ) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
 create_version_variables(nubase ${NULITE_VERSION})
 create_version_variables(nu ${NULITE_VERSION})
 
-create_version_variables(ppfx v02_20_09)
+create_version_variables(ppfx v02_22_00)
 
 # NOvA
 create_version_variables(castxml v0_5_1)
