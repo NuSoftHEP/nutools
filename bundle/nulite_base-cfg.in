@@ -110,6 +110,10 @@ echo "check to see if we can build libtorch on ${flvr} with -q +$basequal"
   build_bundle libtorch-@LIBTORCH_DOT_VERSION@ $basequal ||
   return
 
+# hep_hpc
+do_build hdf5 @HDF5_VERSION@ ${basequal}
+do_build hep_hpc @HEP_HPC_VERSION@ ${basequal}
+
 # Data-only packages.
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharm
 build_noarch genie_phyopt @GENIE_PHYOPT_VERSION@ dkcharmtau

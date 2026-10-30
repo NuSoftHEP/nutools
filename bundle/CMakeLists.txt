@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_21_04)
+create_version_variables(geant4reweight v01_21_05)
 
 # ifdh
 create_version_variables(libwda v2_30_1)
@@ -109,6 +109,9 @@ create_version_variables(abseil_cpp v20230802_1)
 create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
 create_version_variables(inclxx v5_2_9_5g)
+# hep_hpc
+create_product_variables( hdf5 v1_12_2b )
+create_product_variables( hep_hpc v0_15_00 )
 # stan
 create_version_variables(eigen v23_08_01_66e8f)
 create_version_variables(sundials v7_1_1)
@@ -166,7 +169,7 @@ create_version_variables(nusystematics v1_05_15)
 
 create_version_variables(nutools v3_22_02)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
