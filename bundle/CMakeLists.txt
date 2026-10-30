@@ -110,8 +110,8 @@ create_version_variables(protobuf v3_21_12a)
 create_version_variables(pygccxml v2_2_1b)
 create_version_variables(inclxx v5_2_9_5g)
 # hep_hpc
-create_product_variables( hdf5 v1_12_2b )
-create_product_variables( hep_hpc v0_15_00 )
+create_version_variables( hdf5 v1_12_2b )
+create_version_variables( hep_hpc v0_15_00 )
 # stan
 create_version_variables(eigen v23_08_01_66e8f)
 create_version_variables(sundials v7_1_1)
