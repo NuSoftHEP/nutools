@@ -49,13 +49,12 @@ if [[ -z "${version_set}" ]]; then
   return 1
 fi
 
-build_cet_null -DWANT_UPS=1 cetmodules @CETMODULES1_VERSION@
-
-build_cet -G art-daq -p trace TRACE @TRACE_VERSION@ -nq-
-
+# artdaq_core
+ensure_support_package -f NULL -- cetmodules @CETMODULES1_VERSION@
+build_cet -f NULL -G art-daq -p trace TRACE @TRACE_VERSION@ 
 build_cet -G art-daq artdaq_core @ARTDAQ_CORE_VERSION@ ${basequal}:@version_set@
 
-build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
+#build_cet toyExperiment @TOYEXPERIMENT_VERSION@ ${basequal}${pylabel}:@version_set@
 
 build_cet -f NULL -G NuSoftHEP nufinder @NUFINDER_VERSION@
 build_cet -G NuSoftHEP nusimdata @NUSIMDATA_VERSION@ ${basequal}${pylabel}
@@ -67,7 +66,7 @@ build_cet -G NuSoftHEP nurandom @NURANDOM_VERSION@ ${basequal}${pylabel}
 build_cet -G NuSoftHEP nutools @NUTOOLS_VERSION@ ${basequal}${pylabel}
 # extras
 build_cet -G LArSoft systematicstools @SYSTEMATICSTOOLS_VERSION@ ${basequal}
-build_cet -G LArSoft nusystematics @NUSYSTEMATICS_VERSION@ ${basequal}
+build_cet -G LArSoft nusystematics @NUSYSTEMATICS_VERSION@ ${basequal}${build_label:+:${build_label}}
 build_cet -G NuSoftHEP -p ppfxv2 ppfx @PPFX_VERSION@ ${basequal}${pylabel}
 
 # Local Variables:
