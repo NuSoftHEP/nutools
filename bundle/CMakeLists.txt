@@ -42,7 +42,7 @@ create_version_variables(cetmodules
 # mrb
 create_version_variables( hub v2_14_2 )
 create_version_variables( gh v2_25_1 )
-create_version_variables(mrb v6_09_13)
+create_version_variables(mrb v6_09_15)
 # ninja
 create_version_variables(ninja v1_11_1)
 
@@ -85,7 +85,7 @@ create_version_variables(g4pii v1_3)
 create_version_variables(g4radiative v5_6)
 create_version_variables(g4surface v2_2)
 create_version_variables(g4tendl v1_4)
-create_version_variables(geant4reweight v01_24_00)
+create_version_variables(geant4reweight v01_24_01)
 
 # ifdh
 create_version_variables(libwda v2_30_1)
@@ -169,7 +169,7 @@ create_version_variables(nusystematics v1_08_00)
 
 create_version_variables(nutools v3_24_00)
 create_version_variables(nutools_dist NAME nutools ${NUTOOLS_VERSION})
-set(nulite_suffix ) # Reset when no longer needed
+set(nulite_suffix a) # Reset when no longer needed
 create_version_variables(nulite ${NUTOOLS_VERSION}${nulite_suffix})
 
 create_version_variables(nulite_base ${NULITE_VERSION})
